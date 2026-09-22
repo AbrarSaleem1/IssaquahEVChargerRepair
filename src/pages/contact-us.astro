@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+const contactFaqs = [
+  {
+    question: "What information should I have ready when I call?",
+    answer: "Having your vehicle make/model, your charger brand (e.g. Tesla, ChargePoint, JuiceBox), and any specific indicator lights or error messages on your charger display will help our electricians prepare the appropriate testing equipment prior to dispatch."
+  },
+  {
+    question: "Do you provide emergency service for vehicles that won't charge?",
+    answer: "Yes. If your vehicle is stranded with low battery due to a failed charging station, tripped main breaker, or damaged cable, call our dispatch line directly at (425) 380-0019 to request priority diagnostic scheduling."
+  },
+  {
+    question: "Do you service both residential and commercial charging stations?",
+    answer: "Yes. In addition to single-family and townhome garages, we troubleshoot and install Level 2 commercial charging stations for local businesses, apartment complexes, HOAs, and corporate parking lots throughout Issaquah."
+  }
+];
+---
+
+<Layout
+  title="Contact Issaquah EV Charger Repair | Call (425) 380-0019"
+  description="Contact Issaquah EV Charger Repair. Call (425) 380-0019 to speak with certified electricians for diagnostic service, repairs, and installations in Issaquah, WA."
+  canonicalPath="/contact-us/"
+  schemaType="ContactPage"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Contact Us', url: '/contact-us/' }
+  ]} />
+
+  <!-- Hero Banner -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 800px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Direct Electrical Support</span>
+        <h1>Contact Our Issaquah Electricians</h1>
+        <p class="hero-lead">
+          Connect directly with our local technical dispatch team for immediate assistance, troubleshooting questions, or to schedule an in-person diagnostic inspection.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime">
+            <span>📞</span>
+            <span>Call (425) 380-0019</span>
+          </a>
+          <a href="/locations/" class="btn btn-outline-white">
+            View All 15 Service Areas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Contact Information & Map Section -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 3rem; align-items: start;">
+        
+        <!-- Contact Cards Column -->
+        <div>
+          <div class="contact-hero-card" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.6rem; margin-top: 0; margin-bottom: 1.5rem;">Dispatch Headquarters</h2>
+            
+            <div class="contact-detail-row">
+              <div class="contact-detail-icon">📞</div>
+              <div>
+                <div style="font-size: 0.9rem; color: #64748b; font-weight: 600;">Telephone Contact</div>
+                <a href="tel:+14253800019" style="font-size: 1.5rem; font-weight: 800; color: #0b132b; text-decoration: none;">
+                  +1 (425) 380-0019
+                </a>
+                <div style="font-size: 0.85rem; color: #16a34a; font-weight: 600; margin-top: 0.2rem;">
+                  Click to speak directly with an on-duty technician
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-detail-row">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <div style="font-size: 0.9rem; color: #64748b; font-weight: 600;">Main Business Address</div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: #0b132b;">
+                  612 Jasmine Pl NW<br />
+                  Issaquah, WA 98027, USA
+                </div>
+                <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">
+                  Centrally located near Gilman Boulevard and I-90
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-detail-row">
+              <div class="contact-detail-icon">⏰</div>
+              <div>
+                <div style="font-size: 0.9rem; color: #64748b; font-weight: 600;">Business Hours</div>
+                <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">
+                  Open 24/7 (24 Hours, 7 Days a Week)
+                </div>
+                <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">
+                  24/7 Emergency diagnostic response across 98027 & 98029
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">
+              <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+                <span>⚡</span>
+                <span>Call (425) 380-0019</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Coverage Notice -->
+          <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem;">
+            <h3 style="margin-top: 0; font-size: 1.15rem; margin-bottom: 0.5rem;">Serving All 15 Issaquah Communities</h3>
+            <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 0.75rem;">
+              We provide rapid technician dispatch across Issaquah Highlands, Talus, Klahanie, Providence Point, Grand Ridge, Olde Town, Squak Mountain, Newport, Gilman, Sycamore, Central Issaquah, Greenwood Point, Tiger Mountain, Mirrormont, and Preston.
+            </p>
+            <a href="/locations/" style="color: #16a34a; font-weight: 700; font-size: 0.95rem;">Browse all neighborhood pages →</a>
+          </div>
+        </div>
+
+        <!-- Embedded Map Column -->
+        <div>
+          <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); border: 2px solid #e2e8f0; height: 520px;">
+            <iframe
+              title="Issaquah Headquarters Location Map"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              src="https://maps.google.com/maps?q=612+Jasmine+Pl+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-Call FAQ -->
+  
+  <!-- Equipment & Diagnostic Showcase -->
+  <section style="padding-bottom: 3.5rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <figure class="seo-feature-figure" style="margin: 0; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="Licensed electrician installing Level 2 EV charging station in Issaquah WA"
+            width="600"
+            height="380"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: 320px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            24/7 Service Dispatch: Providing Level 2 installations across zip codes 98027 & 98029.
+          </figcaption>
+        </figure>
+        <figure class="seo-feature-figure" style="margin: 0; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Certified technician diagnosing EVSE circuit with digital multimeter in Issaquah"
+            width="600"
+            height="380"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: 320px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Rapid Diagnostic Response: Same-day inspection for red fault codes, tripped breakers, and melted outlets.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion
+    title="Frequently Asked Questions Before Calling"
+    subtitle="Quick answers to help you prepare for your technical consultation."
+    items={contactFaqs}
+  />
+</Layout>

@@ -1,0 +1,29 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  buttonText?: string;
+}
+
+const {
+  title = "Is Your EV Charger Tripping, Showing Fault Codes, or Not Charging?",
+  subtitle = "Speak directly with an experienced Issaquah electrical technician. We troubleshoot, repair, and install EV chargers across all Issaquah neighborhoods.",
+  buttonText = "Call (425) 380-0019"
+} = Astro.props;
+---
+
+<section class="cta-band">
+  <div class="container">
+    <h2>{title}</h2>
+    <p>{subtitle}</p>
+    <div class="cta-band-actions">
+      <a href="tel:+14253800019" class="btn btn-lime">
+        <span>📞</span>
+        <span>{buttonText}</span>
+      </a>
+      <a href="/contact-us/" class="btn btn-outline-white">
+        View Service Details & Location
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "What does EV-ready mean?",
+    "answer": "EV-ready means the electrical infrastructure, including conduit, conductors, breaker space, and junction box, is installed and ready for a charging station to be connected with minimal additional work."
+  },
+  {
+    "question": "How much cheaper is pre-wiring vs. retrofit?",
+    "answer": "Pre-wiring during open-wall construction typically costs significantly less than retrofit wiring because conduit can be run freely through wall cavities without cutting finished drywall, patching, and repainting."
+  },
+  {
+    "question": "What wire size should be pre-installed?",
+    "answer": "We recommend 4 AWG copper for runs over 50 feet and 6 AWG for shorter runs, supporting up to 48-amp continuous charging on a 60-amp breaker."
+  },
+  {
+    "question": "Does Washington State require EV-ready wiring in new homes?",
+    "answer": "Washington has been progressively adopting EV-ready requirements in residential building codes. Check current City of Issaquah building code requirements or ask our electricians during your consultation."
+  },
+  {
+    "question": "Can you pre-wire for two charging stations?",
+    "answer": "Yes. We can install dual conduit runs, size the subpanel for two 60-amp circuits, and provision for future power-sharing charger installations."
+  }
+];
+---
+
+<Layout
+  title="EV-Ready Home Wiring in Issaquah, WA | Future-Proof Your Garage"
+  description="EV-ready home wiring and pre-wire services in Issaquah WA. Future-proof conduit, dedicated circuits, and subpanel provisioning. Call (425) 380-0019."
+  canonicalPath="/services/ev-ready-home-wiring/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'EV-Ready Home Wiring' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Specialized EV Service</span>
+        <h1>EV-Ready Home Wiring & Pre-Wire Services in Issaquah</h1>
+        <p class="hero-lead">Planning to buy an electric vehicle in the next year or two? Installing the conduit, conductors, and panel provisioning now, while walls are open during construction or renovation, saves significant cost compared to retrofitting later.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">View All 15 Service Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>What This Service Covers</h2>
+        <ul>
+          <li>Dedicated conduit rough-in from panel to garage charging location</li>
+          <li>Pre-pulled copper conductors sized for 48-amp continuous loads</li>
+          <li>Panel space reservation with labeled breaker positions</li>
+          <li>Subpanel provisioning in detached garages or carriage houses</li>
+          <li>Junction box installation at future charger mounting locations</li>
+          <li>Compliance with Washington State EV-ready building codes</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/modern-issaquah-garage-ev-charger.jpg" 
+            alt="Rough-in electrical conduit and dedicated branch wiring for future EV charger in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Future-proof garage wiring: heavy-duty metal conduit and dedicated pull boxes for upcoming EV additions.
+          </figcaption>
+        </figure>
+
+
+        <h2>Technical Background & How It Works</h2>
+        <p>Washington State building codes increasingly require new residential construction to include EV-ready electrical provisions. Even where not yet mandated, pre-wiring during construction or major renovation costs a fraction of what retrofit wiring costs after drywall, insulation, and paint are finished.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Garage subpanel rough-in for multi-vehicle EV charging in Issaquah 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Dedicated 100A garage subpanels provisioning capacity for multiple Level 2 chargers.
+          </figcaption>
+        </figure>
+
+
+        <p>An EV-ready installation includes running appropriately sized conduit (typically 1-inch EMT or schedule 40 PVC), pulling 6 AWG or 4 AWG copper conductors from the panel to a junction box at the planned charger location, and reserving dedicated breaker spaces in the electrical panel. When the vehicle arrives, connecting the charger takes less than an hour.</p>
+
+        <p>This service is available throughout all 15 Issaquah neighborhoods, including <a href="/locations/issaquah-highlands/">Issaquah Highlands</a>, <a href="/locations/talus/">Talus</a>, <a href="/locations/klahanie/">Klahanie</a>, and <a href="/locations/olde-town-issaquah/">Olde Town Issaquah</a>. Browse our full <a href="/locations/">locations hub</a> to find your area.</p>
+
+        <h2>When to Contact Us</h2>
+        <ul>
+          <li>You are building a new home and want EV charging capability from day one</li>
+          <li>You are remodeling a garage and walls are open for easy wiring access</li>
+          <li>You plan to purchase an EV within the next 1-2 years</li>
+          <li>You want to increase your home resale value with EV-ready infrastructure</li>
+          <li>Your builder needs a licensed electrical subcontractor for EV pre-wire</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="Pre-wired garage bay ready for plug-and-play EVSE mounting in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Finished EV-ready home setup ready for immediate station mounting without drywall damage.
+          </figcaption>
+        </figure>
+
+
+        <p>For technical questions about ev-ready home wiring in Issaquah, call our dispatch line directly at <a href="tel:+14253800019">(425) 380-0019</a>. Licensed under <a href="https://apps.leg.wa.gov/WAC/default.aspx?cite=296-46B" target="_blank" rel="noopener">WAC 296-46B</a> and fully compliant with NEC Article 625 standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Related Solutions</span>
+        <h2>Related EV Charging Services</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <h3 class="card-title">Level 2 EV Charger Installation</h3>
+          <a href="/services/level-2-ev-charger-installation/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">Panel Upgrade for EV Charging</h3>
+          <a href="/services/panel-upgrade-for-ev-charging/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Circuit Repair & Installation</h3>
+          <a href="/services/ev-charger-circuit-repair-installation/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">NEMA 14-50 Outlet Install & Repair</h3>
+          <a href="/services/nema-14-50-outlet-installation-repair/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Installation</h3>
+          <a href="/services/ev-charger-installation/" class="card-link">View Service Details →</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/services/" class="btn btn-navy">View All 14 EV Services</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABand
+    title="Need EV-Ready Home Wiring in Issaquah?"
+    subtitle="Speak directly with an electrical specialist to schedule your on-site service."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Issaquah Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=612+Jasmine+Pl+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

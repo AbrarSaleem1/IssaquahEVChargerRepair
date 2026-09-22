@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Why does my charger blink red?",
+    "answer": "Red blinks indicate specific faults: ground connection issues, high terminal resistance, internal contactor failure, or communication errors with the vehicle. The number and pattern of blinks correspond to specific diagnostic codes that vary by manufacturer."
+  },
+  {
+    "question": "Why does the breaker trip at night?",
+    "answer": "Overnight tripping usually results from thermal buildup in the breaker after hours of continuous current, dual-GFCI interference between the breaker and the charger internal GFCI, or loose wire terminals creating resistance heating."
+  },
+  {
+    "question": "How long does a diagnostic visit take?",
+    "answer": "Most on-site diagnostics take 45 to 90 minutes. We test input voltage, load amperage, breaker terminals, grounding continuity, and charging cable pins. Minor repairs are often completed during the same visit."
+  },
+  {
+    "question": "Do you troubleshoot all charger brands?",
+    "answer": "Yes. We diagnose Tesla Wall Connectors, ChargePoint, Wallbox, Autel, Emporia, Grizzl-E, JuiceBox, ClipperCreek, Siemens VersiCharge, and Bosch units."
+  },
+  {
+    "question": "Can a power surge damage my EV charger?",
+    "answer": "Yes. Lightning strikes or utility grid switching events can damage sensitive EVSE microprocessors. We install surge protective devices (SPDs) at the panel to prevent future damage."
+  }
+];
+---
+
+<Layout
+  title="EV Charger Troubleshooting in Issaquah, WA | Diagnostic Experts"
+  description="Professional EV charger troubleshooting and diagnostic testing in Issaquah. Red fault codes, breaker trips, and charging failures resolved. Call (425) 380-0019."
+  canonicalPath="/services/ev-charger-troubleshooting/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'EV Charger Troubleshooting' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Specialized EV Service</span>
+        <h1>Professional EV Charger Troubleshooting & Diagnostics in Issaquah</h1>
+        <p class="hero-lead">When your charger flashes red, trips the breaker at 2 AM, or stops mid-cycle, guesswork makes things worse. Our electricians use calibrated meters, thermal imaging, and systematic testing to find the exact failure point.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">View All 15 Service Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>What This Service Covers</h2>
+        <ul>
+          <li>Charger fault code interpretation (red LED flash counts, error displays)</li>
+          <li>Split-phase voltage stability testing under load</li>
+          <li>Infrared thermal scanning of breaker panels and terminal blocks</li>
+          <li>Ground loop impedance and grounding electrode resistance testing</li>
+          <li>EVSE internal contactor and relay verification</li>
+          <li>J1772 and NACS connector pin continuity testing</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Certified electrical technician using digital multimeter to diagnose EV charger red fault indicator in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Root-cause diagnostic testing: checking input voltage, line resistance, and internal contactor continuity.
+          </figcaption>
+        </figure>
+
+
+        <h2>Technical Background & How It Works</h2>
+        <p>Modern EVSE units contain sophisticated microprocessors that monitor voltage, ground continuity, and temperature hundreds of times per second. When any parameter drifts outside factory tolerances, the unit halts charging and displays error codes.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Electrician inspecting double-pole breaker and neutral bus bar for EV charger circuit in Issaquah 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Thermal scanning and breaker torque verification to diagnose nuisance tripping and heat buildup.
+          </figcaption>
+        </figure>
+
+
+        <p>Common causes include loose terminal lugs that create micro-arcing under sustained heat, tripped internal GFCI sensors due to moisture intrusion, voltage drops from undersized conductors, and bus bar oxidation inside aging electrical panels. Our diagnostic approach tests each component systematically rather than swapping parts blindly.</p>
+
+        <p>This service is available throughout all 15 Issaquah neighborhoods, including <a href="/locations/issaquah-highlands/">Issaquah Highlands</a>, <a href="/locations/talus/">Talus</a>, <a href="/locations/klahanie/">Klahanie</a>, and <a href="/locations/olde-town-issaquah/">Olde Town Issaquah</a>. Browse our full <a href="/locations/">locations hub</a> to find your area.</p>
+
+        <h2>When to Contact Us</h2>
+        <ul>
+          <li>Charger displays red or amber fault indicators</li>
+          <li>Circuit breaker trips after 1-3 hours of charging</li>
+          <li>Vehicle reports reduced charging speed</li>
+          <li>Charger starts then stops mid-cycle</li>
+          <li>Burning smell from the outlet or charger housing</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charging-cable-close-up.jpg" 
+            alt="Diagnostic inspection of J1772 and NACS charging handle pins and cable wiring"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Pin continuity and pilot signal testing to eliminate communication handshake failures between vehicle and charger.
+          </figcaption>
+        </figure>
+
+
+        <p>For technical questions about ev charger troubleshooting in Issaquah, call our dispatch line directly at <a href="tel:+14253800019">(425) 380-0019</a>. Licensed under <a href="https://apps.leg.wa.gov/WAC/default.aspx?cite=296-46B" target="_blank" rel="noopener">WAC 296-46B</a> and fully compliant with NEC Article 625 standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Related Solutions</span>
+        <h2>Related EV Charging Services</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Circuit Repair & Installation</h3>
+          <a href="/services/ev-charger-circuit-repair-installation/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">NEMA 14-50 Outlet Install & Repair</h3>
+          <a href="/services/nema-14-50-outlet-installation-repair/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Replacement</h3>
+          <a href="/services/ev-charger-replacement/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">Tesla Wall Connector Installation & Repair</h3>
+          <a href="/services/tesla-wall-connector-installation-repair/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Maintenance</h3>
+          <a href="/services/ev-charger-maintenance/" class="card-link">View Service Details →</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/services/" class="btn btn-navy">View All 14 EV Services</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABand
+    title="Need EV Charger Troubleshooting in Issaquah?"
+    subtitle="Speak directly with an electrical specialist to schedule your on-site service."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Issaquah Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=612+Jasmine+Pl+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "How long does a Level 2 charger installation take?",
+    "answer": "A typical installation with the panel near the garage takes 3 to 5 hours. If conduit must route through finished spaces or crawlspaces, it may require a full day. All work is coordinated with City of Issaquah or WA L&I inspectors."
+  },
+  {
+    "question": "What size breaker do I need?",
+    "answer": "Under NEC 625 continuous load rules: 32A charger needs a 40A breaker, 40A charger needs 50A, 48A charger needs 60A. Conductors must be sized accordingly."
+  },
+  {
+    "question": "Is hardwired better than plug-in?",
+    "answer": "Hardwired eliminates the plug-socket point where most thermal failures occur. It also enables higher amperage (up to 48A vs 32-40A on plug-in) and removes the need for dual-pole GFCI breakers in many cases."
+  },
+  {
+    "question": "Can I install if my panel is only 100 amps?",
+    "answer": "Depends on total load. We perform NEC 220 calculations to determine if capacity exists or if a subpanel or panel upgrade is needed."
+  },
+  {
+    "question": "Do you install chargers bought on Amazon?",
+    "answer": "Yes. We install all brands including Grizzl-E, Autel, Emporia, ChargePoint Home Flex, Wallbox, and Tesla Universal Wall Connector with full code compliance."
+  }
+];
+---
+
+<Layout
+  title="Level 2 EV Charger Installation in Issaquah, WA | 240V Hardwired"
+  description="Professional Level 2 EV charger installation in Issaquah. Hardwired 240V, 48-amp dedicated circuits for Tesla, Rivian, ChargePoint & all EVs. Call (425) 380-0019."
+  canonicalPath="/services/level-2-ev-charger-installation/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Level 2 EV Charger Installation' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Specialized EV Service</span>
+        <h1>Level 2 EV Charger Installation Across Issaquah, WA</h1>
+        <p class="hero-lead">Stop waiting 24 hours on a trickle charger. Our licensed electricians install hardwired 240-volt Level 2 charging stations delivering 25 to 44 miles of range per hour, tailored to your garage, vehicle, and panel capacity.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">View All 15 Service Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>What This Service Covers</h2>
+        <ul>
+          <li>Dedicated 240V, 50A or 60A dual-pole branch circuit from panel to garage</li>
+          <li>Professional wall-mounting of EVSE units (hardwired or plug-in)</li>
+          <li>NEC Article 220 continuous load calculations</li>
+          <li>Commercial-grade dual-pole breakers sized at 125% continuous load</li>
+          <li>Heavy-gauge copper THHN/XHHW conductors rated 75C/90C</li>
+          <li>Full electrical permit filing and inspection coordination</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="Licensed electrician installing 48-amp hardwired Level 2 EV charging station in Issaquah WA garage 98027 & 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Code-certified hardwired 240V Level 2 charging station delivering 25 to 44 miles of driving range per hour.
+          </figcaption>
+        </figure>
+
+
+        <h2>Technical Background & How It Works</h2>
+        <p>Level 1 charging uses a standard 120V outlet and adds only 3 to 5 miles per hour. For a 60 kWh battery, a full charge can take 40 to 50 hours. Level 2 operates on 240 volts and delivers 25 to 44 miles of range per hour, filling most batteries overnight.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="200A electrical service panel with dedicated EV circuit breaker in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Technicians verify circuit impedance, voltage drop, and double-pole breaker capacity under NEC continuous load standards.
+          </figcaption>
+        </figure>
+
+
+        <p>For Issaquah commuters driving 40 to 80 miles daily along I-90 and SR-520, Level 2 ensures a full battery every morning. A hardwired installation removes the plug-socket connection point where thermal failures occur under continuous loads.</p>
+
+        <p>This service is available throughout all 15 Issaquah neighborhoods, including <a href="/locations/issaquah-highlands/">Issaquah Highlands</a>, <a href="/locations/talus/">Talus</a>, <a href="/locations/klahanie/">Klahanie</a>, and <a href="/locations/olde-town-issaquah/">Olde Town Issaquah</a>. Browse our full <a href="/locations/">locations hub</a> to find your area.</p>
+
+        <h2>When to Contact Us</h2>
+        <ul>
+          <li>You purchased an EV and need overnight home charging</li>
+          <li>Your Level 1 cord takes too long</li>
+          <li>You want hardwired installation for maximum speed and safety</li>
+          <li>You are renovating a garage and want EV charging built in</li>
+          <li>Your HOA approved charger installation and you need a licensed contractor</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/modern-issaquah-garage-ev-charger.jpg" 
+            alt="Finished residential garage Level 2 EVSE installation in Issaquah Highlands 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Clean garage installation with heavy-gauge conduit pathways and wall-mounted cord holster.
+          </figcaption>
+        </figure>
+
+
+        <p>For technical questions about level 2 ev charger installation in Issaquah, call our dispatch line directly at <a href="tel:+14253800019">(425) 380-0019</a>. Licensed under <a href="https://apps.leg.wa.gov/WAC/default.aspx?cite=296-46B" target="_blank" rel="noopener">WAC 296-46B</a> and fully compliant with NEC Article 625 standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Related Solutions</span>
+        <h2>Related EV Charging Services</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <h3 class="card-title">Panel Upgrade for EV Charging</h3>
+          <a href="/services/panel-upgrade-for-ev-charging/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV-Ready Home Wiring</h3>
+          <a href="/services/ev-ready-home-wiring/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">NEMA 14-50 Outlet Install & Repair</h3>
+          <a href="/services/nema-14-50-outlet-installation-repair/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">Multi-EV Home Charging</h3>
+          <a href="/services/multi-ev-home-charging/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Circuit Repair & Installation</h3>
+          <a href="/services/ev-charger-circuit-repair-installation/" class="card-link">View Service Details →</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/services/" class="btn btn-navy">View All 14 EV Services</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABand
+    title="Need Level 2 EV Charger Installation in Issaquah?"
+    subtitle="Speak directly with an electrical specialist to schedule your on-site service."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Issaquah Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=612+Jasmine+Pl+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

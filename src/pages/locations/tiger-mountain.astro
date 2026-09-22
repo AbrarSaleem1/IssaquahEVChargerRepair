@@ -1,0 +1,327 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'panel-upgrade-for-ev-charging',
+    title: 'Rural Panel Upgrades',
+    desc: 'Upgrading older 100A or 150A panels in Tiger Mountain properties to 200A load centers capable of supporting continuous EV charging alongside well pumps and heating systems.'
+  },
+  {
+    slug: 'level-2-ev-charger-installation',
+    title: 'Level 2 Installations for Rural Properties',
+    desc: 'Hardwired 240V installations adapted for properties with detached garages, carports, long driveways, and varied distances from the main electrical panel.'
+  },
+  {
+    slug: 'ev-charger-circuit-repair-installation',
+    title: 'Long-Run Circuit Installation',
+    desc: 'Dedicated EV circuits designed for the extended conduit distances common on Tiger Mountain acreage properties, with conductors sized to prevent voltage drop.'
+  },
+  {
+    slug: 'ev-charger-troubleshooting',
+    title: 'Rural Power Quality Diagnostics',
+    desc: 'Troubleshooting charger faults caused by overhead PSE line voltage fluctuations, wildlife-related outages, and grounding issues unique to rural electrical service.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Squak Mountain', url: '/locations/squak-mountain/', note: 'Adjacent mountain residential area to the north and west.' },
+  { name: 'Mirrormont', url: '/locations/mirrormont/', note: 'Established forested community along Tiger Mountain foothills to the south.' },
+  { name: 'Issaquah Highlands', url: '/locations/issaquah-highlands/', note: 'Modern planned community to the northwest along Highlands Drive NE.' }
+];
+
+const faqs = [
+  {
+    question: "Can I install an EV charger on a rural Tiger Mountain property with a 100-amp panel?",
+    answer: "A 100-amp panel may support a lower-amperage charger (24A or 32A) if your total home load is modest. However, Tiger Mountain homes with well pumps, electric heating, and shop circuits frequently require a panel upgrade to 200A before adding EV charging. We calculate exact load requirements for every property."
+  },
+  {
+    question: "How do you handle long distances between the panel and garage on Tiger Mountain properties?",
+    answer: "Long conduit runs increase voltage drop under high-amperage loads. For distances over 50 feet, we upsize conductors from 6 AWG to 4 AWG or even 2 AWG copper, depending on circuit length and amperage. Underground runs use schedule 40 PVC conduit buried at code-required depths."
+  },
+  {
+    question: "Does Tiger Mountain's overhead power affect EV charging reliability?",
+    answer: "Overhead PSE lines are more susceptible to voltage fluctuations, weather-related outages, and wildlife interference than underground service. We install whole-panel surge protective devices (SPDs) to protect your EV charger from power surges, and we test line voltage stability during diagnostic visits."
+  },
+  {
+    question: "Can you install a charger in a detached barn or shop building on Tiger Mountain?",
+    answer: "Yes. Detached structures require a dedicated subpanel with separate grounding electrodes, fed by appropriately sized conductors from the main panel. We route feeders underground or overhead depending on the property layout and distance."
+  },
+  {
+    question: "How far do you travel for Tiger Mountain service calls?",
+    answer: "We serve all properties in the Tiger Mountain area, from homes along Tiger Mountain Road SE to properties accessed via Issaquah-Hobart Road SE. Our dispatch center at 612 Jasmine Pl NW is approximately 15 to 25 minutes from most Tiger Mountain addresses."
+  }
+];
+---
+
+<Layout
+  title="Tiger Mountain Issaquah EV Charger Repair & Installation | Rural Property Electricians"
+  description="EV charger repair and Level 2 installation for Tiger Mountain properties in Issaquah WA. Panel upgrades, long-run circuits, and rural charging solutions. Call (425) 380-0019."
+  canonicalPath="/locations/tiger-mountain/"
+  specificAreaServed="Tiger Mountain, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Tiger Mountain' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Tiger Mountain Electrical Specialists</span>
+        <h1>EV Charger Repair & Installation on Tiger Mountain, Issaquah</h1>
+        <p class="hero-lead">
+          Tiger Mountain properties sit on forested acreage with longer driveways, detached garages, older electrical panels, and overhead power lines. EV charger installations here require specialized approaches that account for rural electrical realities. Our electricians bring that expertise to every Tiger Mountain property.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="#tiger-guide" class="btn btn-outline-white">Explore Neighborhood Guide</a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> Tiger Mountain Area</div>
+          <div class="hero-badge-item"><span>🌲</span> Rural Property Experience</div>
+          <div class="hero-badge-item"><span>⚡</span> Long-Run Circuit Experts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section" id="tiger-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Locally Dispatched</span>
+          <h2>Specialized EV Charging for Tiger Mountain's Rural Properties</h2>
+          <p>
+            Tiger Mountain is one of the most distinctive residential areas in the Issaquah region. Rising southeast of the city center, this forested zone features properties ranging from modest cabins on wooded lots to expansive custom homes on multi-acre parcels. The roads wind through Douglas fir and western red cedar forests, and many driveways run hundreds of feet from the public road to the residence.
+          </p>
+          <p>
+            The electrical infrastructure on Tiger Mountain reflects its rural character. Puget Sound Energy delivers power via overhead lines that run along Tiger Mountain Road SE, Issaquah-Hobart Road SE, and the secondary roads branching into the hillside. Many homes have electrical panels dating from the 1970s through 1990s, with service ranging from 100 to 200 amps. Well pumps, septic systems, and electric heating add to the existing electrical load.
+          </p>
+          <p>
+            Installing an EV charger in this environment requires different skills than working in a suburban development. Long conduit runs, voltage drop calculations, rural grounding systems, and panel capacity constraints are standard considerations on every Tiger Mountain project. Our electricians bring this specific expertise to each property we serve.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">Tiger Mountain Quick Electrical Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Tiger Mountain Property & Infrastructure</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Construction Eras:</strong> 1960s through 2010s, with custom construction throughout.</li>
+            <li><strong>Property Types:</strong> Acreage homes, cabins, custom estates, and detached workshop/garage structures.</li>
+            <li><strong>Typical Electrical Service:</strong> 100A to 200A, overhead PSE utility feeds.</li>
+            <li><strong>Common Installation Needs:</strong> Panel upgrades, long-distance circuit runs, detached building subpanels, and surge protection.</li>
+            <li><strong>Special Considerations:</strong> Overhead power vulnerability, well pump loads, gravel/uneven terrain for trenching.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Targeted Solutions</span>
+        <h2>Tiger Mountain Focused EVSE Services</h2>
+        <p class="section-subtitle">While we offer all 14 services, these four address the most common challenges on Tiger Mountain properties.</p>
+      </div>
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">Read Service Details →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>The Unique Electrical Challenges of Tiger Mountain EV Charging</h2>
+        <p>
+          Installing an EV charger on Tiger Mountain is fundamentally different from installing one in a suburban neighborhood like Klahanie or Issaquah Highlands. The rural setting introduces engineering challenges that require careful planning and specialized knowledge. Understanding these challenges is the first step toward a reliable charging installation.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/luxury-estate-grand-ridge-issaquah.jpg" 
+            alt="Forested acreage residence on Tiger Mountain Issaquah WA 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Tiger Mountain foothill acreage: secluded custom homes, outbuildings, and detached workshops.
+          </figcaption>
+        </figure>
+
+
+        <h3>Long-Distance Circuit Runs and Voltage Drop Engineering</h3>
+        <p>
+          On many Tiger Mountain properties, the main electrical panel is located in the residence while the garage, carport, or preferred parking area is 50, 75, or even 100 feet away. At these distances, the electrical resistance of copper conductors becomes a significant factor in circuit performance.
+        </p>
+        <p>
+          When a 48-amp EV charger draws current through a long circuit, the resistance of the wire itself consumes a portion of the voltage. This phenomenon, called voltage drop, reduces the voltage available at the charger. If voltage drop exceeds 3% (the NEC recommendation for branch circuits), the charger may operate at reduced speed or trigger an undervoltage protection shutdown.
+        </p>
+        <p>
+          Our electricians calculate voltage drop for every Tiger Mountain installation using the actual measured distance and the planned amperage. For runs exceeding 50 feet at 48 amps, we upsize from 6 AWG to 4 AWG copper. For runs exceeding 80 feet, 2 AWG copper may be required. These larger conductors cost more upfront but prevent chronic undervoltage problems that plague installations built with undersized wire.
+        </p>
+
+        <h3>Detached Garage and Outbuilding Installations</h3>
+        <p>
+          Many Tiger Mountain properties have detached garages, barns, or workshop buildings separate from the main residence. Installing an EV charger in a detached structure requires a dedicated subpanel fed by a feeder circuit from the main house panel.
+        </p>
+        <p>
+          Under NEC Article 250, a detached structure with a subpanel requires its own grounding electrode system, typically a driven ground rod or concrete-encased grounding electrode, independent of the house grounding system. The feeder circuit must include an equipment grounding conductor bonded at the main panel and run all the way to the subpanel.
+        </p>
+        <p>
+          The feeder conductors between the house and detached garage are typically run through underground conduit. On Tiger Mountain, trenching through rocky, root-filled, and sloped terrain presents physical challenges that flat suburban lots do not. We plan trench routes to avoid large root systems, rock outcroppings, and septic system components, maintaining the code-required burial depth throughout.
+        </p>
+
+        <h3>Overhead Power and Surge Protection</h3>
+        <p>
+          Tiger Mountain properties receive their electrical service from Puget Sound Energy via overhead power lines running along the mountain roads. Unlike underground service common in newer developments, overhead lines are exposed to lightning strikes, falling tree branches, wind-driven debris, and wildlife (particularly squirrels and woodpeckers).
+        </p>
+        <p>
+          These events cause voltage transients—momentary spikes that can damage sensitive electronic components inside modern EV chargers. A single lightning strike on a nearby overhead line can send a voltage surge through the service entrance that destroys the microprocessor board inside a Tesla Wall Connector, ChargePoint, or Wallbox unit.
+        </p>
+        <p>
+          We recommend and install Type 2 surge protective devices (SPDs) at the main panel for every Tiger Mountain installation. These devices divert transient voltage spikes to ground before they reach downstream equipment. The cost of an SPD is a fraction of the cost of replacing a damaged charger, making it essential protection for overhead-fed properties.
+        </p>
+
+        <h3>Panel Capacity and Well Pump Considerations</h3>
+        <p>
+          Tiger Mountain homes often have electrical loads not found in city-serviced properties. Well pumps, pressure tanks, septic system aerators, and electric baseboard heating can consume significant amperage. On a 100-amp or 150-amp panel, these existing loads may leave insufficient capacity for a high-amperage EV charger without an upgrade.
+        </p>
+        <p>
+          Our load calculations account for every significant appliance in the home, including intermittent loads like well pumps that cycle on and off. We determine the maximum demand that can realistically occur simultaneously with EV charging and size the installation accordingly.
+        </p>
+        <p>
+          For homes where a full panel upgrade is not practical or desired, lower-amperage charger configurations (24A or 32A) or smart load management devices can provide reliable overnight charging within existing panel constraints. A 32-amp charger still delivers approximately 25 miles of range per hour, which is adequate for most daily commuting patterns.
+        </p>
+
+        <h2>Comprehensive Tiger Mountain Coverage</h2>
+        <p>
+          Our service vans travel throughout the Tiger Mountain residential area, including:
+        </p>
+        <ul>
+          <li><strong>Primary Roads:</strong> Tiger Mountain Road SE, Issaquah-Hobart Road SE, and SE Tiger Mountain Summit routes.</li>
+          <li><strong>Secondary Roads:</strong> All branching residential roads, driveways, and private roads accessing Tiger Mountain properties.</li>
+          <li><strong>State Land Vicinity:</strong> Properties bordering Tiger Mountain State Forest and the I-90/Tradition Plateau trailhead area.</li>
+          <li><strong>Adjacent Zones:</strong> Properties transitioning between Tiger Mountain, Squak Mountain, and the Mirrormont community.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Whole-home surge protector and EV subpanel on Tiger Mountain 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Surge protective devices (SPDs) safeguarding sensitive EVSE microprocessors against mountain grid surges.
+          </figcaption>
+        </figure>
+
+
+        <h2>Why Tiger Mountain Property Owners Choose Us</h2>
+        <ol>
+          <li><strong>Rural Property Expertise:</strong> We understand the electrical realities of overhead-fed, well-pumped, acreage properties that differ substantially from suburban construction.</li>
+          <li><strong>Voltage Drop Engineering:</strong> Every long-distance circuit is calculated for voltage drop with appropriately upsized conductors, preventing the chronic undervoltage problems caused by undersized wire.</li>
+          <li><strong>Detached Structure Experience:</strong> We install subpanels, underground feeders, and separate grounding electrode systems for detached garages and outbuildings regularly.</li>
+          <li><strong>Surge Protection Advocacy:</strong> We proactively recommend and install SPDs for overhead-fed properties, protecting your charging equipment from the voltage transients common in rural electrical service.</li>
+          <li><strong>Honest Assessments:</strong> We explain exactly what your property needs, whether that is a simple circuit addition or a comprehensive panel upgrade, and provide clear reasoning for every recommendation.</li>
+        </ol>
+
+        <h2>Our Service Process for Tiger Mountain Properties</h2>
+        <ol>
+          <li><strong>Detailed Phone Consultation:</strong> We gather information about your property layout, panel location, garage distance, existing loads (well pump, heating type), and vehicle model.</li>
+          <li><strong>On-Site Property Survey:</strong> Our electrician inspects the panel, measures distances, evaluates trenching conditions for underground runs, and calculates voltage drop and load capacity.</li>
+          <li><strong>Engineered Installation:</strong> We install properly sized circuits, subpanels where needed, surge protection, and the charger itself, all built for the specific conditions of your property.</li>
+          <li><strong>Full-Load Verification:</strong> We connect your vehicle, verify charging speed, check voltage under load at the charger location, and confirm stable operation.</li>
+        </ol>
+
+        <p>
+          Call <a href="tel:+14253800019">(425) 380-0019</a> to schedule your Tiger Mountain EV charger consultation. Rural properties deserve the same charging reliability as suburban homes, and we engineer every installation to deliver exactly that.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">In addition to Tiger Mountain, our technicians serve all 15 Issaquah neighborhoods.</p>
+      </div>
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <CTABand
+    title="Need EV Charger Service on Tiger Mountain?"
+    subtitle="Speak with an electrical specialist experienced in rural and acreage property installations."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Tiger Mountain Dispatch</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving all Tiger Mountain properties via Issaquah-Hobart Road</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians for Service</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Tiger Mountain Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=Tiger+Mountain+Road+SE,+Issaquah,+WA&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

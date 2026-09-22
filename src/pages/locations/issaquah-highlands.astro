@@ -1,0 +1,392 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'tesla-wall-connector-installation-repair',
+    title: 'Tesla Wall Connector Diagnostics & Repairs',
+    desc: 'High concentration of Model Y, Model 3, and Cybertruck vehicles throughout the Highlands means daily troubleshooting of Gen 3 Wi-Fi drops, red sensor blinks, and power-sharing setups.'
+  },
+  {
+    slug: 'panel-upgrade-for-ev-charging',
+    title: 'Highlands Smart Panel & Load Management',
+    desc: 'Modern townhomes near Grand Ridge Plaza with heat pumps and induction cooktops frequently require load shed modules or 200A load center reconfigurations.'
+  },
+  {
+    slug: 'ev-charger-troubleshooting',
+    title: 'Alley Garage Circuit Diagnostics',
+    desc: 'Tracing ground resistance faults, nuisance tripping on GFCI dual-pole breakers, and conduit thermal issues in detached and rear tuck-under garages.'
+  },
+  {
+    slug: 'nema-14-50-outlet-installation-repair',
+    title: 'Industrial Heavy-Duty Outlet Upgrades',
+    desc: 'Replacing degraded builder-grade receptacles with Bryant or Hubbell industrial 50A sockets built to withstand nightly 32-amp continuous draws.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Grand Ridge', url: '/locations/grand-ridge/', note: 'Directly adjacent eastern forested estates and custom acreage properties.' },
+  { name: 'Central Issaquah', url: '/locations/central-issaquah/', note: 'Just down Highlands Drive NE along the I-90 commercial corridor.' },
+  { name: 'Klahanie', url: '/locations/klahanie/', note: 'Established plateau community situated south along Issaquah-Fall City corridors.' }
+];
+
+const highlandsFaqs = [
+  {
+    question: "Do I need Issaquah Highlands Community Association (IHCA) approval to install a charger?",
+    answer: "If your charging station and all associated electrical conduit are contained entirely inside your attached or tuck-under garage, IHCA architectural committee review is generally not required. However, if your installation requires running surface-mounted conduit along the exterior alley siding, installing an exterior disconnect, or mounting an outdoor pedestal near a parking pad, an IHCA architectural review application must be submitted. Our technicians provide detailed conduit pathway diagrams to ensure smooth HOA compliance."
+  },
+  {
+    question: "Why does my Tesla Wall Connector blink red four times in our Highlands garage?",
+    answer: "Four red blinks on a Gen 3 Tesla Wall Connector indicate an internal thermal sensor warning or high resistance at the terminal block. In the dense townhome construction typical of Highlands Drive NE and Park Drive NE, garages can trap heat, and if the heavy gauge copper conductors were not torqued to exact factory inch-pound specifications, terminal temperatures rise during continuous 48-amp charging. We open the unit, inspect the wire termination lugs for micro-arcing, apply precision torque calibration, and verify thermal stability under load."
+  },
+  {
+    question: "Are townhomes in Issaquah Highlands able to support a full 48-amp Level 2 charger?",
+    answer: "Many Highlands townhomes constructed between 2002 and 2018 have 150-amp or 200-amp main service panels. While 200-amp panels often have sufficient physical space, existing heavy electrical appliances like dual-zone heat pumps, tankless electric water heaters, and electric ranges can consume substantial load capacity. We calculate the home's total continuous draw according to NEC Article 220. If capacity is constrained, we configure dynamic load management (such as the Tesla Neurio meter or Emporia Vue EMS) to automatically throttle charging without tripping main breakers."
+  },
+  {
+    question: "How does Puget Sound Energy's grid service affect charging reliability in zip code 98029?",
+    answer: "The Highlands power infrastructure is modern and subterranean, offering cleaner power than rural overhead lines. However, voltage fluctuations during winter peak hours can occasionally cause sensitive EVSE units (like Wallbox or ChargePoint) to detect undervoltage conditions and pause charging. Our diagnostic inspection includes continuous line-voltage logging at your service panel to confirm PSE secondary feed stability."
+  },
+  {
+    question: "What electrical permits are needed for an EVSE circuit in Issaquah Highlands?",
+    answer: "Under Washington Administrative Code (WAC 296-46B) and City of Issaquah building regulations, all new 240-volt branch circuits, panel alterations, and hardwired EVSE replacements require an electrical permit. Our licensed contractors pull the official permit through the City of Issaquah or WA L&I, schedule the final city inspection, and ensure all work satisfies National Electrical Code Article 625 standards."
+  }
+];
+---
+
+<Layout
+  title="Issaquah Highlands EV Charger Repair & Installation | 98029 Electricians"
+  description="Specialized EV charger repair and Level 2 installation in Issaquah Highlands, WA (98029). Fast troubleshooting for Tesla, ChargePoint & multi-EV townhomes near Grand Ridge Plaza. Call (425) 380-0019."
+  canonicalPath="/locations/issaquah-highlands/"
+  specificAreaServed="Issaquah Highlands, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Issaquah Highlands', url: '/locations/issaquah-highlands/' }
+  ]} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Issaquah Highlands Electrical Specialists</span>
+        <h1>Dedicated EV Charger Repair & Installation in Issaquah Highlands</h1>
+        <p class="hero-lead">
+          From modern alley-load townhomes near Blakely Hall to custom family residences overlooking Grand Ridge Plaza, we provide certified electrical troubleshooting, Tesla Wall Connector service, and code-permitted Level 2 charging installations designed for the 98029 zip code.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime">
+            <span>📞</span>
+            <span>Call (425) 380-0019</span>
+          </a>
+          <a href="#highlands-guide" class="btn btn-outline-white">
+            Explore Neighborhood Guide
+          </a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> Local to 98029</div>
+          <div class="hero-badge-item"><span>🛡️</span> IHCA Architectural Familiarity</div>
+          <div class="hero-badge-item"><span>⚡</span> Certified EVSE Diagnostics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- About Company Summary -->
+  <section class="section" id="highlands-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Locally Dispatched</span>
+          <h2>Precision Electrical Engineering for Issaquah Highlands Garages</h2>
+          <p>
+            Issaquah Highlands represents one of the Pacific Northwest’s premier master-planned urbanist communities. Established with high environmental awareness, the Highlands boasts one of the densest concentrations of battery electric vehicles in King County. From Tesla Model 3s and Model Ys commuting daily into Bellevue and Seattle to high-capacity Rivian R1S SUVs and Porsche Taycans, reliable residential charging is central to daily life here.
+          </p>
+          <p>
+            However, the architecture of the Highlands presents distinct electrical challenges. Many homes feature rear-entry alleyway garages, multi-story vertical layouts, and shared utility chases that complicate electrical conduit routing. When charging equipment experiences red fault indicators, nuisance breaker trips, or thermal throttling, you need electricians who understand the exact construction profiles of these homes.
+          </p>
+          <p>
+            Issaquah EV Charger Repair provides fast on-site technical diagnostics across all Highlands micro-neighborhoods, including Ashland, Crofton, Magnolia, Kirkwood, and High Street Townhomes. We diagnose root electrical causes rather than simply resetting equipment, ensuring your EVSE runs safely under prolonged continuous amperage.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">98029 Quick Electrical Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Highlands Housing Stock & Infrastructure</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Construction Eras:</strong> Late 1990s through 2020s modern construction.</li>
+            <li><strong>Predominant Housing:</strong> Multi-story rowhomes, courtyard townhomes, and compact single-family lots.</li>
+            <li><strong>Typical Electrical Service:</strong> 150A to 200A 120/240V split-phase underground utility feeds from Puget Sound Energy.</li>
+            <li><strong>Common Installation Needs:</strong> Rear alley conduit management, load-balancing energy monitors, and 48A hardwired circuits.</li>
+            <li><strong>HOA Governance:</strong> Issaquah Highlands Community Association (IHCA) exterior guidelines.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services for this Neighborhood -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Targeted Solutions</span>
+        <h2>Highlands Focused EVSE Electrical Services</h2>
+        <p class="section-subtitle">
+          While we offer our complete catalog of 14 services across the city, these four solutions are most frequently requested by homeowners in Issaquah Highlands.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">
+              Read Service Details →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive In-Depth Technical Content Body (Targeting 2400+ words of real depth) -->
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>The Engineering Behind EV Charger Reliability in Issaquah Highlands</h2>
+        <p>
+          Electric vehicle supply equipment is fundamentally different from virtually any other electrical appliance in a modern home. Unlike a standard electric clothes dryer or air conditioning condenser that cycles on and off as temperatures fluctuate, a Level 2 EV charging station pulls high continuous current for six, eight, or even ten consecutive hours. Under the National Electrical Code (NEC Article 625), an electric vehicle circuit must be treated as a continuous load, meaning the branch circuit conductors and overcurrent protection devices must be sized at 125% of the continuous draw.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/pacific-northwest-residential-home.jpg" 
+            alt="Modern master-planned homes and garages in Issaquah Highlands WA 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Issaquah Highlands residential streetscape: master-planned townhomes and single-family properties with high EV adoption.
+          </figcaption>
+        </figure>
+
+
+        <p>
+          In Issaquah Highlands, where residents commute to high-tech campuses across the Eastside, multiple electric vehicles per garage have become standard. When two electric cars plug in simultaneously after work—alongside peak household electricity usage for cooking, laundry, and climate control—the electrical demand placed on your home's main panel can easily surpass safe thermal thresholds if not engineered correctly.
+        </p>
+
+        <h3>Alley-Load Garages and Complex Conduit Pathways</h3>
+        <p>
+          A defining architectural element of many Issaquah Highlands neighborhoods—such as those along Park Drive NE, NE Park Walk, and 25th Avenue NE—is the rear alleyway garage. In these properties, the primary electrical service entrance and Puget Sound Energy utility meter are frequently located at the front or side of the property, while the garage is situated at the opposite end of the structure on a lower subterranean or alley elevation.
+        </p>
+        <p>
+          Routing a 240-volt, 50-amp or 60-amp dedicated branch circuit across finished living spaces requires specialized technical strategies. Punching through finished drywall, crossing structural joists, and complying with Washington Administrative Code fire-stopping requirements necessitates careful planning. When surface conduit is required along exterior building facades facing the alley, our electricians adhere strictly to Issaquah Highlands Community Association (IHCA) aesthetic rules, utilizing powder-coated raceways and routing along existing architectural trim lines to maintain neighborhood visual standards.
+        </p>
+
+        <h3>Diagnosing Nuisance Breaker Trips and Fault Indicator Lights</h3>
+        <p>
+          A common frustration reported by Highlands homeowners is an EV charger that initiates charging normally, only to shut down unexpectedly two to three hours into the cycle. When you wake up in the morning expecting a full battery for your morning commute, discovering that your charger tripped out at 1:30 AM can disrupt your entire day.
+        </p>
+        <p>
+          Our diagnostic approach avoids guesswork. Nuisance tripping during overnight charging in Issaquah Highlands typically stems from three distinct electrical phenomena:
+        </p>
+        <ul>
+          <li><strong>Thermal Overheating at the Breaker:</strong> Circuit breakers in residential load centers operate via thermal-magnetic trip mechanisms. When a breaker is subjected to continuous high amperage inside an overcrowded panel, ambient heat from adjacent circuits accumulates. If the panel lacks adequate heat dissipation or if the breaker terminals have loosened over time, the internal bimetallic strip bends, tripping the circuit prematurely even if actual amperage draw remains below the nominal trip rating.</li>
+          <li><strong>Ground Fault Interrupter (GFCI) Clashing:</strong> Modern electrical codes require GFCI protection on 240-volt receptacles installed in residential garages. However, virtually all modern Level 2 charging stations (including ChargePoint Home Flex, Wallbox Pulsar Plus, and Tesla Universal Wall Connectors) incorporate sensitive internal ground-fault protection circuits (CCID20). When a plug-in EVSE with internal GFCI monitoring is plugged into a dual-pole GFCI circuit breaker, the two monitoring circuits can interfere with one another, generating phantom ground fault trips. Our electricians solve this by converting plug-in stations to direct hardwired configurations on standard thermal-magnetic breakers, as permitted under NEC 625.54.</li>
+          <li><strong>Loose Wire Terminations & Micro-Arcing:</strong> Copper conductors expand slightly under continuous charging heat and contract when the circuit cools down. Over thousands of charging cycles, standard screw terminals can lose torque. Micro-gaps form between the conductor and the terminal block, causing localized electrical resistance that triggers the charger's internal thermal protection sensors. We utilize calibrated digital torque drivers to torque all connections to exact manufacturer specifications, preventing micro-arcing and thermal sensor shutdowns.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="Hardwired Level 2 EV charging station installed in Issaquah Highlands 98029 garage"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Code-compliant Level 2 installation adhering to IHCA HOA aesthetic guidelines and rear-alley conduit routing.
+          </figcaption>
+        </figure>
+
+
+        <blockquote>
+          "In high-density neighborhoods like Issaquah Highlands, electrical panel load calculations are not optional. Adding a 48-amp continuous charging load to a home with existing heat pump heating requires verification of total service demand to protect the integrity of the home's electrical infrastructure."
+        </blockquote>
+
+        <h3>Smart Energy Management Systems (EMS) for Highlands Homes</h3>
+        <p>
+          With many homes in the Highlands featuring 150-amp or 200-amp main service panels, installing a secondary Level 2 charger or a single high-output 48-amp charging station can push calculated service load beyond the safe 80% continuous threshold specified by NEC Article 220. Upgrading the entire electrical service panel can be cost-prohibitive or physically restricted by utility transformer capacities along Highlands secondary distribution loops.
+        </p>
+        <p>
+          To solve this without compromising charging speed, we deploy intelligent Energy Management Systems (EMS) and dynamic load shedding modules. Devices such as the DCC (Demand Charge Controller) or smart current transformers monitor total home electricity consumption in real time. During peak moments—such as when an induction cooktop and heat pump heat strips activate simultaneously—the EMS automatically pauses or reduces current to the EV charger. As soon as household demand drops, full charging speed resumes automatically, ensuring compliance with local electrical codes while eliminating the expense of a whole-home service replacement.
+        </p>
+
+        <h3>Upgrading Fragile Builder Receptacles to Industrial NEMA 14-50 Sockets</h3>
+        <p>
+          Many homes constructed throughout Issaquah Highlands during the 2010s were outfitted with standard NEMA 14-50 receptacles in the garage. While labeled for 50 amps, common consumer-grade receptacles manufactured for electric cooking ranges use thin galvanized metal contacts and lightweight plastic faceplates. Cooking ranges operate intermittently, whereas electric vehicles draw continuous current for hours on end.
+        </p>
+        <p>
+          Under sustained 32-amp EV loads, consumer-grade receptacles frequently suffer from plastic melting, scorched terminal screws, and catastrophic terminal degradation. If your garage outlet feels warm to the touch after charging, exhibits discoloration around the neutral or ground slots, or emits a distinct burning plastic odor, the outlet is on the verge of thermal failure. Our technicians replace damaged receptacles with industrial-grade, heavy-duty commercial sockets (such as Hubbell or Bryant) constructed with reinforced nylon housings and heavy brass contact lugs designed specifically for EVSE duty cycles.
+        </p>
+
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="200A electrical service panel and dual-pole EV circuit breakers in Issaquah Highlands WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            200-amp service load calculations ensuring adequate headroom for continuous overnight 48A charging.
+          </figcaption>
+        </figure>
+
+<h2>Comprehensive Issaquah Highlands Street and Landmark Coverage</h2>
+        <p>
+          Our technical service vans operate daily throughout the entirety of Issaquah Highlands. Whether your residence is situated directly off Highlands Drive NE, adjacent to Grand Ridge Plaza, or up the hillside near Central Park, our technicians are positioned for prompt response:
+        </p>
+        <ul>
+          <li><strong>Commercial & Mixed-Use Corridors:</strong> Service routes covering Park Drive NE, 25th Avenue NE, High Street NE, and the shopping and dining areas surrounding Grand Ridge Plaza.</li>
+          <li><strong>Residential Streets & Avenues:</strong> Active service along NE Park Walk, Discovery Drive NE, 10th Avenue NE, Magnolia Boulevard NE, NE Harrison Street, and 15th Avenue NE.</li>
+          <li><strong>Key Landmarks & Gathering Hubs:</strong> Properties surrounding Blakely Hall, Village Green Park, Issaquah Highlands Central Park, Vista Park, and the Swedish Medical Center Issaquah campus corridor.</li>
+          <li><strong>Postal Code Service:</strong> Complete dispatch coverage throughout the 98029 zip code area.</li>
+        </ul>
+
+        <h2>Why Choose Us for Highlands EV Charger Repair</h2>
+        <p>
+          Choosing an electrical contractor for high-voltage EVSE maintenance requires specialized technical capabilities. Here is why Highlands homeowners consistently trust our team:
+        </p>
+        <ol>
+          <li><strong>Specialized EVSE Focus:</strong> We do not treat EV charging as a sideline to ceiling fan installations. Our primary discipline is electric vehicle supply equipment, load calculation, and diagnostic troubleshooting.</li>
+          <li><strong>Local Dispatch Proximity:</strong> Located at 612 Jasmine Pl NW in central Issaquah, our technicians can reach Highlands addresses within minutes when a vehicle is unable to charge.</li>
+          <li><strong>Strict Code & Permit Adherence:</strong> Every service alteration and new circuit installation complies with Washington State L&I electrical safety guidelines and City of Issaquah building ordinances.</li>
+          <li><strong>Prequalified Hardware:</strong> We install commercial-grade breakers, industrial receptacles, and pure copper THHN/XHHW conductors capable of handling sustained 75°C and 90°C thermal conditions.</li>
+          <li><strong>Transparent Diagnostic Reports:</strong> We explain exactly what failed—whether a compromised neutral wire, faulty circuit breaker, or internal relay issue—before executing repairs.</li>
+          <li><strong>Comprehensive Manufacturer Experience:</strong> Certified familiarity across Tesla Wall Connectors, ChargePoint Home Flex, Wallbox, Autel, Emporia, Grizzl-E, and JuiceBox hardware.</li>
+        </ol>
+
+        <h2>Our Step-by-Step Diagnostic and Repair Protocol</h2>
+        <p>
+          When you contact our dispatch team regarding an EVSE malfunction in Issaquah Highlands, we follow a meticulous four-stage service procedure:
+        </p>
+        <ol>
+          <li><strong>Initial Technical Consultation:</strong> We identify your EV model, charger hardware, and specific error indications (such as red LED flash counts or breaker trip patterns) to equip our service vehicles with the required replacement components.</li>
+          <li><strong>On-Site Electrical Inspection:</strong> Upon arrival, our electrician conducts non-invasive infrared thermal scans, tests split-phase voltage stability at your panel, measures branch circuit loop impedance, and tests grounding electrode resistance.</li>
+          <li><strong>Precision Hardware Repair:</strong> Defective breakers, melted receptacles, damaged cables, or loose terminal blocks are repaired or replaced using code-compliant materials torqued to manufacturer specifications.</li>
+          <li><strong>Live-Load Commissioning:</strong> We connect diagnostic test equipment or your vehicle to initiate a live charging cycle, monitoring voltage drop, amperage stability, and thermal dissipation under continuous full-load operating conditions.</li>
+        </ol>
+
+        <h2>Straight-Forward Assessment Standards</h2>
+        <p>
+          Electrical troubleshooting requires clarity and technical honesty. We conduct all on-site diagnostics with complete transparency. Our technicians explain every step of the testing process, identify the physical components causing failure, and outline the precise corrective actions necessary to restore safe, uninterrupted charging to your Issaquah Highlands home.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Neighborhoods Links -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">
+          In addition to Issaquah Highlands, our technicians provide dedicated electrical services throughout adjacent neighborhoods.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <FAQAccordion items={highlandsFaqs} />
+
+  <!-- CTA Band -->
+  <CTABand
+    title="Is Your Issaquah Highlands EV Charger Malfunctioning or Tripping?"
+    subtitle="Speak directly with an electrical specialist to schedule an on-site diagnostic visit or circuit assessment."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <!-- Contact & Map Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Direct Contact</span>
+        <h2>Schedule Highlands EVSE Service</h2>
+        <p class="section-subtitle">
+          Contact our local dispatch office by telephone to discuss your EV charger repair or installation requirements.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Issaquah Highlands Dispatch</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving Highlands Dr NE, Grand Ridge Plaza & all 98029</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+              📞 Call Technicians for Service
+            </a>
+          </div>
+        </div>
+
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe
+            title="Issaquah Highlands Map"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=Grand+Ridge+Plaza,+Issaquah+Highlands,+WA+98029&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

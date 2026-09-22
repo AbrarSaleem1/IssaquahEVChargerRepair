@@ -1,0 +1,128 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+const servicesList = [
+  { name: 'Level 2 EV Charger Installation', url: '/services/level-2-ev-charger-installation/' },
+  { name: 'EV Charger Troubleshooting', url: '/services/ev-charger-troubleshooting/' },
+  { name: 'Tesla Wall Connector Installation & Repair', url: '/services/tesla-wall-connector-installation-repair/' },
+  { name: 'Panel Upgrade for EV Charging', url: '/services/panel-upgrade-for-ev-charging/' },
+  { name: 'EV-Ready Home Wiring', url: '/services/ev-ready-home-wiring/' },
+  { name: 'NEMA 14-50 Outlet Install & Repair', url: '/services/nema-14-50-outlet-installation-repair/' },
+  { name: 'View All 14 Services →', url: '/services/' },
+];
+
+const locationsList = [
+  { name: 'Issaquah Highlands', url: '/locations/issaquah-highlands/' },
+  { name: 'Talus', url: '/locations/talus/' },
+  { name: 'Klahanie', url: '/locations/klahanie/' },
+  { name: 'Providence Point', url: '/locations/providence-point/' },
+  { name: 'Grand Ridge', url: '/locations/grand-ridge/' },
+  { name: 'Olde Town (Downtown)', url: '/locations/olde-town-issaquah/' },
+  { name: 'Squak Mountain', url: '/locations/squak-mountain/' },
+  { name: 'View All 15 Areas →', url: '/locations/' },
+];
+---
+
+<header class="site-header">
+  <div style="background: #060b18; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0.35rem 1rem; font-size: 0.82rem; color: #94a3b8;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+      <div>
+        <span style="color: #84cc16; font-weight: 700;">⚡ Issaquah's Local EVSE Electricians</span>
+        <span style="margin-left: 0.5rem; color: #cbd5e1;">Serving Zip Codes <strong>98027</strong> & <strong>98029</strong></span>
+      </div>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <span>🕒 Open 24/7 | Emergency Dispatch</span>
+        <a href="tel:+14253800019" style="color: #84cc16; font-weight: 700; text-decoration: none;">📞 (425) 380-0019</a>
+      </div>
+    </div>
+  </div>
+  <div class="container header-container">
+    <a href="/" class="brand-logo-link" aria-label="Issaquah EV Charger Repair Home">
+      <div class="brand-icon">⚡</div>
+      <div class="brand-text">
+        <span class="brand-name">Issaquah EV Charger Repair</span>
+        <span class="brand-sub">Licensed Electrical Specialists</span>
+      </div>
+    </a>
+
+    <nav aria-label="Primary Navigation">
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/services/" class="nav-link">
+            Services ▾
+          </a>
+          <div class="dropdown-menu">
+            {servicesList.map(item => (
+              <a href={item.url} class="dropdown-link">{item.name}</a>
+            ))}
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="/locations/" class="nav-link">
+            Locations ▾
+          </a>
+          <div class="dropdown-menu">
+            {locationsList.map(item => (
+              <a href={item.url} class="dropdown-link">{item.name}</a>
+            ))}
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="/about-us/" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="/contact-us/" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-cta-group">
+      <a href="tel:+14253800019" class="header-phone-link">
+        <span>📞</span>
+        <span>(425) 380-0019</span>
+      </a>
+      <a href="tel:+14253800019" class="btn btn-lime">
+        Call Technicians
+      </a>
+      <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Navigation Menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileDrawer" style="display: none; background: #ffffff; border-bottom: 2px solid #e2e8f0; padding: 1.5rem;">
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <a href="/" style="font-weight: 700; color: #0b132b; font-size: 1.1rem;">Home</a>
+      <a href="/services/" style="font-weight: 700; color: #0b132b; font-size: 1.1rem;">All Services (14)</a>
+      <a href="/locations/" style="font-weight: 700; color: #0b132b; font-size: 1.1rem;">All Locations (15)</a>
+      <a href="/about-us/" style="font-weight: 700; color: #0b132b; font-size: 1.1rem;">About Us</a>
+      <a href="/contact-us/" style="font-weight: 700; color: #0b132b; font-size: 1.1rem;">Contact Us</a>
+      <hr style="border: none; border-top: 1px solid #e2e8f0; margin-block: 0.5rem;" />
+      <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+        📞 Call (425) 380-0019
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggleBtn = document.getElementById('mobileMenuToggle');
+  const drawer = document.getElementById('mobileDrawer');
+  if (toggleBtn && drawer) {
+    toggleBtn.addEventListener('click', () => {
+      drawer.style.display = drawer.style.display === 'none' ? 'block' : 'none';
+    });
+  }
+</script>

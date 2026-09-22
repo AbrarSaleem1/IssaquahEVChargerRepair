@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "How long does a panel upgrade take?",
+    "answer": "A full 200-amp panel replacement typically takes one full day. A 400-amp heavy-up requiring PSE coordination may take 2-3 days including utility meter swap scheduling."
+  },
+  {
+    "question": "Will I lose power during the upgrade?",
+    "answer": "Yes, power must be disconnected while the old panel is removed and the new one is installed. We minimize downtime and typically restore power the same day."
+  },
+  {
+    "question": "What is the difference between a subpanel and a main panel upgrade?",
+    "answer": "A subpanel adds breaker capacity without replacing the main service. A main panel upgrade replaces the entire service entrance including the meter base, main breaker, and distribution panel. The right choice depends on your existing service amperage and total load."
+  },
+  {
+    "question": "Does PSE need to be involved?",
+    "answer": "For service amperage increases (e.g., 200A to 400A), yes. We coordinate directly with PSE Customer Construction Services for transformer sizing, meter base replacement, and service reconnection scheduling."
+  },
+  {
+    "question": "Is an electrical permit required?",
+    "answer": "Yes. All panel upgrades and service modifications require an electrical permit through the City of Issaquah or Washington State L&I. Our licensed contractors handle all permit filing and inspection scheduling."
+  }
+];
+---
+
+<Layout
+  title="Electrical Panel Upgrade for EV Charging in Issaquah | 200A & 400A"
+  description="Panel upgrades for EV charging in Issaquah WA. 100A to 200A and 200A to 400A service heavy-ups for Level 2 chargers. Licensed electricians. Call (425) 380-0019."
+  canonicalPath="/services/panel-upgrade-for-ev-charging/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Panel Upgrade for EV Charging' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Specialized EV Service</span>
+        <h1>Electrical Panel Upgrade for EV Charging in Issaquah, WA</h1>
+        <p class="hero-lead">When your breaker box lacks space for a 50-amp or 60-amp EV circuit, or when your home total load exceeds safe thresholds, a panel modernization gives your electrical system the headroom to charge safely and reliably.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">View All 15 Service Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>What This Service Covers</h2>
+        <ul>
+          <li>Complete 100A to 200A or 200A to 400A main panel replacement</li>
+          <li>New commercial-grade copper service entrance conductors</li>
+          <li>Puget Sound Energy coordination for meter base and transformer upgrades</li>
+          <li>Subpanel installation for dedicated EV charging circuits</li>
+          <li>Bus bar inspection and replacement for oxidized or degraded contacts</li>
+          <li>Transfer of existing branch circuits to new panel with clean labeling</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Modern 200-amp electrical panel replacement for EV charging capacity in Issaquah WA 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            200-amp service heavy-up modernizing older 100A panels to safely accommodate high-draw Level 2 EV charging.
+          </figcaption>
+        </figure>
+
+
+        <h2>Technical Background & How It Works</h2>
+        <p>Many Issaquah homes built before 2000 have 100-amp or 150-amp panels. These panels served adequately for decades, but modern electric vehicles, heat pumps, and induction cooktops have dramatically increased residential electrical demand.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Certified electrician testing panel load calculation and line voltage in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Certified load calculations per NEC Article 220 ensuring safe electrical headroom for heat pumps and EV chargers.
+          </figcaption>
+        </figure>
+
+
+        <p>A Level 2 EV charger drawing 48 amps continuously requires a dedicated 60-amp breaker. On a 100-amp panel, that single circuit consumes 60% of the entire electrical service, leaving only 40 amps for every other appliance in the house. A 200-amp upgrade provides safe, ample capacity for modern electrical demands.</p>
+
+        <p>This service is available throughout all 15 Issaquah neighborhoods, including <a href="/locations/issaquah-highlands/">Issaquah Highlands</a>, <a href="/locations/talus/">Talus</a>, <a href="/locations/klahanie/">Klahanie</a>, and <a href="/locations/olde-town-issaquah/">Olde Town Issaquah</a>. Browse our full <a href="/locations/">locations hub</a> to find your area.</p>
+
+        <h2>When to Contact Us</h2>
+        <ul>
+          <li>Your breaker panel has zero open slots for a new EV circuit</li>
+          <li>Your home has a 100A or 150A service that cannot support added load</li>
+          <li>Bus bars show discoloration, oxidation, or heat damage</li>
+          <li>You need to charge multiple electric vehicles simultaneously</li>
+          <li>Your electrician determined a panel upgrade is required for code compliance</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/modern-issaquah-garage-ev-charger.jpg" 
+            alt="Clean finished garage electrical service for EV charging in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Code-compliant conduit runs with dedicated neutral and grounding conductors inspected to City of Issaquah standards.
+          </figcaption>
+        </figure>
+
+
+        <p>For technical questions about panel upgrade for ev charging in Issaquah, call our dispatch line directly at <a href="tel:+14253800019">(425) 380-0019</a>. Licensed under <a href="https://apps.leg.wa.gov/WAC/default.aspx?cite=296-46B" target="_blank" rel="noopener">WAC 296-46B</a> and fully compliant with NEC Article 625 standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Related Solutions</span>
+        <h2>Related EV Charging Services</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <h3 class="card-title">Level 2 EV Charger Installation</h3>
+          <a href="/services/level-2-ev-charger-installation/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Circuit Repair & Installation</h3>
+          <a href="/services/ev-charger-circuit-repair-installation/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">Multi-EV Home Charging</h3>
+          <a href="/services/multi-ev-home-charging/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">Commercial EV Charging</h3>
+          <a href="/services/commercial-ev-charging/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV-Ready Home Wiring</h3>
+          <a href="/services/ev-ready-home-wiring/" class="card-link">View Service Details →</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/services/" class="btn btn-navy">View All 14 EV Services</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABand
+    title="Need Panel Upgrade for EV Charging in Issaquah?"
+    subtitle="Speak directly with an electrical specialist to schedule your on-site service."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Issaquah Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=612+Jasmine+Pl+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

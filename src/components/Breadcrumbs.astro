@@ -1,0 +1,45 @@
+---
+export interface BreadcrumbItem {
+  name: string;
+  url?: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.name,
+    ...(item.url ? { "item": item.url.startsWith('http') ? item.url : `https://issaquahevchargerrepair.com${item.url}` } : {})
+  }))
+};
+---
+
+<nav class="breadcrumbs-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumbs-list">
+      {items.map((item, index) => {
+        const isLast = index === items.length - 1;
+        return (
+          <li class="breadcrumbs-item">
+            {index > 0 && <span style="color: #94a3b8;">/</span>}
+            {isLast || !item.url ? (
+              <span style="color: #0b132b; font-weight: 600;" aria-current="page">{item.name}</span>
+            ) : (
+              <a href={item.url} class="breadcrumbs-link">{item.name}</a>
+            )}
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />

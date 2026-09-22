@@ -1,0 +1,163 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  schemaType?: 'LocalBusiness' | 'Service' | 'AboutPage' | 'ContactPage';
+  specificAreaServed?: string;
+  pageSchema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  schemaType = 'LocalBusiness',
+  specificAreaServed = 'Issaquah, WA',
+  pageSchema
+} = Astro.props;
+
+// Ensure clean trailing slash and clean URL
+const cleanPath = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
+const canonicalUrl = `https://issaquahevchargerrepair.com${cleanPath.endsWith('/') ? cleanPath : `${cleanPath}/`}`;
+
+const baseLocalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Electrician",
+  "@id": "https://issaquahevchargerrepair.com/#organization",
+  "name": "Issaquah EV Charger Repair",
+  "url": "https://issaquahevchargerrepair.com",
+  "logo": "https://issaquahevchargerrepair.com/favicon.svg",
+  "image": "https://issaquahevchargerrepair.com/favicon.svg",
+  "telephone": "+14253800019",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "612 Jasmine Pl NW",
+    "addressLocality": "Issaquah",
+    "addressRegion": "WA",
+    "postalCode": "98027",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 47.5352,
+    "longitude": -122.0415
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "PostalAddress",
+      "postalCode": "98027",
+      "addressLocality": "Issaquah",
+      "addressRegion": "WA"
+    },
+    {
+      "@type": "PostalAddress",
+      "postalCode": "98029",
+      "addressLocality": "Issaquah",
+      "addressRegion": "WA"
+    },
+    {
+      "@type": "City",
+      "name": "Issaquah",
+      "containedInPlace": {
+        "@type": "State",
+        "name": "Washington"
+      }
+    },
+    ...(specificAreaServed && specificAreaServed !== 'Issaquah, WA' ? [{
+      "@type": "AdministrativeArea",
+      "name": specificAreaServed
+    }] : [])
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "EV Charger Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Level 2 EV Charger Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "EV Charger Troubleshooting & Diagnostics"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tesla Wall Connector Repair & Installation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Panel Upgrade for EV Charging"
+        }
+      }
+    ]
+  }
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#0B132B" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Issaquah EV Charger Repair" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
+    <!-- Core Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(baseLocalBusinessSchema)} />
+    {pageSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+    )}
+  </head>
+  <body>
+    <Header currentPath={cleanPath} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

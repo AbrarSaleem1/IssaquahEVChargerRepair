@@ -1,0 +1,390 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'panel-upgrade-for-ev-charging',
+    title: '400-Amp Heavy-Up Electrical Services',
+    desc: 'Upgrading large custom estates from standard 200A service to dual 200A (400A total) capacity to support multiple simultaneous high-speed Level 2 charging circuits.'
+  },
+  {
+    slug: 'multi-ev-home-charging',
+    title: 'High-Output Dual Charging Systems',
+    desc: 'Engineering dedicated continuous 48-amp charging for multiple luxury vehicles, including Porsche Taycan, Lucid Air, Rivian, and Tesla fleets.'
+  },
+  {
+    slug: 'ev-charger-relocation',
+    title: 'Detached Carriage House & Barn Trenching',
+    desc: 'Underground conduit trenching and subpanel distribution connecting main estate services to secondary garages and separate vehicle workshops.'
+  },
+  {
+    slug: 'tesla-wall-connector-installation-repair',
+    title: 'Tesla Universal & High-Amperage Service',
+    desc: 'Certified hardwired installation, commercial-grade thermal management, and power-sharing setup for Tesla Wall Connectors on 60A dedicated breakers.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Issaquah Highlands', url: '/locations/issaquah-highlands/', note: 'Located directly adjacent down the ridge via Grand Ridge Plaza corridors.' },
+  { name: 'Preston', url: '/locations/preston/', note: 'Directly east along High Point Way and the rural I-90 foothills.' },
+  { name: 'Tiger Mountain', url: '/locations/tiger-mountain/', note: 'Forested foothill estates and acreage properties across the valley.' }
+];
+
+const grandRidgeFaqs = [
+  {
+    question: "Why do custom estates in Grand Ridge often require a 400-amp service upgrade?",
+    answer: "Many luxury custom residences in Grand Ridge span 4,500 to 9,000 square feet and feature high-capacity electrical systems including multiple geothermal heat pumps, heated driveway systems, wine cellars, and extensive architectural lighting. When adding two Level 2 EV charging stations pulling 48 amps each (requiring two 60-amp breakers), the cumulative continuous load easily exceeds the capacity of a standard 200-amp service panel. A 400-amp (320-amp continuous) service heavy-up provides dedicated electrical headroom without tripping main breakers."
+  },
+  {
+    question: "Can an EV charger be installed in a detached carriage house or workshop on my property?",
+    answer: "Yes. Many Grand Ridge properties feature detached three-car garages, carriage houses, or dedicated vehicle barns. We specialize in exterior directional boring and underground conduit trenching. We install dedicated subpanels equipped with surge protection in the outbuilding, ensuring full 48-amp charging speeds without voltage drop over long wire runs."
+  },
+  {
+    question: "How do you protect high-end EV chargers from seasonal power surges in forested areas?",
+    answer: "Grand Ridge's mountainous, heavily wooded environment exposes overhead utility lines to falling tree limbs and lightning events, which can cause sudden electrical surges. Because modern EVSE units contain delicate microprocessor motherboards, we install Type 1 and Type 2 whole-house surge protective devices (SPDs) directly at the main distribution panel and subpanels, protecting your charging stations and vehicles against high-voltage spikes."
+  },
+  {
+    question: "Does an EV charger installation in Grand Ridge require coordination with Puget Sound Energy?",
+    answer: "If your installation utilizes existing panel capacity, work is permitted directly through the City of Issaquah or Washington State L&I. However, if your estate requires upgrading from a 200-amp to a 400-amp service entrance, our master electricians coordinate directly with Puget Sound Energy Customer Construction Services to upgrade the utility service drop, transformer sizing, and meter base."
+  },
+  {
+    question: "Can I integrate my EV charging stations with a home battery backup or solar array?",
+    answer: "Yes. We install smart EV chargers that communicate directly with energy storage systems like Tesla Powerwall, Enphase, or SolarEdge. During a utility grid power outage, the system can automatically throttle or pause EV charging to preserve essential household battery reserves, or charge purely from surplus daytime solar generation."
+  }
+];
+---
+
+<Layout
+  title="Grand Ridge EV Charger Installation & Repair | Luxury Estate Electricians 98029"
+  description="High-amperage EV charger repair, 400A panel upgrades, and detached garage wiring in Grand Ridge, Issaquah WA (98029). Multi-EV specialists for luxury estates. Call (425) 380-0019."
+  canonicalPath="/locations/grand-ridge/"
+  specificAreaServed="Grand Ridge, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Grand Ridge', url: '/locations/grand-ridge/' }
+  ]} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Grand Ridge Estate Electrical Specialists</span>
+        <h1>Grand Ridge EV Charger Installation & Heavy-Up Electrical Service in Issaquah</h1>
+        <p class="hero-lead">
+          Tailored high-amperage EVSE engineering for Grand Ridge custom estates and forested acreage residences. We specialize in 400-amp service heavy-ups, multi-vehicle charging systems, detached carriage house underground trenching, and certified diagnostics in zip code 98029.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime">
+            <span>📞</span>
+            <span>Call (425) 380-0019</span>
+          </a>
+          <a href="#grand-ridge-guide" class="btn btn-outline-white">
+            Explore Estate Guide
+          </a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> Local to Grand Ridge 98029</div>
+          <div class="hero-badge-item"><span>🛡️</span> 400A Heavy-Up Contractors</div>
+          <div class="hero-badge-item"><span>⚡</span> Dual-Vehicle Charging</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- About Company Summary -->
+  <section class="section" id="grand-ridge-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Custom Estate Expertise</span>
+          <h2>High-Capacity EV Electrical Architecture for Grand Ridge Properties</h2>
+          <p>
+            Grand Ridge stands as one of the Pacific Northwest’s most exclusive residential sanctuaries. Situated along the high forested ridgelines east of Issaquah Highlands, Grand Ridge features expansive custom estates, multi-acre wooded parcels, and panoramic vistas stretching from Lake Sammamish to the snow-capped Olympic and Cascade ranges. Homeowners here demand top-tier craftsmanship, uncompromising safety standards, and robust electrical infrastructure capable of supporting advanced lifestyle amenities.
+          </p>
+          <p>
+            The electric vehicle profile in Grand Ridge reflects the pinnacle of modern automotive engineering. Garages frequently house multiple high-output electric vehicles, including Lucid Air sedans, Porsche Taycans, Mercedes-EQ SUVs, Tesla Model S Plaid, and heavy-duty electric trucks like the Rivian R1T and Ford F-150 Lightning. Supporting multiple 48-amp charging stations operating at continuous full capacity requires electrical engineering that far exceeds standard residential wiring practices.
+          </p>
+          <p>
+            Issaquah EV Charger Repair delivers turnkey, white-glove electrical services designed specifically for Grand Ridge custom estates. From engineering 400-amp service heavy-ups to installing underground feeder lines to detached carriage houses and troubleshooting high-voltage hardware, our licensed electricians handle every installation with master-level precision.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">98029 Estate Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Grand Ridge Housing & Electrical Demands</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Property Types:</strong> Custom luxury architectural estates, multi-acre wooded acreage, and private gated compounds.</li>
+            <li><strong>Garage Infrastructure:</strong> Three-bay to six-bay attached garages, detached carriage houses, and heated collector shops.</li>
+            <li><strong>Electrical Service:</strong> 320A/400A split-phase 120/240V utility entrances; high-demand multi-panel configurations.</li>
+            <li><strong>Specialized Demands:</strong> Dual 48A charging circuits, underground conduit trenching, battery storage integration, and whole-estate surge suppression.</li>
+            <li><strong>Utility Coordination:</strong> Puget Sound Energy high-capacity transformer coordination.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services for this Neighborhood -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Estate Solutions</span>
+        <h2>Grand Ridge Focused EV Charging Services</h2>
+        <p class="section-subtitle">
+          These four electrical solutions address the high continuous power demands and expansive layouts of Grand Ridge custom properties.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">
+              Read Service Details →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive In-Depth Technical Content Body (2400+ words target) -->
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>The Engineering Behind High-Amperage Estate EVSE in Grand Ridge</h2>
+        <p>
+          Managing electrical loads in a custom luxury estate requires an advanced understanding of electrical load diversity, voltage drop across expansive physical layouts, and continuous duty thermal dynamics. In standard residential neighborhoods, a single 32-amp or 40-amp EVSE is often the only high-draw continuous load on the property. In Grand Ridge, an estate may feature two or three electric vehicles charging simultaneously alongside wine cellar chillers, heated floors, swimming pool pumps, and multi-zone commercial-grade heat pumps.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/luxury-estate-grand-ridge-issaquah.jpg" 
+            alt="Custom luxury estate with multi-car garage in Grand Ridge Issaquah WA 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Grand Ridge custom estate homes: spacious multi-car garages and high-amperage electrical service demands.
+          </figcaption>
+        </figure>
+
+
+        <p>
+          Under the National Electrical Code (NEC Article 625), charging an electric vehicle represents a continuous duty load, demanding a 125% safety margin on all conductors, terminal blocks, and circuit breakers. Installing two 48-amp charging stations requires two dedicated 60-amp double-pole circuit breakers drawing a combined 96 amps of continuous current. That alone represents nearly half of a standard 200-amp residential electrical service.
+        </p>
+
+        <h3>Why 400-Amp (320A Continuous) Services Are the Gold Standard in Grand Ridge</h3>
+        <p>
+          When our master electricians evaluate custom estates along Grand Ridge Drive NE and High Point Way, we frequently find that existing 200-amp electrical services are already operating near calculated capacity. If a homeowner attempts to add high-amperage vehicle charging without upgrading the service entrance, running a heavy charging cycle while major household systems are active can push the main breaker into thermal overload, causing nuisance blackouts.
+        </p>
+        <p>
+          To provide complete reliability, we install 400-amp electrical services (technically rated for 320 amps of continuous duty under utility standards). This involves coordinating with Puget Sound Energy to install a 320-amp meter socket, dual 200-amp main breaker distribution panels, and upsized commercial-grade service entrance conductors. This architecture provides complete independence between household living circuits and vehicle charging subpanels, ensuring that rapid dual-vehicle charging never impacts indoor comfort or electronic entertainment systems.
+        </p>
+
+        <h3>Underground Trenching and Detached Carriage House Infrastructure</h3>
+        <p>
+          A common architectural feature in Grand Ridge is the detached multi-bay carriage house or vehicle collector barn, often located fifty to two hundred feet from the primary residence. Providing clean, high-amperage power to an outbuilding requires specialized exterior underground engineering:
+        </p>
+        <ul>
+          <li><strong>Deep Trenching & Directional Boring:</strong> We excavate trench pathways compliant with Washington State L&I depth standards (minimum 24 inches for direct-burial schedule 40/80 PVC conduit). Where manicured lawns, heated paver driveways, or mature native trees must be preserved, we utilize directional horizontal boring to install conduit without disturbing the surface grounds.</li>
+          <li><strong>Voltage Drop Elimination:</strong> When running electrical feeders over distances exceeding one hundred feet, resistance in standard wire sizes causes noticeable voltage drop during peak current draw. We upsize feeder cables to 3/0 or 4/0 copper conductors, ensuring that line voltage delivered to the detached subpanel remains rock-solid at 240 volts under full charging load.</li>
+          <li><strong>Dedicated Outbuilding Subpanels:</strong> We install dedicated 100-amp or 125-amp subpanels inside the carriage house, equipped with dedicated isolation disconnects, heavy-duty industrial breakers, and local ground rods bonded in compliance with NEC Article 250.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/multi-ev-home-dual-charging.jpg" 
+            alt="Dual EV charging system with dynamic power sharing in Grand Ridge 98029 estate garage"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Multi-vehicle intelligent charging systems allowing two electric cars to charge simultaneously without panel overload.
+          </figcaption>
+        </figure>
+
+
+        <blockquote>
+          "In luxury custom estates like those in Grand Ridge, high-speed EV charging must be engineered as an integrated infrastructure system. Upgraded 400-amp panels, industrial conductors, and multi-tier surge protection preserve property value and deliver dependable vehicle charging."
+        </blockquote>
+
+        <h3>Multi-Tier Surge Suppression for Forested Acreage Properties</h3>
+        <p>
+          Grand Ridge's high-altitude topography and dense evergreen tree cover expose local power lines to seasonal storms and power quality anomalies. Falling branches across overhead Puget Sound Energy transmission lines along High Point Way and I-90 can create micro-outages, transient voltage surges, and utility grid switching transients.
+        </p>
+        <p>
+          High-end electric vehicles contain delicate onboard charging computers (AC-to-DC rectifiers) and lithium-ion battery management systems that are vulnerable to high-voltage transients. Similarly, advanced smart charging stations (such as Tesla Universal Wall Connectors or ChargePoint Home Flex) feature sensitive digital microprocessors. We install cascading multi-tier surge protection: Type 1 surge protective devices (SPDs) installed at the main utility meter base to absorb massive external surges, combined with Type 2 SPDs installed at individual EV subpanels to clamp residual micro-surges, safeguarding both your charging hardware and luxury vehicles.
+        </p>
+
+        <h3>Dynamic Power-Sharing and Smart Solar/Storage Integration</h3>
+        <p>
+          For Grand Ridge homeowners with existing rooftop solar arrays or whole-home battery backup systems (such as dual or triple Tesla Powerwall units), we engineer intelligent charging ecosystems. We configure smart EVSE systems that communicate with home energy monitors in real time:
+        </p>
+        <ul>
+          <li><strong>Solar Excess Charging:</strong> During sunny summer afternoons, the system directs surplus rooftop photovoltaic power straight into your vehicle batteries rather than exporting it to the grid at lower utility compensation rates.</li>
+          <li><strong>Grid Outage Load Shedding:</strong> During winter storm power outages, when the home shifts to battery backup or standby generator power, the charging system automatically throttles down or pauses completely, ensuring that critical estate systems—well pumps, refrigerators, and security systems—remain fully powered.</li>
+        </ul>
+
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="400-amp service heavy-up for high-demand electric vehicle charging in Grand Ridge 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            400-amp service heavy-ups and detached carriage house trenching engineered to luxury estate standards.
+          </figcaption>
+        </figure>
+
+<h2>Comprehensive Grand Ridge Street and Landmark Coverage</h2>
+        <p>
+          Our technical service vans provide complete, discreet service across all private estates, gated lanes, and thoroughfares in the Grand Ridge area:
+        </p>
+        <ul>
+          <li><strong>Estate Thoroughfares:</strong> Active service along Grand Ridge Drive NE, High Point Way, 280th Avenue NE, and Mitchell Hill Road.</li>
+          <li><strong>Private Lanes & Compounds:</strong> Complete technical coverage throughout private gated drives, ridgeline spurs, and estate access roads.</li>
+          <li><strong>Parks & Foothill Boundaries:</strong> Service surrounding Grand Ridge Regional Park, Mitchell Hill Forest trailheads, High Point trailhead corridors, and properties bordering Tiger Mountain open spaces.</li>
+          <li><strong>Postal Sector:</strong> Prompt dispatch across all residential and estate addresses within zip code 98029.</li>
+        </ul>
+
+        <h2>Why Choose Us for Grand Ridge EV Charger Services</h2>
+        <p>
+          Grand Ridge homeowners choose our electrical team for our specialized knowledge, meticulous execution, and commitment to high-end estate standards:
+        </p>
+        <ol>
+          <li><strong>High-Capacity Electrical Capabilities:</strong> We specialize in 400-amp service heavy-ups, 320-amp meter bases, and commercial-grade distribution subpanels.</li>
+          <li><strong>Discreet & Clean Execution:</strong> We respect the privacy and manicured grounds of custom estates, maintaining spotless work environments and low-impact installation techniques.</li>
+          <li><strong>Direct Local Proximity:</strong> Located at 612 Jasmine Pl NW in central Issaquah, our electricians respond rapidly to diagnostic and repair service calls across Grand Ridge.</li>
+          <li><strong>Licensed, Permitted & Insured:</strong> Full compliance with Washington State L&I electrical codes, complete commercial liability coverage, and City of Issaquah permitting.</li>
+          <li><strong>Underground Trenching & Boring Mastery:</strong> Expertise in running long-distance subterranean electrical conduits to detached garages and carriage houses without disrupting landscaping.</li>
+          <li><strong>Luxury Vehicle Compatibility:</strong> Factory-spec troubleshooting and installation for Porsche Taycan, Tesla, Lucid Air, Rivian, BMW i-series, Mercedes-EQ, and Audi e-tron.</li>
+        </ol>
+
+        <h2>Our Four-Step On-Site Diagnostic and Installation Protocol</h2>
+        <p>
+          When you request technical service for your Grand Ridge estate, our electricians follow a thorough four-stage process:
+        </p>
+        <ol>
+          <li><strong>Comprehensive Estate Electrical Audit:</strong> We calculate total continuous electrical load, inspect existing service panel capacity, and evaluate distances between power sources and vehicle parking bays.</li>
+          <li><strong>Engineering Design & Permitting:</strong> We create detailed electrical single-line schematics, coordinate with Puget Sound Energy if a service heavy-up is required, and file official permits with the City of Issaquah or WA L&I.</li>
+          <li><strong>Precision Installation & Heavy-Up:</strong> Our electricians install industrial-grade copper conductors, dual-pole overcurrent protection, surge suppression modules, and high-speed charging hardware.</li>
+          <li><strong>Full-Capacity Load Testing:</strong> We initiate simultaneous live charging cycles across all vehicles, monitoring thermal dissipation, voltage stability, and digital communications under maximum continuous load.</li>
+        </ol>
+
+        <h2>Straight-Forward Assessment Standards</h2>
+        <p>
+          We conduct every diagnostic evaluation with total transparency. Our electricians inspect your equipment thoroughly, explain the physical status of your electrical components, and provide clear technical guidance tailored to your estate's long-term vehicle charging requirements.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Neighborhoods Links -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">
+          In addition to Grand Ridge, our technicians provide dedicated electrical services throughout adjacent neighborhoods.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <FAQAccordion items={grandRidgeFaqs} />
+
+  <!-- CTA Band -->
+  <CTABand
+    title="Need High-Capacity EV Charging for Your Grand Ridge Estate?"
+    subtitle="Speak directly with an electrical specialist to book an on-site estate assessment or diagnostic service call."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <!-- Contact & Map Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Direct Contact</span>
+        <h2>Schedule Grand Ridge EVSE Service</h2>
+        <p class="section-subtitle">
+          Call our Issaquah dispatch line directly to discuss your vehicle charging needs or report an equipment malfunction.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Grand Ridge Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving Grand Ridge Dr NE, High Point Way & all 98029</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+              📞 Call Technicians for Service
+            </a>
+          </div>
+        </div>
+
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe
+            title="Grand Ridge Issaquah Map"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=Grand+Ridge+Dr+NE,+Issaquah,+WA+98029&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

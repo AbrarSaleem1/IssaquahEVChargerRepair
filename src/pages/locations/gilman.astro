@@ -1,0 +1,333 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'ev-charger-troubleshooting',
+    title: 'Gilman Corridor Charger Diagnostics',
+    desc: 'Fault tracing and breaker trip resolution for mixed-use properties and condominiums along NW Gilman Boulevard and the Front Street commercial transition zone.'
+  },
+  {
+    slug: 'commercial-ev-charging',
+    title: 'Commercial Property EV Stations',
+    desc: 'Multi-station Level 2 installations for Gilman Boulevard retail centers, office buildings, and mixed-use developments with networked billing and load management.'
+  },
+  {
+    slug: 'level-2-ev-charger-installation',
+    title: 'Residential Level 2 Installations',
+    desc: 'Dedicated 240V charger installations for single-family homes and townhomes along the residential streets branching off Gilman Boulevard.'
+  },
+  {
+    slug: 'panel-upgrade-for-ev-charging',
+    title: 'Panel Upgrades for Gilman Area Homes',
+    desc: 'Service upgrades from 100A to 200A for 1970s-1990s homes that lack capacity for a dedicated EV charging circuit alongside existing appliance loads.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Olde Town Issaquah', url: '/locations/olde-town-issaquah/', note: 'Historic downtown core directly west along Front Street and Sunset Way.' },
+  { name: 'Central Issaquah', url: '/locations/central-issaquah/', note: 'Adjacent commercial and residential zone along the I-90 interchange.' },
+  { name: 'Sycamore', url: '/locations/sycamore/', note: 'Newer residential development north of Gilman Boulevard.' }
+];
+
+const faqs = [
+  {
+    question: "Can you install EV chargers in Gilman Boulevard commercial properties?",
+    answer: "Yes. We design and install commercial Level 2 charging stations for retail centers, office parks, and mixed-use developments along Gilman Boulevard. Commercial installations include networked load management, revenue-grade metering, ADA-compliant placement, and commercial permitting through the City of Issaquah."
+  },
+  {
+    question: "Do condominiums along Gilman need HOA approval for EV charger installation?",
+    answer: "Washington State's EV charging rights law (RCW 64.90.510) limits HOA restrictions on EV charger installations. However, condos typically require approval for electrical work in common areas or on shared electrical panels. We provide detailed installation plans and electrical specifications that satisfy most condo board requirements."
+  },
+  {
+    question: "What panel sizes are common in Gilman neighborhood homes?",
+    answer: "Homes built in the 1970s through 1990s in the Gilman area typically have 100-amp or 150-amp panels. Many of these homes need a panel upgrade or subpanel addition to support a dedicated 40-amp or 60-amp EV charging circuit. Newer construction generally has 200-amp panels with available capacity."
+  },
+  {
+    question: "How close is your office to the Gilman area?",
+    answer: "Our dispatch center at 612 Jasmine Pl NW is located within the Gilman service area, enabling response times under 10 minutes to most Gilman Boulevard addresses during normal business hours."
+  },
+  {
+    question: "Can you install outdoor chargers at Gilman area businesses?",
+    answer: "Yes. Outdoor commercial installations use NEMA 4X rated equipment, bollard-protected pedestals, weather-tight conduit systems, and properly grounded concrete-embedded foundations. We handle site design, permitting, and PSE coordination for transformer or service upgrades."
+  }
+];
+---
+
+<Layout
+  title="Gilman Issaquah EV Charger Repair & Installation | Boulevard Corridor Electricians"
+  description="EV charger repair and installation in the Gilman area of Issaquah, WA. Commercial and residential EVSE service along NW Gilman Boulevard. Call (425) 380-0019."
+  canonicalPath="/locations/gilman/"
+  specificAreaServed="Gilman, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Gilman' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Gilman Area Electrical Specialists</span>
+        <h1>EV Charger Repair & Installation in the Gilman Corridor, Issaquah</h1>
+        <p class="hero-lead">
+          The Gilman Boulevard corridor is the commercial and residential crossroads of Issaquah. From retail parking lots needing commercial EV stations to residential side streets where homeowners need garage charging, our electricians bring specialized EV infrastructure expertise to every property type in this mixed-use area.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="#gilman-guide" class="btn btn-outline-white">Explore Neighborhood Guide</a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> NW Gilman Blvd Corridor</div>
+          <div class="hero-badge-item"><span>🏢</span> Commercial & Residential</div>
+          <div class="hero-badge-item"><span>⚡</span> Multi-Station Installations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section" id="gilman-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Locally Dispatched</span>
+          <h2>EV Charging Expertise for Gilman's Commercial and Residential Properties</h2>
+          <p>
+            The Gilman area straddles both sides of NW Gilman Boulevard, Issaquah's primary commercial artery running east from the I-90 interchange toward Olde Town. This corridor includes retail shopping centers, professional offices, restaurants, and multi-family residential complexes interspersed with established single-family neighborhoods on the streets branching north and south from the boulevard.
+          </p>
+          <p>
+            This mixed-use character creates diverse EV charging demands. Commercial property managers need multi-station Level 2 installations with networked billing for tenant and customer use. Residential homeowners on adjacent side streets need dedicated garage charging circuits. Condominium boards are fielding increasing requests from unit owners for charger installations on shared electrical systems.
+          </p>
+          <p>
+            Issaquah EV Charger Repair handles both commercial and residential EV charging infrastructure throughout the Gilman corridor. Our dispatch office sits within minutes of every address in this area, and our electricians carry the diagnostic tools and commercial-grade hardware required for projects ranging from single-car residential installations to 10-station commercial parking deployments.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">Gilman Quick Electrical Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Gilman Area Property & Infrastructure</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Property Types:</strong> Commercial retail, offices, condominiums, townhomes, and single-family residences.</li>
+            <li><strong>Construction Eras:</strong> 1970s through 2020s, with ongoing infill development.</li>
+            <li><strong>Residential Service:</strong> 100A to 200A panels. Older homes often need upgrades.</li>
+            <li><strong>Commercial Service:</strong> 400A to 800A three-phase for larger retail and office complexes.</li>
+            <li><strong>Common Needs:</strong> Commercial multi-station installs, condo charger approvals, and residential panel upgrades.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Targeted Solutions</span>
+        <h2>Gilman Corridor Focused EVSE Services</h2>
+        <p class="section-subtitle">While we offer our complete catalog of 14 services, these four are most frequently requested in the Gilman area.</p>
+      </div>
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">Read Service Details →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Commercial EV Charging Along NW Gilman Boulevard</h2>
+        <p>
+          NW Gilman Boulevard is Issaquah's retail spine, home to shopping centers, restaurants, grocery stores, medical offices, and professional services. As EV adoption accelerates across the Eastside, commercial property owners along this corridor are recognizing that EV charging stations are not optional amenities but fundamental infrastructure for attracting customers and tenants.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/suburban-craftsman-home-issaquah.jpg" 
+            alt="Mixed-use and residential properties near Gilman Village Issaquah WA 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Historic Gilman corridor: boutique commercial establishments and surrounding residential homes.
+          </figcaption>
+        </figure>
+
+
+        <p>
+          Commercial EV charging installations differ fundamentally from residential projects. Instead of a single 48-amp circuit serving one vehicle, a commercial property may need four, eight, or more Level 2 stations running simultaneously. A row of eight stations, each drawing 32 amps, represents 256 continuous amps of additional electrical load, a significant addition to any commercial service.
+        </p>
+        <p>
+          Our commercial installations begin with a thorough electrical load study of the property's existing service. We assess the main service amperage, transformer capacity, panel load factor, and available physical space for new equipment. Based on these findings, we design a phased installation plan that maximizes the number of charging stations within the existing infrastructure, with provisions for future expansion.
+        </p>
+
+        <h3>Networked Charging with Revenue Management</h3>
+        <p>
+          Modern commercial charging stations include built-in networking capabilities that enable access control, usage tracking, and automated billing. For retail properties, stations can be configured to offer complimentary charging during shopping visits or time-limited sessions. For office buildings and apartment complexes, networked stations track individual usage by RFID card or mobile app and generate monthly billing statements.
+        </p>
+        <p>
+          We install and configure networked EVSE systems from ChargePoint, Blink, EverCharge, and other commercial-grade manufacturers. Our installations include revenue-grade kWh metering (ANSI C12 compliant) for properties that need to bill tenants or charge for electricity, as well as cloud-based load management that dynamically distributes available power across all active stations.
+        </p>
+
+        <h3>Residential Charging in Gilman Side Streets</h3>
+        <p>
+          The residential neighborhoods branching off Gilman Boulevard include a wide range of home vintages and electrical configurations. Homes built in the 1970s and 1980s along the streets north and south of the boulevard frequently have 100-amp panels that are already loaded with original household circuits. Adding a 40-amp or 60-amp EV charger circuit to these panels requires a load calculation and, in many cases, a panel upgrade.
+        </p>
+        <p>
+          Newer townhomes and condominiums built during Gilman Boulevard's recent redevelopment cycle typically have modern 200-amp panels with available breaker positions. For these properties, a Level 2 charger installation may require only a new dedicated circuit, an installation that can be completed in a single visit.
+        </p>
+        <p>
+          Our electricians tailor every installation to the specific property. We never apply a one-size-fits-all approach. A 1978 split-level on a Gilman side street requires a completely different scope of work than a 2022 townhome in a new development, and our assessments reflect that reality.
+        </p>
+
+        <h3>Condominium EV Charging in Multi-Family Gilman Properties</h3>
+        <p>
+          Multi-family developments along Gilman Boulevard present unique EV charging challenges. Individual unit owners want dedicated chargers in their parking stalls, but the building's electrical infrastructure was designed before EV charging was commonplace. Shared electrical panels, metering complexities, and HOA governance structures all factor into the installation process.
+        </p>
+        <p>
+          Washington State law (RCW 64.90.510) generally supports EV charger installations by unit owners, but the details of electrical work on common systems require careful coordination. We work with condo boards to develop installation plans that address electrical capacity, metering for individual billing, load management across multiple chargers, and compliance with the building's electrical system limitations.
+        </p>
+
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Panel upgrade and circuit diagnostics in Gilman corridor 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Systematic electrical diagnostics identifying loose neutrals, breaker wear, and load balance issues.
+          </figcaption>
+        </figure>
+
+<h2>Comprehensive Gilman Area Street and Landmark Coverage</h2>
+        <p>
+          Our technicians serve every property within the Gilman corridor and surrounding residential streets:
+        </p>
+        <ul>
+          <li><strong>Commercial Corridor:</strong> NW Gilman Boulevard from the I-90 interchange west to the Front Street intersection, including Gilman Village, Pickering Place, and Meadows shopping areas.</li>
+          <li><strong>Residential North:</strong> 12th Avenue NW, NW Poplar Way, NW Alder Place, and streets between Gilman and the Issaquah Highlands access roads.</li>
+          <li><strong>Residential South:</strong> Rainier Boulevard S, SE Clark Street, and the residential blocks between Gilman and Squak Mountain foothills.</li>
+          <li><strong>Multi-Family:</strong> Condominium and apartment complexes along the Gilman Boulevard redevelopment corridor and Hyla Avenue NE.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/commercial-ev-charging-stations-parking.jpg" 
+            alt="Commercial and multi-family EV charging stations along Gilman Blvd Issaquah 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Turnkey commercial pedestal installations for retail parking lots and multi-family condominiums.
+          </figcaption>
+        </figure>
+
+
+        <h2>Why Gilman Area Property Owners Choose Us</h2>
+        <ol>
+          <li><strong>Dual Commercial-Residential Capability:</strong> We handle both large-scale commercial parking installations and individual residential garage chargers with equal expertise.</li>
+          <li><strong>Condo Board Experience:</strong> We understand the approval processes, shared-system constraints, and individual metering requirements unique to multi-family EV charging.</li>
+          <li><strong>Office Within the Service Zone:</strong> Our 612 Jasmine Pl NW dispatch center is located directly within the Gilman area, enabling response times under 10 minutes.</li>
+          <li><strong>Full Permit Management:</strong> We handle all electrical permits through City of Issaquah or WA L&I, including commercial building permits where required.</li>
+          <li><strong>Scalable Infrastructure Design:</strong> We design installations with future growth in mind, pre-running conduit and sizing panels for additional stations that may be needed in two or three years.</li>
+        </ol>
+
+        <h2>Our Service Process</h2>
+        <ol>
+          <li><strong>Initial Consultation:</strong> We assess the property type, electrical service details, number of stations needed, and any HOA or commercial building requirements.</li>
+          <li><strong>On-Site Load Study:</strong> Our electrician inspects the existing electrical infrastructure, performs load calculations, and designs the optimal installation approach.</li>
+          <li><strong>Permitted Installation:</strong> We pull permits, install circuits and equipment, and coordinate inspections for full code compliance.</li>
+          <li><strong>Commissioning and Training:</strong> We activate all stations, verify charging under load, and provide operation training for property managers or homeowners.</li>
+        </ol>
+
+        <p>
+          Call <a href="tel:+14253800019">(425) 380-0019</a> to discuss your Gilman area EV charging project, whether it is a single garage charger or a twenty-station commercial deployment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">In addition to Gilman, our technicians provide dedicated electrical services throughout adjacent neighborhoods.</p>
+      </div>
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <CTABand
+    title="Need EV Charger Service in the Gilman Area?"
+    subtitle="Speak directly with an electrical specialist about your residential or commercial EV charging project."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Gilman Area Dispatch</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving NW Gilman Blvd & all Gilman area properties</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians for Service</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Gilman Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=NW+Gilman+Boulevard,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

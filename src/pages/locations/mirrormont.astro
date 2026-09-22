@@ -1,0 +1,327 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'level-2-ev-charger-installation',
+    title: 'Mirrormont Home Charger Installations',
+    desc: 'Hardwired 240V Level 2 installations for Mirrormont homes with attached garages, properly routed through finished spaces and utility areas.'
+  },
+  {
+    slug: 'panel-upgrade-for-ev-charging',
+    title: 'Mirrormont Panel Modernization',
+    desc: 'Upgrading 100A and 150A panels in 1970s-1990s Mirrormont homes to 200A load centers with dedicated EV circuit capacity.'
+  },
+  {
+    slug: 'ev-charger-troubleshooting',
+    title: 'Foothill Charger Diagnostics',
+    desc: 'Diagnosing fault codes, breaker trips, and voltage fluctuation issues in Mirrormont garages with overhead PSE electrical service.'
+  },
+  {
+    slug: 'ev-charger-circuit-repair-installation',
+    title: 'Circuit Repair & New Installations',
+    desc: 'Repairing damaged circuits and installing new dedicated 240V lines for EV chargers in Mirrormont properties of all vintages.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Tiger Mountain', url: '/locations/tiger-mountain/', note: 'Adjacent forested mountain area with rural acreage properties to the east.' },
+  { name: 'Squak Mountain', url: '/locations/squak-mountain/', note: 'Neighboring mountain residential community to the north.' },
+  { name: 'Preston', url: '/locations/preston/', note: 'Rural community to the southeast along the Preston-Fall City corridor.' }
+];
+
+const faqs = [
+  {
+    question: "What panel sizes do Mirrormont homes typically have?",
+    answer: "Homes built in the 1970s-1980s in Mirrormont typically have 100-amp or 150-amp panels. Homes built in the 1990s-2000s generally have 200-amp panels. We inspect your specific panel and perform NEC Article 220 load calculations to determine if an upgrade is needed for EV charging."
+  },
+  {
+    question: "Does Mirrormont have an HOA that governs charger installations?",
+    answer: "If an HOA is active in Mirrormont, installations inside attached garages typically do not require approval. Any exterior modifications may need review. Washington State law limits HOA restrictions on EV charger installations, and we provide documentation to facilitate the approval process."
+  },
+  {
+    question: "Is overhead power a concern for EV charging in Mirrormont?",
+    answer: "Overhead PSE service is more vulnerable to power surges from lightning, falling branches, and wildlife contact. We install surge protective devices (SPDs) at the panel to protect your charger from damaging voltage spikes."
+  },
+  {
+    question: "Can you install a charger if my Mirrormont garage is below the main level?",
+    answer: "Yes. Many Mirrormont homes on sloped lots have garages on a lower level. We route circuits through interior walls, crawlspaces, or utility chases to reach the garage without cutting through finished living spaces."
+  },
+  {
+    question: "How long is the drive from your office to Mirrormont?",
+    answer: "Our dispatch center at 612 Jasmine Pl NW is approximately 10 to 20 minutes from most Mirrormont addresses, depending on the specific location within the community."
+  }
+];
+---
+
+<Layout
+  title="Mirrormont Issaquah EV Charger Repair & Installation | Foothill Electricians"
+  description="EV charger repair and Level 2 installation in Mirrormont, Issaquah WA. Panel upgrades, circuit installations, and charger diagnostics for foothill homes. Call (425) 380-0019."
+  canonicalPath="/locations/mirrormont/"
+  specificAreaServed="Mirrormont, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Mirrormont' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Mirrormont Electrical Specialists</span>
+        <h1>EV Charger Repair & Installation in Mirrormont, Issaquah</h1>
+        <p class="hero-lead">
+          Tucked along the wooded foothills south of Issaquah's central core, Mirrormont is an established residential community where homes range from 1970s-era construction to early 2000s builds. Our licensed electricians understand the specific panel types, wiring vintages, and terrain challenges that affect EV charger installations in this foothill neighborhood.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="#mirrormont-guide" class="btn btn-outline-white">Explore Neighborhood Guide</a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> Mirrormont Community</div>
+          <div class="hero-badge-item"><span>🌲</span> Foothill Home Experience</div>
+          <div class="hero-badge-item"><span>⚡</span> Panel Upgrade Specialists</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section" id="mirrormont-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Locally Dispatched</span>
+          <h2>Professional EV Charging Service for Mirrormont's Established Homes</h2>
+          <p>
+            Mirrormont is a well-established residential community situated on the forested hillsides south of central Issaquah. Developed primarily during the 1970s through the early 2000s, the neighborhood features a mix of ranch homes, split-level designs, and traditional two-story family residences set among tall evergreen trees on generous lots.
+          </p>
+          <p>
+            The electrical infrastructure in Mirrormont homes spans multiple decades of construction standards. Older homes may have 100-amp or 150-amp panels with limited available breaker positions, while newer construction typically features 200-amp service with more capacity. The community's overhead PSE electrical service, sloped building lots, and varied garage configurations all influence how EV charger installations are planned and executed.
+          </p>
+          <p>
+            Issaquah EV Charger Repair brings focused EVSE expertise to Mirrormont. Our electricians handle the specific challenges of foothill homes—panels on different floors than the garage, sloped-lot construction requiring creative conduit routing, and older electrical systems that need assessment before adding high-amperage EV loads.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">Mirrormont Quick Electrical Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Mirrormont Housing & Infrastructure</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Construction Eras:</strong> 1970s through early 2000s residential construction.</li>
+            <li><strong>Predominant Housing:</strong> Ranch, split-level, and two-story family homes on wooded lots.</li>
+            <li><strong>Typical Electrical Service:</strong> 100A to 200A, overhead PSE utility feeds.</li>
+            <li><strong>Common Installation Needs:</strong> Panel upgrades, circuit installations, surge protection, and multi-level conduit routing.</li>
+            <li><strong>Special Considerations:</strong> Sloped lots, garages on different levels, overhead power vulnerability, and varied panel ages.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Targeted Solutions</span>
+        <h2>Mirrormont Focused EVSE Services</h2>
+        <p class="section-subtitle">While we offer all 14 services city-wide, these four address the most common Mirrormont scenarios.</p>
+      </div>
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">Read Service Details →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>EV Charging in Mirrormont: Working with Established Electrical Infrastructure</h2>
+        <p>
+          Mirrormont homes were built during an era when household electrical demands were significantly lower than they are today. A 1975 ranch home was designed for lighting, a refrigerator, a television, an electric range, and perhaps a clothes dryer. The idea of drawing 48 continuous amps from a single circuit every night was beyond any reasonable forecast. Today, EV ownership has made that scenario routine.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/luxury-estate-grand-ridge-issaquah.jpg" 
+            alt="Wooded acreage lot and detached workshop in Mirrormont Issaquah WA 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Mirrormont wooded parcels: spacious estate properties with detached garages and multi-EV setups.
+          </figcaption>
+        </figure>
+
+
+        <p>
+          Successfully adding EV charging to a Mirrormont home requires understanding the existing electrical system in detail. Our electricians assess not just whether a new circuit can be added, but whether the entire electrical backbone—from the PSE service drop through the meter base, main breaker, bus bars, and branch circuits—can safely handle the additional sustained load.
+        </p>
+
+        <h3>Panel Assessment and Upgrade Pathways</h3>
+        <p>
+          Mirrormont's housing stock includes panels from several manufacturers across multiple decades. We encounter Square D QO and Homeline panels, Siemens/Murray panels, Cutler-Hammer BR series, and occasionally older brands like Zinsco, Federal Pacific, or Pushmatic. Each has different characteristics, available capacities, and safety profiles.
+        </p>
+        <p>
+          Zinsco and Federal Pacific panels, found in some 1970s Mirrormont homes, have documented safety concerns including breakers that fail to trip under overcurrent conditions. When we encounter these panels, we strongly recommend replacement regardless of EV charging plans, as they present a fundamental safety risk under any loading conditions.
+        </p>
+        <p>
+          For sound panels that simply lack capacity, we evaluate whether a subpanel addition or a full service upgrade is the better path. A subpanel can add breaker positions and circuit capacity without replacing the main panel, but it is limited by the main service amperage. A full upgrade from 100A or 150A to 200A provides maximum flexibility for EV charging, heat pumps, and other modern electrical demands.
+        </p>
+
+        <h3>Multi-Level Conduit Routing in Hillside Construction</h3>
+        <p>
+          Many Mirrormont homes are built on sloped lots, with the main living areas on one level and the garage on a lower level. The electrical panel may be upstairs in a utility closet while the garage sits at grade on the downhill side. This vertical separation creates conduit routing challenges that do not exist in single-level suburban homes.
+        </p>
+        <p>
+          Our electricians plan conduit pathways that minimize disruption to finished interiors. Common approaches include routing through interior stud cavities accessed from the garage ceiling, running through crawlspaces below the main floor, using existing utility chases that carry plumbing or HVAC ductwork, or running exterior conduit along the foundation where it can be concealed behind landscaping.
+        </p>
+        <p>
+          Each approach has trade-offs in cost, aesthetics, and installation complexity. We explain the options during the on-site survey and recommend the approach that best balances these factors for your specific home.
+        </p>
+
+        <h3>Weather and Power Quality Considerations</h3>
+        <p>
+          Mirrormont's forested setting and overhead PSE service introduce power quality variables that affect EV charger reliability. During Pacific Northwest winter storms, falling branches on overhead lines cause momentary outages and voltage transients. Even without a full outage, voltage sags during heavy grid loading can cause sensitive charger electronics to fault.
+        </p>
+        <p>
+          We address these issues with two protective measures. First, a Type 2 surge protective device (SPD) installed at the main panel diverts voltage spikes from lightning and switching events before they reach the charger. Second, during diagnostic visits we log line voltage over extended periods to identify chronic undervoltage or voltage instability from the PSE secondary feed.
+        </p>
+        <p>
+          If sustained voltage issues are identified, we report them to PSE for investigation. In some cases, the utility tap transformer may need adjustment or replacement to provide stable voltage within the ±5% tolerance required by modern EVSE equipment.
+        </p>
+
+        <h3>Maintaining Charging Equipment in a Forest Environment</h3>
+        <p>
+          Mirrormont's tree canopy creates a beautiful living environment, but it also produces pollen, leaf debris, sap residue, and elevated humidity around garage areas. These environmental factors can affect charger equipment over time, particularly outdoor-mounted units or chargers in garages with poor ventilation.
+        </p>
+        <p>
+          Annual maintenance inspections are particularly important for Mirrormont chargers. During inspections, we clean connector pins, check for moisture intrusion in junction boxes, verify that ventilation openings are not obstructed by debris, and perform thermal imaging to detect any connections showing elevated temperatures. This proactive care extends equipment life and prevents failures during critical overnight charging.
+        </p>
+
+        <h2>Comprehensive Mirrormont Street Coverage</h2>
+        <p>
+          Our service vans travel throughout the Mirrormont community:
+        </p>
+        <ul>
+          <li><strong>Primary Roads:</strong> SE Mirrormont Boulevard, SE Mirrormont Drive, and the main access routes connecting Mirrormont to central Issaquah.</li>
+          <li><strong>Residential Streets:</strong> All courts, places, and lanes branching off the main Mirrormont thoroughfares, including hilltop and lower-elevation addresses.</li>
+          <li><strong>Community Boundaries:</strong> Properties at the transition zones between Mirrormont, Tiger Mountain, and the Squak Mountain residential areas.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="Industrial-grade EV charging station in Mirrormont Issaquah 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Heavy-duty 48-amp charging installations providing reliable overnight range for rural commutes.
+          </figcaption>
+        </figure>
+
+
+        <h2>Why Mirrormont Homeowners Choose Us</h2>
+        <ol>
+          <li><strong>Established Home Expertise:</strong> We work with every panel brand and vintage found in Mirrormont, from legacy manufacturers through modern equipment.</li>
+          <li><strong>Multi-Level Construction Skills:</strong> We plan conduit routes for split-level and hillside homes that minimize wall penetrations and aesthetic impact.</li>
+          <li><strong>Surge Protection Advocacy:</strong> We recommend SPDs for all overhead-fed Mirrormont homes, protecting charging equipment from power quality events.</li>
+          <li><strong>Local Proximity:</strong> Our 612 Jasmine Pl NW office is a short drive from Mirrormont for both scheduled and urgent service calls.</li>
+          <li><strong>Straightforward Assessments:</strong> We tell you exactly what your home needs—whether a simple circuit addition or a panel upgrade—and explain the reasoning behind every recommendation.</li>
+        </ol>
+
+        <h2>Our Service Process</h2>
+        <ol>
+          <li><strong>Phone Assessment:</strong> We collect your home's approximate age, panel location, garage configuration, vehicle model, and any existing electrical concerns.</li>
+          <li><strong>On-Site Survey:</strong> Our electrician inspects the panel, evaluates conduit routing options, and performs load calculations specific to your home.</li>
+          <li><strong>Professional Installation:</strong> We install the circuit, mount the charger, connect everything to code, and coordinate any required city inspection.</li>
+          <li><strong>Live Testing:</strong> We verify charging under load with your vehicle, check voltage stability, and confirm proper operation before completing the project.</li>
+        </ol>
+
+        <p>
+          Call <a href="tel:+14253800019">(425) 380-0019</a> to discuss your Mirrormont EV charger project. We understand the electrical character of this community and design every installation for long-term reliability.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">In addition to Mirrormont, our technicians serve all 15 Issaquah neighborhoods.</p>
+      </div>
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <CTABand
+    title="Need EV Charger Service in Mirrormont?"
+    subtitle="Speak directly with an electrical specialist experienced in foothill home installations."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Mirrormont Dispatch</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving all Mirrormont community properties</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians for Service</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Mirrormont Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=Mirrormont,+Issaquah,+WA&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

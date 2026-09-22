@@ -1,0 +1,393 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'ev-charger-circuit-repair-installation',
+    title: 'Hillside Branch Circuit & Conduit Engineering',
+    desc: 'Talus homes frequently have electrical panels two stories above garage slabs. We engineer clean, code-compliant conduit paths through steep structural grade transitions.'
+  },
+  {
+    slug: 'multi-ev-home-charging',
+    title: 'Multi-EV Dual Charging Stations',
+    desc: 'Intelligent power-sharing setups for households operating two electric vehicles simultaneously without exceeding 200-amp main breaker capacity.'
+  },
+  {
+    slug: 'ev-charger-troubleshooting',
+    title: 'Ground Fault & Nuisance Trip Diagnostics',
+    desc: 'Testing rocky mountain grounding electrode resistance, moisture intrusion in outdoor raceways, and internal EVSE contactor wear.'
+  },
+  {
+    slug: 'level-2-ev-charger-installation',
+    title: 'High-Amperage 48A Hardwired EVSE',
+    desc: 'Direct-wire 60-amp circuit installations optimized for Tesla, Rivian, Lucid, and German luxury EVs demanding fast overnight recovery.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Squak Mountain', url: '/locations/squak-mountain/', note: 'Directly bordering mountain residential communities and wooded hillside lots.' },
+  { name: 'Olde Town Issaquah', url: '/locations/olde-town-issaquah/', note: 'Just north down the mountain along Newport Way SW and Sunset Way.' },
+  { name: 'Gilman', url: '/locations/gilman/', note: 'Central valley district adjacent to Gilman Village and historic corridors.' }
+];
+
+const talusFaqs = [
+  {
+    question: "Why does my EV charger trip the breaker during heavy rainfall in Talus?",
+    answer: "Talus sits on the western flank of Squak Mountain, where steep elevation changes and high annual precipitation create damp environmental conditions in below-grade garages and exterior-mounted equipment. If exterior raceways or junction boxes lack proper drainage weep holes, or if condensation forms inside the EVSE casing, sensitive ground-fault detection sensors trip. Additionally, the rocky terrain around Shangri-La Way can result in higher soil resistivity, making proper dual-ground rod installation essential for stable reference grounding."
+  },
+  {
+    question: "How do you run EV charging wiring when my electrical panel is on the top floor?",
+    answer: "Many multi-level homes and townhomes in Talus feature reverse floor plans where main living spaces and electrical panels are situated on the upper floor while garages are excavated into the lower hillside. We specialize in non-invasive conduit pathways, utilizing utility chases, unfinished basement spaces, or professionally painted EMT conduit running along discreet foundation lines to reach lower-level vehicle bays without cutting excessive drywall."
+  },
+  {
+    question: "Does the Talus Residential Association have restrictions on outdoor charging stations?",
+    answer: "Yes. The Talus Residential Association enforces architectural design standards regarding visible exterior electrical equipment. If a charger or electrical disconnect is installed on an exterior parking pad or carport, the equipment and conduit must be approved and painted to match surrounding exterior siding. We prepare complete architectural submittal packages, including equipment specifications and conduit routing maps, to streamline HOA board approval."
+  },
+  {
+    question: "Can I charge a Rivian and a Tesla at the same time in my Talus garage?",
+    answer: "Yes, but doing so on a standard 200-amp service requires careful load balancing. Two 48-amp chargers pulling full current simultaneously demand 96 amps of continuous power, which represents nearly half of an entire 200-amp service. We install smart power-sharing chargers (such as networked Wallbox Pulsar Plus or dual Tesla Wall Connectors) that communicate over Wi-Fi or hardwired data lines to dynamically divide available circuit capacity."
+  },
+  {
+    question: "What permits are required for an EV charger installation in Talus 98027?",
+    answer: "Talus falls under the jurisdiction of the City of Issaquah Building Division and the Washington State Department of Labor & Industries (L&I). All new 240-volt circuits, panel additions, or service modifications require an electrical permit. Our licensed contractors handle the permit filing, coordinate with city electrical inspectors, and provide you with signed documentation for your home records."
+  }
+];
+---
+
+<Layout
+  title="Talus EV Charger Repair & Installation | Squak Mountain Electricians 98027"
+  description="Expert EV charger repair, Level 2 installation, and multi-story circuit troubleshooting in Talus, Issaquah WA (98027). Serving Shangri-La Way & Timber Ridge. Call (425) 380-0019."
+  canonicalPath="/locations/talus/"
+  specificAreaServed="Talus, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Talus', url: '/locations/talus/' }
+  ]} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Talus Hillside Electrical Specialists</span>
+        <h1>Talus EV Charger Repair & Circuit Troubleshooting in Issaquah</h1>
+        <p class="hero-lead">
+          Perched along the scenic mountain slopes of Squak Mountain, Talus homes demand specialized electrical knowledge for multi-story vertical wire runs, below-grade garage power management, and high-performance Level 2 charging stations across zip code 98027.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime">
+            <span>📞</span>
+            <span>Call (425) 380-0019</span>
+          </a>
+          <a href="#talus-guide" class="btn btn-outline-white">
+            Explore Neighborhood Guide
+          </a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> Local to Talus 98027</div>
+          <div class="hero-badge-item"><span>🛡️</span> Multi-Level Hillside Experts</div>
+          <div class="hero-badge-item"><span>⚡</span> Dual-EV Load Balancing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- About Company Summary -->
+  <section class="section" id="talus-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Squak Mountain Proximity</span>
+          <h2>Specialized EV Charging for Talus Multi-Level Architecture</h2>
+          <p>
+            Developed throughout the 2000s and 2010s, Talus is an eco-planned hillside community carved directly into the western slopes of Squak Mountain. Homeowners here enjoy immediate access to Cougar Mountain trails, sweeping Cascade views, and an active lifestyle that aligns naturally with driving electric vehicles. The concentration of long-range electric SUVs, dual-motor commuter sedans, and high-performance EVs in Talus is among the highest in Washington State.
+          </p>
+          <p>
+            However, the dramatic mountain topography that gives Talus its charm introduces unique electrical engineering challenges. Many executive residences and hillside townhomes feature three-story and four-story vertical layouts where the utility meter, main breaker panel, and garage parking bays sit on completely different structural planes. Running 50-amp or 60-amp feeder cables through concrete retaining walls and multiple finished floors requires master-level electrical expertise.
+          </p>
+          <p>
+            Issaquah EV Charger Repair delivers precision diagnostics and custom installations across all Talus enclaves, including Shangri-La, Timber Ridge, Trail Walk, and the Talus Urban Village. When your charger shows red fault warnings, drops charging speed, or trips your panel breaker, our electricians resolve the issue at the circuit level.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">98027 Electrical Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Talus Housing Stock & Electrical Grid</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Construction Eras:</strong> 2002 through 2018 modern Pacific Northwest architectural design.</li>
+            <li><strong>Predominant Housing:</strong> Multi-level custom single-family homes, steep hillside townhomes, and urban village condominiums.</li>
+            <li><strong>Typical Electrical Service:</strong> 200A 120/240V split-phase service from Puget Sound Energy; subpanels common in multi-floor layouts.</li>
+            <li><strong>Key Installation Demands:</strong> Vertical conduit pathways, long circuit runs, dual-EV load balancing, and rocky terrain grounding verification.</li>
+            <li><strong>HOA Governance:</strong> Talus Residential Association architectural guidelines.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services for this Neighborhood -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Customized Solutions</span>
+        <h2>Talus Focused EV Charging Services</h2>
+        <p class="section-subtitle">
+          These four electrical solutions address the distinct structural and power requirements of Talus hillside homes.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">
+              Read Service Details →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive In-Depth Technical Content Body (2400+ words target) -->
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Understanding Hillside Electrical Dynamics for EVSE in Talus</h2>
+        <p>
+          Installing and maintaining an electric vehicle charging station in a mountain-side community like Talus requires engineering precautions that flat suburban neighborhoods rarely encounter. The vertical elevation changes, dense concrete retaining foundations, and prolonged wet weather characteristic of Squak Mountain directly influence how electrical circuits perform under continuous high-amperage loads.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/modern-architectural-home-talus.jpg" 
+            alt="Hillside multi-level executive residence along Shangri-La Way in Talus Issaquah WA 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Talus hillside community: multi-level architectural properties with unique vertical electrical routing challenges.
+          </figcaption>
+        </figure>
+
+
+        <p>
+          A Level 2 EV charging station pulls high continuous current for hours at a time. Under the National Electrical Code (NEC Article 625), this constant draw produces sustained heat inside conductor insulation, terminal lugs, and circuit breaker components. When branch circuits must traverse long distances—often 60 to 120 feet between an upper-level service panel and a basement garage—voltage drop and thermal resistance become critical engineering factors.
+        </p>
+
+        <h3>Managing Voltage Drop Across Long Vertical Circuit Runs</h3>
+        <p>
+          In many Talus floor plans—such as those along Shangri-La Way NW and NW Timber Ridge Way—the Puget Sound Energy meter base and main distribution panel are mounted on the highest floor or on an exterior side wall, while the garage is excavated two levels below into the hillside. Standard electrical charts suggest that 6 AWG copper wire is sufficient for a 48-amp charger on a 60-amp breaker. However, standard charts assume short branch circuit runs under 50 feet.
+        </p>
+        <p>
+          When a circuit length exceeds 75 to 100 feet through interior chases and vertical wall drops, resistance in the wire causes voltage to drop during peak current flow. If voltage at the charger drops below 208 volts on a nominal 240-volt supply, modern electric vehicles (including Tesla, Rivian, and Audi e-tron) automatically detect the impedance and throttle charging rates from 48 amps down to 32 amps or even 24 amps to protect the battery pack. In severe cases, the vehicle halts charging completely and logs a grid voltage failure.
+        </p>
+        <p>
+          Our electricians calculate precise circuit length and loop resistance before installing or modifying any EV circuit in Talus. By upsizing conductors to 4 AWG copper and utilizing low-resistance compression terminations, we eliminate line voltage drop, ensuring your vehicle receives full charging power throughout the night.
+        </p>
+
+        <h3>Addressing Rocky Mountain Soil and Grounding Electrode Resistance</h3>
+        <p>
+          Squak Mountain’s geology consists of dense glacial till, bedrock, and rocky subsoil. Reliable EVSE operation depends on a low-impedance connection to earth. Modern charging stations continuously test the integrity of the equipment grounding conductor before closing their internal contactors to supply power to the vehicle.
+        </p>
+        <p>
+          In rocky Talus ground, older grounding rods can experience seasonal resistance spikes during dry late-summer periods or loose physical contact with bedrock. When an EVSE’s onboard microcomputer detects ground impedance exceeding factory thresholds (typically 5 to 10 ohms depending on manufacturer), the unit refuses to initiate charging and displays a persistent red ground fault indicator. Our technicians perform soil clamp resistance testing and, where necessary, install supplementary ground rods or chemical ground electrodes compliant with WAC 296-46B-250 to establish an ultra-reliable ground reference.
+        </p>
+
+        <h3>Tackling Dual-EV Charging Demands in Talus Garages</h3>
+        <p>
+          It is increasingly common for Talus households to operate two electric vehicles—for example, a daily commuter sedan and an all-wheel-drive electric adventure vehicle for weekend mountain trips. Charging two electric vehicles overnight on a typical 200-amp residential electrical service presents serious electrical planning considerations.
+        </p>
+        <p>
+          Two independent 48-amp chargers pulling full load simultaneously consume 96 continuous amps. When factored at the required 125% continuous duty rating (NEC 625.41), the two circuits require 120 amps of breaker capacity—leaving only 80 amps for the entire rest of the home’s heating, cooking, and lighting loads. If an electric heat pump or water heater cycles on while both cars are drawing maximum power, the home’s main 200-amp breaker can trip, cutting power to the entire residence.
+        </p>
+        <p>
+          We resolve this challenge through intelligent load-sharing EVSE systems. By installing paired charging units that communicate wirelessly or via a dedicated low-voltage data link (such as dual Tesla Wall Connectors or Wallbox Pulsar Plus units), both vehicles can plug in at the same time. The chargers share a single 60-amp circuit: if one car is charging, it receives full 48-amp power; when the second car plugs in, the units instantly split current to 24 amps each. Once the first battery is topped off, the second vehicle immediately ramps up to full charging speed—all without requiring a costly service upgrade.
+        </p>
+
+        <blockquote>
+          "Hillside homes in Talus require a specialized approach to EVSE installation. Navigating vertical conduit paths, concrete retaining walls, and high continuous power demands requires master electrical craftsmanship that preserves both home safety and interior aesthetics."
+        </blockquote>
+
+        <h3>Preventing Thermal Receptacle Degradation in Mountain Garages</h3>
+        <p>
+          Many Talus homeowners who initially utilized plug-in mobile charging cords connected to standard NEMA 14-50 wall outlets have experienced sudden charging cutoffs. Garages built into hillsides often experience limited natural airflow. Under prolonged 32-amp charging, cheap builder-grade outlets generate significant heat at the screw terminals. Over time, heat cycles cause the copper wire to loosen slightly, producing resistance heating that can melt the plastic receptacle casing.
+        </p>
+        <p>
+          Our team provides permanent remediation by replacing worn or degraded receptacles with heavy-duty industrial-grade NEMA 14-50 sockets, or by hardwiring the charging station directly into a dedicated steel junction box. Hardwired installations eliminate plug-and-socket resistance entirely, deliver higher charging rates (up to 48 amps versus 32 or 40 amps on a plug), and eliminate the need for temperamental dual-pole GFCI breakers that cause nuisance trips.
+        </p>
+
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Electrical panel and breaker testing in Talus hillside homes"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Electricians test voltage drop and circuit impedance across long conduit pathways from lower-level garages.
+          </figcaption>
+        </figure>
+
+<h2>Comprehensive Talus Street and Landmark Coverage</h2>
+        <p>
+          Our service vehicles are dispatched throughout the Talus community daily. We know the access gates, private lane layouts, and parking regulations across every section of the neighborhood:
+        </p>
+        <ul>
+          <li><strong>Main Thoroughfares:</strong> Comprehensive service along Shangri-La Way NW, Talus Drive, NW Timber Ridge Way, and Wildwood Boulevard SW.</li>
+          <li><strong>Residential Streets & Lanes:</strong> Quick dispatch to Panorama Way NW, Canyon Terrace NW, Mountainside Lane NW, Skyline Way NW, and Cascade Terrace NW.</li>
+          <li><strong>Local Landmarks & Recreation Hubs:</strong> Coverage around the Talus Urban Village, Timber Ridge at Talus, Cougar Mountain Regional Wildland Park trailheads, and Squak Mountain State Park access points.</li>
+          <li><strong>Postal Sector:</strong> Fast service across all residential addresses within zip code 98027.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="Level 2 EV charging station installed in steep topography garage in Talus 98027"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Turnkey Level 2 EVSE installation engineered for steep hillside homes and executive townhomes in Talus.
+          </figcaption>
+        </figure>
+
+
+        <h2>Why Choose Our Electricians for Talus EV Charger Repair</h2>
+        <p>
+          Electric vehicle infrastructure is our dedicated focus. Homeowners throughout Talus choose our technical team for several key reasons:
+        </p>
+        <ol>
+          <li><strong>Hillside Structural Experience:</strong> We know how to navigate multi-level construction, concrete foundations, and long vertical conduit runs cleanly and efficiently.</li>
+          <li><strong>Direct Local Dispatch:</strong> Located at 612 Jasmine Pl NW in central Issaquah, our technicians reach Talus within minutes for urgent diagnostic service calls.</li>
+          <li><strong>Code-Permitted Safety:</strong> Every circuit addition, panel modification, and charger installation is permitted through the City of Issaquah or Washington State L&I.</li>
+          <li><strong>Zero Guesswork Diagnostics:</strong> We test loop impedance, voltage stability, and thermal dissipation with calibrated digital instruments before recommending component repairs.</li>
+          <li><strong>HOA Compliance Support:</strong> We supply detailed conduit schematics and equipment specifications that satisfy Talus Residential Association architectural guidelines.</li>
+          <li><strong>Multi-Brand Expertise:</strong> Certified troubleshooting for Tesla, ChargePoint, Wallbox, Rivian, Autel, Emporia, and Grizzl-E hardware.</li>
+        </ol>
+
+        <h2>Our Four-Step On-Site Diagnostic and Repair Procedure</h2>
+        <p>
+          When you request technical service for your Talus home, our electricians follow a systematic diagnostic methodology:
+        </p>
+        <ol>
+          <li><strong>Intake & Technical Evaluation:</strong> We collect details about your vehicle model, charger manufacturer, and specific error indicators (such as flashing LED counts or breaker trip timing) to dispatch the proper diagnostic instruments and replacement components.</li>
+          <li><strong>Precision Electrical Testing:</strong> On site, we conduct non-invasive thermal imaging of your electrical panel, test line voltage under load, inspect breaker bus bar connections, and verify ground fault loop impedance.</li>
+          <li><strong>Component Repair or Hardware Modernization:</strong> We replace faulty breakers, re-terminate wiring with digital torque wrenches to factory specifications, repair damaged cords, or install industrial-grade connection hardware.</li>
+          <li><strong>Full-Amperage Verification:</strong> We initiate a live charging cycle, monitoring thermal performance, current draw, and vehicle communication to confirm safe, uninterrupted operation.</li>
+        </ol>
+
+        <h2>Straight-Forward Assessment Principles</h2>
+        <p>
+          We believe in straightforward, transparent technical communication. Our electricians inspect your equipment thoroughly, pinpoint the exact electrical component causing the issue, and provide clear explanations of what is required to restore reliable charging without hidden surprises.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Neighborhoods Links -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">
+          In addition to Talus, our technicians provide dedicated electrical services throughout adjacent neighborhoods.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <FAQAccordion items={talusFaqs} />
+
+  <!-- CTA Band -->
+  <CTABand
+    title="Is Your Talus EV Charger Malfunctioning or Showing Error Codes?"
+    subtitle="Speak directly with an electrical specialist to book an on-site diagnostic visit or circuit evaluation."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <!-- Contact & Map Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Direct Contact</span>
+        <h2>Schedule Talus EVSE Service</h2>
+        <p class="section-subtitle">
+          Call our Issaquah dispatch line directly to discuss your vehicle charging needs or report an equipment malfunction.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Talus Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving Shangri-La Way, Timber Ridge & all Talus 98027</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+              📞 Call Technicians for Service
+            </a>
+          </div>
+        </div>
+
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe
+            title="Talus Issaquah Map"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=Shangri-La+Way+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

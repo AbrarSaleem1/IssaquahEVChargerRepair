@@ -1,0 +1,61 @@
+---
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  items: FAQItem[];
+  includeSchema?: boolean;
+}
+
+const {
+  title = "Frequently Asked Questions",
+  subtitle = "Clear answers regarding EV charging repair, circuit diagnostics, and local Issaquah electrical standards.",
+  items,
+  includeSchema = true,
+} = Astro.props;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": items.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+  <div class="container">
+    <div class="section-title-wrap">
+      <span class="section-tag">Got Questions?</span>
+      <h2>{title}</h2>
+      <p class="section-subtitle">{subtitle}</p>
+    </div>
+
+    <div class="accordion">
+      {items.map((item, idx) => (
+        <details class="accordion-item" open={idx === 0}>
+          <summary class="accordion-trigger">
+            <span>{item.question}</span>
+            <span class="accordion-arrow">▾</span>
+          </summary>
+          <div class="accordion-content">
+            <p>{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+{includeSchema && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}

@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CTABand from '../components/CTABand.astro';
+
+const values = [
+  {
+    title: 'Code Precision & Safety First',
+    desc: 'EV charging involves continuous electrical loads that push residential panels to their limits. We never take shortcuts on wire gauge, breaker quality, or proper ground rod verification.'
+  },
+  {
+    title: 'Local Rootedness in Issaquah',
+    desc: 'We live, work, and dispatch directly out of Issaquah. From the steep driveways of Talus to the master-planned townhomes of Issaquah Highlands, we understand local building types intimately.'
+  },
+  {
+    title: 'Honest Technical Diagnoses',
+    desc: 'If your charger is showing a red fault indicator because of an inexpensive terminal screw issue, we fix the terminal screw—we do not push you to buy an entire replacement charging unit.'
+  },
+  {
+    title: 'Full Inspection & Permitting Support',
+    desc: 'Every installation is fully permitted through Washington State L&I or the City of Issaquah, ensuring your homeowner insurance remains completely protected.'
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Our Tesla Wall Connector stopped charging mid-cycle every evening. The team diagnosed a faulty ground connection inside our subpanel in Talus. Fast, friendly, and deeply knowledgeable.",
+    author: "Rachel M.",
+    location: "Talus, Issaquah"
+  },
+  {
+    quote: "Installed a dual-charger setup for our Ford Lightning and Model Y in Grand Ridge. The panel upgrade and trenching to the detached garage were handled flawlessly.",
+    author: "Brian T.",
+    location: "Grand Ridge, Issaquah"
+  },
+  {
+    quote: "Upgraded our 1970s panel in Olde Town and installed a hardwired ChargePoint Home Flex. The permit was passed on the first inspection. Truly top-tier electricians.",
+    author: "Susan L.",
+    location: "Olde Town Issaquah"
+  }
+];
+---
+
+<Layout
+  title="About Issaquah EV Charger Repair | Certified Local Electrical Specialists"
+  description="Learn about Issaquah EV Charger Repair. Certified electricians dedicated to safe, code-compliant EVSE installations, panel upgrades, and repairs across Issaquah, WA."
+  canonicalPath="/about-us/"
+  schemaType="AboutPage"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'About Us', url: '/about-us/' }
+  ]} />
+
+  <!-- Hero Banner -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 800px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Our Story & Standards</span>
+        <h1>Specialized EV Electrical Contractors in Issaquah, WA</h1>
+        <p class="hero-lead">
+          Founded right here in Issaquah, we specialize exclusively in electric vehicle supply equipment (EVSE), residential high-amp branch circuits, panel modernizations, and precision charging diagnostics.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime">
+            <span>📞</span>
+            <span>Call (425) 380-0019</span>
+          </a>
+          <a href="/locations/" class="btn btn-outline-white">
+            Our Service Areas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- Our Story -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Dedicated Focus</span>
+          <h2>Why We Focused Exclusively on EV Charging</h2>
+          <p>
+            As electric vehicle adoption accelerated across the Eastside, we noticed a widespread problem: homeowners were hiring general handymen or residential contractors who treated EV chargers like ordinary light fixtures or clothes dryers.
+          </p>
+          <p>
+            An EV charger draws high continuous power (32 to 48 amps) uninterrupted for 6 to 10 hours overnight. Standard residential wiring practices often resulted in melted NEMA 14-50 outlets, nuisance-tripping breakers, burned bus bars, and premature hardware failure.
+          </p>
+          <p>
+            We established <strong>Issaquah EV Charger Repair</strong> at 612 Jasmine Pl NW to solve this exact challenge. Our electricians undergo rigorous training in EVSE communication protocols (PWM and PLC signals), thermal dissipation analysis, industrial-grade torque standards, and NEC Article 625 compliance.
+          </p>
+        </div>
+
+        <!-- Team & Credentials Card -->
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="width: 72px; height: 72px; background: #0b132b; color: #84cc16; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin-bottom: 1.5rem; border: 2px solid #22c55e;">
+            ⚡
+          </div>
+          <h3 style="margin-top: 0; margin-bottom: 0.5rem; font-size: 1.4rem;">Electrical Leadership & Technicians</h3>
+          <p style="font-size: 0.95rem; color: #64748b; margin-bottom: 1.25rem;">
+            Led by Washington State certified electricians with specialized expertise in residential load calculations, Puget Sound Energy service connections, and high-voltage DC/AC charging systems.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; color: #1e293b;">
+            <div>✓ WA Electrical Contractor License & Full Bonding</div>
+            <div>✓ Commercial General Liability Coverage</div>
+            <div>✓ Direct Familiarity with Issaquah HOA Architectural Guidelines</div>
+            <div>✓ Certified for Tesla, ChargePoint, Wallbox, and Autel systems</div>
+          </div>
+
+      <figure class="seo-feature-figure" style="margin-top: 3.5rem; text-align: center;">
+        <img 
+          src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+          alt="Certified electricians providing Level 2 EV charging installations in Issaquah WA"
+          width="1100"
+          height="550"
+          loading="lazy"
+          decoding="async"
+          style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 16px; border: 1px solid #cbd5e1; box-shadow: 0 15px 30px -10px rgba(0,0,0,0.12);"
+        />
+        <figcaption style="margin-top: 0.75rem; font-size: 0.9rem; color: #64748b; font-style: italic;">
+          Dedicated EVSE specialists: Certified installations meeting National Electrical Code continuous load safety standards.
+        </figcaption>
+      </figure>
+
+        </div>
+      </div>
+
+      <!-- Generated SEO Image 1: Service Van & Technician -->
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Principles</span>
+        <h2>How We Approach Every Service Call</h2>
+        <p class="section-subtitle">
+          Our team operates under straightforward principles designed to give you complete confidence in your home charging system.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {values.map(val => (
+          <div class="feature-card">
+            <h3 class="card-title">{val.title}</h3>
+            <p class="card-text">{val.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+      <figure class="seo-feature-figure" style="margin-top: 3rem; text-align: center;">
+        <img 
+          src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+          alt="Certified electrical technician testing EV charger terminal voltage and circuit impedance in Issaquah"
+          width="900"
+          height="480"
+          loading="lazy"
+          decoding="async"
+          style="width: 100%; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+        />
+        <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+          Precision electrical testing: Calibrated multimeters and thermography ensure every installation operates cool and safe.
+        </figcaption>
+      </figure>
+
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Homeowner Reviews</span>
+        <h2>What Issaquah Drivers Say About Our Work</h2>
+      </div>
+
+      <div class="cards-grid">
+        {testimonials.map(t => (
+          <div class="feature-card">
+            <div style="color: #f59e0b; font-size: 1.2rem; margin-bottom: 0.75rem;">★★★★★</div>
+            <p style="font-style: italic; color: #334155; margin-bottom: 1.25rem;">"{t.quote}"</p>
+            <div style="font-weight: 700; color: #0b132b;">{t.author}</div>
+            <div style="font-size: 0.85rem; color: #64748b;">{t.location}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <CTABand
+    title="Ready to Discuss Your EV Charger Repair or Installation?"
+    subtitle="Speak directly with our local electrical specialists. We diagnose and service chargers throughout Issaquah."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <!-- Contact Block -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Issaquah Headquarters</h3>
+          <p style="color: #475569; margin-bottom: 1.5rem;">
+            Conveniently located at 612 Jasmine Pl NW in Issaquah, WA. Our vans are stocked with industrial-grade receptacles, breakers, and diagnostic meters for fast local response.
+          </p>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Direct Phone</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+              📞 Call Technicians Directly
+            </a>
+          </div>
+        </div>
+
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe
+            title="Issaquah EV Charger Repair Map"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=612+Jasmine+Pl+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

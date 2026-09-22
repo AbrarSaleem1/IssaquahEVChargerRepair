@@ -1,0 +1,393 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'panel-upgrade-for-ev-charging',
+    title: 'Klahanie 150A/200A Panel Modernization',
+    desc: 'Many 1980s and 1990s homes near Yellow Lake have full breaker boxes due to added central air conditioning. We install clean subpanels and upgrade aging load centers.'
+  },
+  {
+    slug: 'nema-14-50-outlet-installation-repair',
+    title: 'Industrial Heavy-Duty Receptacle Upgrades',
+    desc: 'Replacing builder-grade garage outlets with industrial Bryant or Hubbell 50-amp sockets engineered to prevent thermal melting under continuous 32A loads.'
+  },
+  {
+    slug: 'amazon-ev-charger-installation-repair',
+    title: 'Customer-Purchased EVSE Hardwiring',
+    desc: 'Professional installation and code certification for chargers ordered online, including Emporia, ChargePoint Home Flex, Autel, and Grizzl-E.'
+  },
+  {
+    slug: 'ev-charger-maintenance',
+    title: 'Thermal & Electrical Safety Tune-Ups',
+    desc: 'Infrared heat scans, conductor torque re-verification, and ground loop impedance testing to prevent unexpected charging interruptions.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Issaquah Highlands', url: '/locations/issaquah-highlands/', note: 'Located just north across the plateau corridor along Highlands Drive.' },
+  { name: 'Providence Point', url: '/locations/providence-point/', note: 'Directly neighboring master-planned community to the west along SE 43rd Way.' },
+  { name: 'Central Issaquah', url: '/locations/central-issaquah/', note: 'Down the hill via Issaquah-Fall City Road connecting to the valley center.' }
+];
+
+const klahanieFaqs = [
+  {
+    question: "Do homes built in the 1980s and 1990s in Klahanie have enough electrical capacity for Level 2 charging?",
+    answer: "Most original Klahanie residences were constructed with 150-amp or 200-amp main electrical service panels (often manufactured by Murray, Siemens, or Square D). While a 200-amp service generally has adequate capacity, many homeowners have added central air conditioning, heat pumps, or hot tubs over the years, filling all available breaker spaces. During our on-site evaluation, our electricians perform an official NEC Article 220 load calculation to determine if a tandem breaker reconfiguration, subpanel addition, or panel heavy-up is needed."
+  },
+  {
+    question: "Does the Klahanie Association require architectural approval for home EV chargers?",
+    answer: "For standard interior garage installations, the Klahanie Association does not require an architectural review committee application. However, if your installation involves exterior-mounted equipment—such as an outdoor charging pedestal, an exterior disconnect switch, or surface-mounted conduit running across outside siding—an architectural application must be submitted. We supply comprehensive conduit path diagrams and equipment spec sheets to help homeowners secure swift HOA approval."
+  },
+  {
+    question: "Why does my garage outlet smell like burning plastic when charging my car?",
+    answer: "Standard residential NEMA 14-50 outlets are rated for intermittent appliance use (like clothes dryers or cooking ranges) rather than sustained 32-amp EV charging for 8 continuous hours. The repeated heating cycles loosen terminal screws, creating high electrical resistance that melts the outlet's plastic housing. If you notice any burning odor or discoloration, immediately turn off the circuit breaker and contact our technicians to install an industrial-grade EV-rated receptacle or convert the unit to hardwired service."
+  },
+  {
+    question: "Are Klahanie residents eligible for Puget Sound Energy EV charging rebates?",
+    answer: "Yes. Klahanie is fully located within Puget Sound Energy's electric service territory in zip code 98029. Qualifying ENERGY STAR smart Level 2 charging stations (such as ChargePoint Home Flex or Wallbox Pulsar Plus) are eligible for PSE equipment rebates, with enhanced incentives available for qualifying households through the PSE Empower Mobility program."
+  },
+  {
+    question: "How long does a typical Level 2 charger installation take in a Klahanie home?",
+    answer: "A straightforward installation where the electrical panel is located on an interior garage wall typically takes between 3 and 5 hours. If your installation requires routing conduit across finished crawlspaces, adding a subpanel, or installing an exterior trench to a detached parking pad, the project may require a full day of precision electrical labor. All work is coordinated with Washington L&I or City of Issaquah electrical inspectors."
+  }
+];
+---
+
+<Layout
+  title="Klahanie EV Charger Repair & Installation | 98029 Local Electricians"
+  description="Expert EV charger repair, Level 2 installation, and panel upgrades in Klahanie, Issaquah WA (98029). Serving Yellow Lake, Klahanie Blvd & plateau homes. Call (425) 380-0019."
+  canonicalPath="/locations/klahanie/"
+  specificAreaServed="Klahanie, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Klahanie', url: '/locations/klahanie/' }
+  ]} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Klahanie Electrical Specialists</span>
+        <h1>Klahanie EV Charger Repair & Dedicated Circuit Installation in Issaquah</h1>
+        <p class="hero-lead">
+          Nestled around Yellow Lake on the Sammamish plateau, Klahanie residences require experienced electrical diagnostics for 1980s and 1990s breaker panels, heavy-duty NEMA 14-50 outlet upgrades, and code-certified Level 2 EV charging stations across zip code 98029.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime">
+            <span>📞</span>
+            <span>Call (425) 380-0019</span>
+          </a>
+          <a href="#klahanie-guide" class="btn btn-outline-white">
+            Explore Neighborhood Guide
+          </a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> Local to Klahanie 98029</div>
+          <div class="hero-badge-item"><span>🛡️</span> 150A/200A Panel Specialists</div>
+          <div class="hero-badge-item"><span>⚡</span> Industrial Socket Upgrades</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- About Company Summary -->
+  <section class="section" id="klahanie-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Plateau Proximity</span>
+          <h2>Reliable EV Charging Solutions for Established Klahanie Residences</h2>
+          <p>
+            Klahanie is one of the Eastside’s most beloved master-planned residential communities. Featuring lush tree-canopied streets, scenic Yellow Lake trails, and neighborhood parks, Klahanie was officially annexed into the City of Issaquah in 2016. Today, hundreds of households throughout Klahanie have transitioned to electric vehicles—commuting along I-90 and SR-520 in Teslas, Rivians, Chevy Bolts, and Hyundai Ioniqs.
+          </p>
+          <p>
+            Unlike newer developments with modern pre-wired garages, most Klahanie residences were built between 1985 and 1998. During this era, homes were wired with standard 150-amp or 200-amp electrical panels that were never intended to support prolonged 48-amp vehicle charging. Over the years, many homeowners added modern central air conditioning units, heat pump hot water heaters, or backyard hot tubs, leaving breaker boxes crowded with zero spare circuits.
+          </p>
+          <p>
+            Issaquah EV Charger Repair delivers precision electrical troubleshooting and custom installations tailored specifically to Klahanie's established architecture. Whether you reside in Brookshire, Heatherwood, Lake Ridge, or along Klahanie Boulevard, our licensed electricians ensure your home charging station operates with complete electrical safety.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">98029 Electrical Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Klahanie Housing Stock & Electrical Grid</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Construction Eras:</strong> 1985 through late 1990s master-planned suburban construction.</li>
+            <li><strong>Predominant Housing:</strong> Two-story single-family homes with attached 2-car or 3-car garages, plus select townhome clusters.</li>
+            <li><strong>Typical Electrical Service:</strong> 150A to 200A split-phase service panels (Murray, Siemens, Square D QO, GE).</li>
+            <li><strong>Key Installation Demands:</strong> Subpanel additions, breaker bus bar load management, industrial NEMA 14-50 replacements, and hardwired 48A runs.</li>
+            <li><strong>HOA Governance:</strong> Klahanie Association architectural committee rules.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services for this Neighborhood -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Targeted Solutions</span>
+        <h2>Klahanie Focused EV Charging Services</h2>
+        <p class="section-subtitle">
+          These four electrical solutions address the specific electrical panel ages and structural configurations of Klahanie properties.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">
+              Read Service Details →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive In-Depth Technical Content Body (Targeting 2400+ words) -->
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>The Technical Realities of EV Charging in Established Klahanie Subdivisions</h2>
+        <p>
+          Residential electric vehicle supply equipment operates under intense electrical parameters. In an established community like Klahanie, where homes are thirty to forty years old, installing high-draw EVSE requires a meticulous assessment of the entire electrical distribution chain. Unlike an electric range that operates for forty minutes during dinner preparation, an EVSE pulls continuous current through conductors and bus bar stabs for six to ten hours uninterrupted.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/pacific-northwest-residential-home.jpg" 
+            alt="Yellow Lake suburban family residence in Klahanie Issaquah WA 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Klahanie residential subdivisions: established Sammamish plateau homes built in the 1980s and 1990s.
+          </figcaption>
+        </figure>
+
+
+        <p>
+          According to the National Electrical Code (NEC Article 625), any load that draws maximum current for three hours or longer is classified as a continuous load. This classification mandates a 125% safety multiplier on all circuit calculations. A 32-amp Level 2 charger requires a 40-amp branch circuit; a 40-amp charger requires a 50-amp circuit; and a 48-amp charger demands a dedicated 60-amp circuit with conductors rated to withstand continuous thermal buildup.
+        </p>
+
+        <h3>Evaluating 1980s and 1990s Electrical Panels in Klahanie</h3>
+        <p>
+          A substantial number of Klahanie residences feature original 150-amp or 200-amp main breaker panels manufactured by brands like Murray, Crouse-Hinds, Siemens, or early Square D. While these panels have provided decades of dependable service, their internal bus bars and breaker clips may exhibit oxidation or relaxed mechanical tension.
+        </p>
+        <p>
+          When a modern 50-amp or 60-amp double-pole breaker is snapped into an aging panel bus bar, high continuous current can cause micro-vibrations at the contact point. If the bus bar stab is slightly pitted or oxidized, contact resistance increases dramatically. This produces localized heating that can degrade the breaker clip and cause the breaker to trip on thermal overload after two or three hours of charging—even though the vehicle’s current draw is well within the breaker’s rating.
+        </p>
+        <p>
+          Our electricians conduct non-destructive thermal imaging and physical bus bar inspections on every Klahanie service call. When bus bars show signs of heat degradation or when physical slot space is exhausted, we install an adjacent heavy-duty subpanel or perform a complete panel upgrade, modernizing the home’s electrical foundation to current City of Issaquah standards.
+        </p>
+
+        <h3>The Danger of Low-Grade NEMA 14-50 Outlets</h3>
+        <p>
+          Many Klahanie homeowners who purchase a plug-in Level 2 charger attempt to use a standard hardware-store NEMA 14-50 receptacle. Standard consumer-grade receptacles are engineered primarily for electric cooking ranges, which cycle on and off intermittently and rarely pull more than 20 to 25 amps simultaneously.
+        </p>
+        <p>
+          Subjecting an inexpensive builder-grade outlet to continuous 32-amp or 40-amp EV charging causes rapid thermal fatigue. The thin stamped brass terminals inside budget outlets expand when hot and contract when cool. Over months of nightly charging, terminal screws loosen, creating an air gap that generates intense electrical resistance. This localized heating frequently scorches the plastic faceplate, melts internal insulating barriers, and poses a severe electrical fire hazard.
+        </p>
+        <p>
+          We replace melted or compromised outlets with industrial-specification receptacles from manufacturers such as Bryant and Hubbell. These commercial-grade units feature solid brass terminal blocks, heavy-gauge screw clamps designed for high torque, and glass-reinforced nylon bodies rated for continuous 75°C and 90°C thermal conditions. Alternatively, we convert plug-in stations to direct hardwired connections, eliminating receptacle failure points entirely.
+        </p>
+
+        <blockquote>
+          "In 1980s and 1990s homes like those in Klahanie, treating an EV charger like an ordinary household appliance is dangerous. Continuous electrical loads require verified panel capacity, heavy-duty industrial connections, and calibrated torque settings to ensure complete fire safety."
+        </blockquote>
+
+        <h3>Overcoming Crowded Breaker Panels with Subpanels</h3>
+        <p>
+          When Klahanie homeowners request an EV charger installation, our electricians frequently encounter panels that have zero open breaker spaces. Over thirty years of home ownership, previous residents have added circuits for finished bonus rooms, central air conditioning, detached storage sheds, and outdoor yard lighting.
+        </p>
+        <p>
+          Installing tandem or "cheater" breakers is not always permitted under the manufacturer’s panel labeling or local electrical codes. When panel capacity allows, our licensed electricians install a dedicated 60-amp or 100-amp subpanel adjacent to the main service panel. We cleanly migrate lighting and general branch circuits over to the subpanel, freeing up prime slots in the main panel for a dedicated high-amperage EV circuit with proper clearance and ventilation.
+        </p>
+
+        <h3>PSE Rebates and Energy Efficiency for Klahanie EV Owners</h3>
+        <p>
+          Because Klahanie is served by Puget Sound Energy (PSE), local homeowners can take advantage of utility incentive programs for installing qualifying smart Level 2 charging stations. PSE pre-qualifies ENERGY STAR certified smart chargers that feature integrated Wi-Fi connectivity and scheduling capabilities.
+        </p>
+        <p>
+          Smart chargers allow Klahanie drivers to automatically schedule charging sessions during off-peak overnight hours when regional electrical grid demand is lowest. This reduces strain on local distribution transformers, lowers energy costs, and ensures your vehicle is charged and preconditioned every morning. Our team assists with equipment selection, ensuring your chosen hardware qualifies for available PSE rebates and local utility incentives.
+        </p>
+
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Electrical panel modernization and load calculation in Klahanie 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Modernizing 1980s/1990s electrical panels to accommodate dual-pole EV breakers safely.
+          </figcaption>
+        </figure>
+
+<h2>Comprehensive Klahanie Street and Landmark Coverage</h2>
+        <p>
+          Our technical service vans provide complete coverage across all subdivisions and streets within the Klahanie community. We navigate neighborhood streets daily, providing prompt response across:
+        </p>
+        <ul>
+          <li><strong>Primary Arterials:</strong> Direct service along Klahanie Boulevard, SE 32nd Street, SE 40th Street, and 244th Avenue SE.</li>
+          <li><strong>Residential Subdivisions:</strong> Active service throughout Brookshire, Heatherwood, Lake Ridge, Westridge, Clearwood, Fairfield, and The Willows.</li>
+          <li><strong>Parks & Community Landmarks:</strong> Service coverage around Yellow Lake, the Klahanie Community Center, Challenger Elementary School, Beaver Lake Middle School corridors, and Lakeside Park.</li>
+          <li><strong>Postal Coverage:</strong> Serving all residential and townhome addresses within zip code 98029.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/nema-14-50-heavy-duty-receptacle-installation.jpg" 
+            alt="Heavy-duty NEMA 14-50 receptacle upgrade in Klahanie 98029 garage"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Industrial-grade receptacle upgrade replacing melted or overheated builder-grade outlets.
+          </figcaption>
+        </figure>
+
+
+        <h2>Why Choose Us for Klahanie EV Charger Repair</h2>
+        <p>
+          Selecting an electrical specialist for high-voltage EVSE maintenance ensures long-term safety and reliability. Here is why Klahanie homeowners rely on our technical expertise:
+        </p>
+        <ol>
+          <li><strong>Established Home Expertise:</strong> We understand the exact electrical profiles of 1980s and 1990s Klahanie homes, from panel bus bar conditions to crawlspace wire routing.</li>
+          <li><strong>Direct Local Proximity:</strong> Our dispatch facility at 612 Jasmine Pl NW in Issaquah allows our electricians to arrive quickly for urgent diagnostic appointments.</li>
+          <li><strong>Licensed & Code Compliant:</strong> Every project is permitted through the City of Issaquah or Washington State L&I, ensuring full compliance with WAC 296-46B and NEC Article 625.</li>
+          <li><strong>Commercial-Spec Components:</strong> We exclusively install industrial-grade receptacles, heavy-duty breakers, and pure copper conductors torqued to exact inch-pound specifications.</li>
+          <li><strong>Complete Transparency:</strong> We provide clear technical diagnostic explanations, showing you precisely why a component failed and how to prevent recurring issues.</li>
+          <li><strong>All Major Brands Serviced:</strong> Factory-spec troubleshooting for Tesla, ChargePoint, Wallbox, Emporia, Grizzl-E, Autel, and Bosch charging equipment.</li>
+        </ol>
+
+        <h2>Our Step-by-Step Diagnostic and Repair Protocol</h2>
+        <p>
+          When you request technical service for your Klahanie home, our electricians follow a methodical four-stage process:
+        </p>
+        <ol>
+          <li><strong>Technical Intake:</strong> We gather information regarding your vehicle model, charger manufacturer, and specific error symptoms (such as breaker trip frequency or flashing fault indicators) to bring the appropriate diagnostic equipment.</li>
+          <li><strong>Comprehensive On-Site Testing:</strong> Upon arrival, our electrician conducts infrared thermal scans of your breaker panel, tests split-phase voltage stability under load, and checks equipment grounding conductor resistance.</li>
+          <li><strong>Hardware Repair or Upgrade:</strong> We replace compromised breakers, install industrial receptacles, re-torque electrical terminals with calibrated digital tools, or hardwire charging units directly into dedicated junction boxes.</li>
+          <li><strong>Full-Amperage Verification:</strong> We initiate a live charging cycle, monitoring current flow, voltage drop, and thermal dissipation to ensure flawless continuous operation.</li>
+        </ol>
+
+        <h2>Straight-Forward Assessment Standards</h2>
+        <p>
+          We operate with complete clarity and professionalism. Our electricians inspect your equipment thoroughly, diagnose the root electrical cause of the malfunction, and explain the necessary corrective steps without confusing jargon or unnecessary service recommendations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Neighborhoods Links -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">
+          In addition to Klahanie, our technicians provide dedicated electrical services throughout adjacent neighborhoods.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <FAQAccordion items={klahanieFaqs} />
+
+  <!-- CTA Band -->
+  <CTABand
+    title="Is Your Klahanie EV Charger Tripping or Failing to Charge?"
+    subtitle="Speak directly with an electrical specialist to book an on-site diagnostic visit or circuit assessment."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <!-- Contact & Map Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Direct Contact</span>
+        <h2>Schedule Klahanie EVSE Service</h2>
+        <p class="section-subtitle">
+          Call our Issaquah dispatch line directly to discuss your vehicle charging needs or report an equipment malfunction.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Klahanie Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving Klahanie Blvd, Yellow Lake & all 98029</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+              📞 Call Technicians for Service
+            </a>
+          </div>
+        </div>
+
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe
+            title="Klahanie Issaquah Map"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=Yellow+Lake,+Klahanie,+Issaquah,+WA+98029&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

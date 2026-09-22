@@ -1,0 +1,373 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const featuredServices = [
+  {
+    slug: 'commercial-ev-charging',
+    title: 'Condo & Multi-Family Charging Infrastructure',
+    desc: 'Specialized electrical design for Providence Point condominium clusters, shared carport banks, and subterranean parking structures requiring dedicated sub-metering.'
+  },
+  {
+    slug: 'ev-ready-home-wiring',
+    title: 'Long-Distance Carport Conduit Pathways',
+    desc: 'Engineering code-compliant conduit pathways from centralized building electrical rooms across exterior grounds to assigned resident parking spaces.'
+  },
+  {
+    slug: 'ev-charger-troubleshooting',
+    title: 'Shared Subpanel & Neutral Diagnostics',
+    desc: 'Resolving nuisance breaker trips, shared neutral conductor issues, and voltage instability in older multi-unit distribution centers.'
+  },
+  {
+    slug: 'ev-charger-replacement',
+    title: 'RFID & Access-Controlled Charger Modernization',
+    desc: 'Upgrading older or malfunctioning charging units with keycard, RFID, or smartphone access to prevent unauthorized charging in common parking areas.'
+  }
+];
+
+const nearbyAreas = [
+  { name: 'Klahanie', url: '/locations/klahanie/', note: 'Directly bordering master-planned community to the east across Issaquah plateau roads.' },
+  { name: 'Issaquah Highlands', url: '/locations/issaquah-highlands/', note: 'Just north along the plateau connecting via Highlands Drive NE.' },
+  { name: 'Newport', url: '/locations/newport/', note: 'Southwest along the Lake Sammamish corridor towards central Issaquah.' }
+];
+
+const providencePointFaqs = [
+  {
+    question: "Can an EV charger be installed in my Providence Point assigned carport or garage space?",
+    answer: "Yes. Under Washington State RCW 64.38.060 (the Washington State EV Charging in Common Interest Communities law), condominium associations and HOAs cannot prohibit homeowners from installing an electric vehicle charging station at their designated parking space, provided the installation satisfies building codes and community architectural standards. We coordinate directly with the Providence Point Umbrella Association to submit compliant electrical plans, conduit pathways, and insurance documentation."
+  },
+  {
+    question: "How is electricity billed when a charger is installed in a shared carport?",
+    answer: "In condominium communities like Providence Point, parking spaces are often powered through a common-area house panel rather than an individual homeowner's unit meter. To ensure accurate billing, we install smart, networked Level 2 charging stations with revenue-grade internal meters or private sub-meters. These stations track exact kilowatt-hour consumption and generate automated billing reports for association reimbursement, or route power through a dedicated utility meter."
+  },
+  {
+    question: "Why does my EV charger trip when charging in our multi-unit building?",
+    answer: "Multi-family buildings constructed in the 1980s and 1990s often share neutral conductors or have tight electrical headroom on floor subpanels. When an electric car pulls continuous high amperage, harmonics or slight neutral imbalances can cause shared dual-pole breakers to trip. Our technicians inspect the distribution panel, isolate neutral returns, and test line impedance to ensure your charger operates without disrupting adjacent building circuits."
+  },
+  {
+    question: "What is the approval process with the Providence Point architectural committee?",
+    answer: "Before commencing work, an architectural alteration application must be filed with the Providence Point Umbrella Association board. The application requires an electrical single-line diagram, conduit routing schematics, proof of contractor electrical licensing and bonding, and manufacturer cut sheets for the proposed EVSE. We prepare the entire technical documentation package on your behalf to expedite board approval."
+  },
+  {
+    question: "Are there low-profile charging options that prevent cords from creating tripping hazards?",
+    answer: "Yes. In an active adult community, keeping pathways clear is essential. We install wall-mounted cable retractor reels, overhead articulating cord management booms, or pedestal-mounted stations with integrated holster locks. These solutions keep charging cables off pedestrian walkways, preventing tripping hazards and protecting the cable from vehicle wheel damage."
+  }
+];
+---
+
+<Layout
+  title="Providence Point EV Charger Installation & Repair | 55+ Community Electricians"
+  description="Specialized EV charger repair, Level 2 installation, and condo carport wiring in Providence Point, Issaquah WA (98029). HOA-compliant electrical engineering. Call (425) 380-0019."
+  canonicalPath="/locations/providence-point/"
+  specificAreaServed="Providence Point, Issaquah, WA"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'Providence Point', url: '/locations/providence-point/' }
+  ]} />
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Providence Point EVSE Specialists</span>
+        <h1>Providence Point EV Charger Installation & Electrical Repair in Issaquah</h1>
+        <p class="hero-lead">
+          Tailored electric vehicle charging engineering for Providence Point's premier 55+ active adult community. We specialize in HOA-compliant condominium carport wiring, shared electrical meter integration, and rapid diagnostic troubleshooting in zip code 98029.
+        </p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime">
+            <span>📞</span>
+            <span>Call (425) 380-0019</span>
+          </a>
+          <a href="#providence-guide" class="btn btn-outline-white">
+            Explore Neighborhood Guide
+          </a>
+        </div>
+        <div class="hero-badges-row">
+          <div class="hero-badge-item"><span>📍</span> Local to Providence Point 98029</div>
+          <div class="hero-badge-item"><span>🛡️</span> RCW 64.38.060 HOA Compliance</div>
+          <div class="hero-badge-item"><span>⚡</span> Condo & Carport Specialists</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- About Company Summary -->
+  <section class="section" id="providence-guide">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+        <div>
+          <span class="section-tag">Active Adult Community Focus</span>
+          <h2>Professional EV Charging for Providence Point Condominiums</h2>
+          <p>
+            Providence Point is an esteemed gated 55+ active adult community nestled across 160 picturesque acres in the Sammamish Plateau corridor of Issaquah. Comprising multiple distinct villages—including Center Village, Hilltop, Forest Village, Garden Village, and Meadowview—Providence Point is renowned for its tranquil environment, social clubhouses, and manicured walking trails. An increasing number of residents have adopted plug-in hybrid and all-electric vehicles for their quiet operation, low maintenance, and environmental benefits.
+          </p>
+          <p>
+            However, adding electric vehicle charging equipment in a master-planned condominium community involves distinct regulatory and electrical complexities. Detached carports, shared basement garage structures, and distance between individual home electric panels and parking spaces require specialized conduit planning. Furthermore, installations must comply with the Providence Point Umbrella Association's architectural guidelines and Washington State condominium statutes.
+          </p>
+          <p>
+            Issaquah EV Charger Repair delivers turnkey technical solutions designed specifically for Providence Point properties. From preparing architectural review filings to executing low-impact conduit installations and diagnosing tripped breakers, our licensed electricians handle every detail with courtesy and precision.
+          </p>
+        </div>
+
+        <div style="background: #ffffff; border: 2px solid #e2e8f0; border-radius: 16px; padding: 2.5rem; box-shadow: var(--shadow-md);">
+          <div style="font-size: 0.9rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-bottom: 0.5rem;">98029 Community Profile</div>
+          <h3 style="margin-top: 0; margin-bottom: 1.25rem;">Providence Point Housing Stock & Power Grid</h3>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.9rem; font-size: 0.95rem; color: #334155; padding-left: 0;">
+            <li><strong>Construction Eras:</strong> Built across the 1980s and 1990s in phased village developments.</li>
+            <li><strong>Predominant Housing:</strong> Garden-style multi-family condominiums, townhomes, and detached single-level villas.</li>
+            <li><strong>Parking Infrastructure:</strong> Detached covered carports, subterranean parking garages, and private attached single-car bays.</li>
+            <li><strong>Electrical Service:</strong> Shared multi-meter electrical rooms and common-area distribution panels powered by Puget Sound Energy.</li>
+            <li><strong>Key Installation Needs:</strong> Sub-metering, access-controlled charging, long exterior conduit runs, and HOA board approval packages.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services for this Neighborhood -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Condo-Tailored Solutions</span>
+        <h2>Providence Point Focused EV Charging Services</h2>
+        <p class="section-subtitle">
+          These four electrical solutions address the multi-family architectural and association guidelines of Providence Point.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {featuredServices.map(srv => (
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="card-title">{srv.title}</h3>
+            <p class="card-text">{srv.desc}</p>
+            <a href={`/services/${srv.slug}/`} class="card-link">
+              Read Service Details →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive In-Depth Technical Content Body (2400+ words target) -->
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Navigating Condominium EVSE Electrical Engineering at Providence Point</h2>
+        <p>
+          Installing an electric vehicle charging station in a single-family home with an attached garage is relatively straightforward: the electrical panel is usually just a few feet away on an interior wall. In a condominium setting like Providence Point, however, the technical path from the power source to the vehicle charging port involves shared infrastructure, common-area property boundaries, and association governance.
+        </p>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/pacific-northwest-residential-home.jpg" 
+            alt="Condominium village and carport parking in Providence Point 55+ community Issaquah WA 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Providence Point active adult community: navigating condo architectural rules and common carport power.
+          </figcaption>
+        </figure>
+
+
+        <p>
+          Under the National Electrical Code (NEC Article 625) and Washington Administrative Code (WAC 296-46B), EVSE installations in multi-family residential structures must maintain strict overcurrent protection, ground fault circuit interruption, and physical protection for cables traversing common pedestrian areas. Our licensed electrical specialists engineer custom solutions that satisfy national electrical standards while respecting the architectural beauty of Providence Point's village neighborhoods.
+        </p>
+
+        <h3>Navigating Washington State EV Charging Condominium Law (RCW 64.38.060)</h3>
+        <p>
+          Many Providence Point residents are surprised to learn that Washington State law explicitly protects a homeowner's right to install an EV charging station. Under RCW 64.38.060 (and corresponding provisions of the Washington Uniform Common Interest Ownership Act), governing boards of common interest communities cannot unreasonably restrict or prohibit the installation of an EV charger within an owner's unit or designated limited common element parking space.
+        </p>
+        <p>
+          The statute allows associations to impose reasonable rules regarding architectural aesthetics, safety, and electrical permitting. Specifically, the homeowner is responsible for the cost of installation, electrical permitting, and sub-metered electricity consumption. Our team works hand-in-hand with Providence Point residents, preparing complete technical submittal packets that include equipment cut sheets, single-line wiring diagrams, and certified liability insurance to ensure effortless review by the architectural committee.
+        </p>
+
+        <h3>Power Routing Strategies for Detached Carports and Shared Garages</h3>
+        <p>
+          In village areas such as Hilltop, Forest Village, and Center Village, resident parking spaces are often located in detached covered carports situated fifty to one hundred feet away from the residential building’s main electrical room. Routing power to these remote parking bays requires precision planning:
+        </p>
+        <ul>
+          <li><strong>Direct Feeds from Resident Meters:</strong> When the distance is manageable and conduit pathways permit, we route a dedicated 240-volt branch circuit directly from the homeowner's private Puget Sound Energy electric meter. This ensures that all electricity used for vehicle charging is billed directly on the owner’s regular residential electric bill, eliminating any need for complex sub-metering or association reimbursement.</li>
+          <li><strong>Common-Area Sub-Metered Feeds:</strong> If the homeowner’s private meter is inaccessible or located in a distant building, we tap power from the nearest building common-area electrical distribution panel. To account for electricity usage accurately, we install a smart, revenue-grade sub-meter or a smart Level 2 charging station (such as Wallbox or ChargePoint) equipped with automated billing software that generates monthly energy usage logs for association accounting.</li>
+          <li><strong>Discreet Conduit Routing:</strong> All exterior conduit is installed using rigid aluminum or powder-coated EMT raceways, routed along building foundation borders and architectural fascia lines, and painted to match building trim colors in accordance with community aesthetic requirements.</li>
+        </ul>
+
+        <figure class="seo-location-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="HOA-approved sub-metered Level 2 EV charging station in Providence Point carport 98029"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            HOA-compliant smart EV charging station featuring automated kilowatt-hour usage tracking and billing.
+          </figcaption>
+        </figure>
+
+
+        <blockquote>
+          "In active adult communities like Providence Point, electrical installations must be safe, quiet, and completely unobtrusive. We design EV charging solutions that integrate cleanly with village aesthetics while giving residents reliable overnight charging."
+        </blockquote>
+
+        <h3>Smart Load Management to Protect Building Electrical Capacity</h3>
+        <p>
+          A common concern raised by condominium boards is whether multi-unit electrical transformers have sufficient capacity to handle EV charging without triggering costly utility upgrades. If multiple residents in a village cluster decide to drive electric cars, the cumulative electrical draw could strain local building feeders during evening peak hours.
+        </p>
+        <p>
+          We resolve this challenge by implementing dynamic Energy Management Systems (EMS) compliant with NEC 625.42. Smart load-sharing chargers communicate with one another over encrypted mesh networks to monitor total circuit current. When multiple vehicles plug in, the chargers automatically balance power between cars without exceeding the feeder's continuous limit. As individual vehicles finish charging, power dynamically re-allocates to remaining cars, ensuring every vehicle is fully charged by morning without risking main breaker trips or costly service overhauls.
+        </p>
+
+        <h3>Safety and Cord Management in Active Adult Walkways</h3>
+        <p>
+          Pedestrian safety is paramount throughout Providence Point’s tree-lined avenues and covered walkways. Loose, dangling, or uncoiled charging cables resting on garage floors or across sidewalks represent a significant trip hazard for residents and visiting grandchildren.
+        </p>
+        <p>
+          Our installations incorporate dedicated cord-management systems tailored to senior living environments. We mount spring-loaded cable retractor reels that automatically lift the heavy charging cord off the ground when not in use. For wall-mounted installations, we position charging holsters at ergonomic waist heights with integrated quick-release cable hangers, ensuring convenient, strain-free handling and keeping walkways completely clear.
+        </p>
+
+        <h2>Comprehensive Providence Point Street and Village Coverage</h2>
+        <p>
+          Our technical service vans provide complete, respectful service across all residential villages and avenues within Providence Point:
+        </p>
+        <ul>
+          <li><strong>Village Neighborhoods:</strong> Comprehensive service throughout Center Village, Forest Village, Garden Village, Hilltop Village, and Meadowview Village.</li>
+          <li><strong>Main Community Arterials:</strong> Active service along Providence Point Drive SE, SE 43rd Way, Mount Rainier Drive SE, and Cascade View Drive SE.</li>
+          <li><strong>Clubhouses & Community Landmarks:</strong> Coverage around the Collinwood clubhouse, the Washington building, the Highland community center, tennis courts, and surrounding garden areas.</li>
+          <li><strong>Postal Sector:</strong> Fast service across all residential addresses within zip code 98029.</li>
+        </ul>
+
+        <h2>Why Choose Us for Providence Point EV Charger Service</h2>
+        <p>
+          Condominium EVSE installation requires specialized regulatory and technical capabilities. Here is why Providence Point residents and village committees rely on our electricians:
+        </p>
+        <ol>
+          <li><strong>Condominium Law & HOA Familiarity:</strong> We understand the specific legal framework of RCW 64.38.060 and prepare thorough submittal packages that make board approvals fast and painless.</li>
+          <li><strong>Sub-Metering & Access Control Expertise:</strong> We install smart stations equipped with RFID card readers or mobile app authorization, preventing unauthorized vehicle plugging in shared carports.</li>
+          <li><strong>Local Proximity & Fast Dispatch:</strong> Centrally based at 612 Jasmine Pl NW in Issaquah, our technicians arrive promptly for consultations, repairs, and scheduled installations.</li>
+          <li><strong>Clean, Low-Impact Workmanship:</strong> We take pride in spotless job sites, utilizing clean drop cloths, non-invasive conduit pathways, and quiet, respectful installation practices.</li>
+          <li><strong>Licensed, Bonded & Insured:</strong> Full compliance with Washington State L&I electrical codes, complete commercial liability coverage, and City of Issaquah permitting.</li>
+          <li><strong>Multi-Brand Support:</strong> Certified diagnostics and installations for Tesla Wall Connectors, ChargePoint, Wallbox, Autel, and Emporia systems.</li>
+        </ol>
+
+        <h2>Our Four-Step On-Site Diagnostic and Installation Process</h2>
+        <p>
+          When you request technical service for your Providence Point home, our electricians follow a methodical four-stage process:
+        </p>
+        <ol>
+          <li><strong>Site Survey & Electrical Audit:</strong> We evaluate the distance between your assigned parking bay and the nearest electrical panel, inspect available service capacity, and identify the most discreet conduit path.</li>
+          <li><strong>HOA Submittal Preparation:</strong> We generate electrical single-line diagrams, specification sheets, and conduit path plans for submission to the Providence Point architectural review board.</li>
+          <li><strong>Permitted Professional Installation:</strong> Upon permit issuance and board approval, our electricians run heavy-duty conductors, mount the charging equipment, and install sub-metering or cord retractors.</li>
+          <li><strong>Commissioning & Resident Walkthrough:</strong> We test the station under live charging load, verify safety disconnects, configure mobile apps or RFID keycards, and demonstrate effortless daily operation.</li>
+        </ol>
+
+        <h2>Straight-Forward Assessment Principles</h2>
+        <p>
+          We believe in transparent, straightforward communication. Our electricians inspect your parking layout, clearly explain the technical options for power delivery and sub-metering, and provide clear technical guidance without high-pressure sales tactics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby Neighborhoods Links -->
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Surrounding Communities</span>
+        <h2>Explore Nearby Issaquah Service Areas</h2>
+        <p class="section-subtitle">
+          In addition to Providence Point, our technicians provide dedicated electrical services throughout adjacent neighborhoods.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        {nearbyAreas.map(area => (
+          <div class="feature-card">
+            <h3 class="card-title">{area.name}</h3>
+            <p class="card-text">{area.note}</p>
+            <a href={area.url} class="card-link">View {area.name} Page →</a>
+          </div>
+        ))}
+      </div>
+      
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/locations/" class="btn btn-navy">View All 15 Issaquah Location Hubs</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <FAQAccordion items={providencePointFaqs} />
+
+  <!-- CTA Band -->
+  <CTABand
+    title="Ready to Add an EV Charger to Your Providence Point Carport or Garage?"
+    subtitle="Speak directly with an electrical specialist to book an on-site site survey or circuit assessment."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <!-- Contact & Map Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Direct Contact</span>
+        <h2>Schedule Providence Point EVSE Service</h2>
+        <p class="section-subtitle">
+          Call our Issaquah dispatch line directly to discuss your vehicle charging needs or report an equipment malfunction.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Providence Point Dispatch</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office Location</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+              <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;">Serving Providence Point Dr SE, SE 43rd Way & all 98029</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">
+              📞 Call Technicians for Service
+            </a>
+          </div>
+        </div>
+
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe
+            title="Providence Point Map"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            src="https://maps.google.com/maps?q=Providence+Point+Dr+SE,+Issaquah,+WA+98029&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

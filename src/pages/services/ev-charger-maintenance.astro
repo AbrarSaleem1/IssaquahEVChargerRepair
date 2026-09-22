@@ -1,0 +1,212 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "How often should my EV charger be inspected?",
+    "answer": "We recommend annual maintenance inspections for all residential EVSE. Chargers in outdoor or high-humidity environments should be inspected every 6 months."
+  },
+  {
+    "question": "What does a maintenance visit include?",
+    "answer": "We perform infrared thermal scanning under load, re-torque all terminal connections, inspect the charging cable for physical wear, test GFCI functionality, verify ground resistance, and check firmware status on smart chargers."
+  },
+  {
+    "question": "Can maintenance prevent charger failures?",
+    "answer": "Yes. The majority of charger failures are caused by gradual terminal loosening and thermal degradation, both of which are detectable and correctable during routine inspections."
+  },
+  {
+    "question": "Does maintenance affect my warranty?",
+    "answer": "Most manufacturers recommend or require periodic professional inspection to maintain warranty coverage. We provide signed maintenance documentation for your records."
+  },
+  {
+    "question": "What tools do you use for thermal inspection?",
+    "answer": "We use FLIR industrial infrared thermal cameras that visualize heat signatures at every connection point, identifying hot spots invisible to the naked eye before they become dangerous."
+  }
+];
+---
+
+<Layout
+  title="EV Charger Maintenance in Issaquah, WA | Safety Tune-Ups"
+  description="Professional EV charger maintenance and safety inspections in Issaquah WA. Thermal scans, torque checks, and ground verification. Call (425) 380-0019."
+  canonicalPath="/services/ev-charger-maintenance/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'EV Charger Maintenance' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Specialized EV Service</span>
+        <h1>EV Charger Maintenance & Safety Inspections in Issaquah</h1>
+        <p class="hero-lead">Your EV charger runs high current for hours every night. Annual maintenance inspections catch worn terminals, loose connections, and degrading components before they cause failures, fires, or expensive hardware damage.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">View All 15 Service Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>What This Service Covers</h2>
+        <ul>
+          <li>Infrared thermal imaging of all electrical connections under load</li>
+          <li>Terminal block torque re-verification with calibrated instruments</li>
+          <li>Charging cable and connector pin wear inspection</li>
+          <li>Ground fault circuit interrupter (GFCI) functionality testing</li>
+          <li>Equipment grounding conductor and ground rod resistance testing</li>
+          <li>Firmware version check and update guidance for smart chargers</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charging-cable-close-up.jpg" 
+            alt="Close-up maintenance inspection of EV charging plug terminals and J1772/NACS latch"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Inspection of connector terminal pins, spring tension, and locking latches to prevent micro-arcing.
+          </figcaption>
+        </figure>
+
+
+        <h2>Technical Background & How It Works</h2>
+        <p>Like any high-current electrical system, EV charging equipment experiences gradual wear from thousands of thermal cycles. Copper conductors expand when hot and contract when cool. Over time, this can loosen terminal screws that were properly torqued at installation.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Annual electrical preventative maintenance testing on EV charger circuit in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Annual insulation resistance testing and terminal lug re-torquing to prevent unexpected failures.
+          </figcaption>
+        </figure>
+
+
+        <p>A proactive annual maintenance inspection costs far less than an emergency repair call or, worse, replacing a charger destroyed by preventable thermal damage. Regular inspections also maintain manufacturer warranty coverage and provide documentation for homeowner insurance.</p>
+
+        <p>This service is available throughout all 15 Issaquah neighborhoods, including <a href="/locations/issaquah-highlands/">Issaquah Highlands</a>, <a href="/locations/talus/">Talus</a>, <a href="/locations/klahanie/">Klahanie</a>, and <a href="/locations/olde-town-issaquah/">Olde Town Issaquah</a>. Browse our full <a href="/locations/">locations hub</a> to find your area.</p>
+
+        <h2>When to Contact Us</h2>
+        <ul>
+          <li>Your charger has been operating for over 12 months without inspection</li>
+          <li>You notice intermittent charging interruptions or slower speeds</li>
+          <li>You want to maintain manufacturer warranty coverage</li>
+          <li>Your charger is exposed to outdoor weather conditions</li>
+          <li>You have experienced a power surge or electrical storm</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Checking breaker temperature during full-load charge"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Thermal testing verifies zero hotspots along the entire circuit during peak 48-amp draw.
+          </figcaption>
+        </figure>
+
+
+        <p>For technical questions about ev charger maintenance in Issaquah, call our dispatch line directly at <a href="tel:+14253800019">(425) 380-0019</a>. Licensed under <a href="https://apps.leg.wa.gov/WAC/default.aspx?cite=296-46B" target="_blank" rel="noopener">WAC 296-46B</a> and fully compliant with NEC Article 625 standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <FAQAccordion items={faqs} />
+
+  <section class="section" style="background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Related Solutions</span>
+        <h2>Related EV Charging Services</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Troubleshooting</h3>
+          <a href="/services/ev-charger-troubleshooting/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Replacement</h3>
+          <a href="/services/ev-charger-replacement/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">NEMA 14-50 Outlet Install & Repair</h3>
+          <a href="/services/nema-14-50-outlet-installation-repair/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">EV Charger Circuit Repair & Installation</h3>
+          <a href="/services/ev-charger-circuit-repair-installation/" class="card-link">View Service Details →</a>
+        </div>
+        <div class="feature-card">
+          <h3 class="card-title">Tesla Wall Connector Installation & Repair</h3>
+          <a href="/services/tesla-wall-connector-installation-repair/" class="card-link">View Service Details →</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="/services/" class="btn btn-navy">View All 14 EV Services</a>
+      </div>
+    </div>
+  </section>
+
+  <CTABand
+    title="Need EV Charger Maintenance in Issaquah?"
+    subtitle="Speak directly with an electrical specialist to schedule your on-site service."
+    buttonText="Call (425) 380-0019"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <div class="contact-hero-card">
+          <h3 style="margin-top: 0; margin-bottom: 1.5rem;">Issaquah Dispatch Center</h3>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📞</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Phone Line</div>
+              <a href="tel:+14253800019" style="font-size: 1.35rem; font-weight: 800; color: #0b132b;">+1 (425) 380-0019</a>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div style="font-size: 0.9rem; color: #64748b;">Office</div>
+              <div style="font-size: 1.05rem; font-weight: 700; color: #0b132b;">612 Jasmine Pl NW, Issaquah, WA 98027</div>
+            </div>
+          </div>
+          <div style="margin-top: 2rem;">
+            <a href="tel:+14253800019" class="btn btn-lime" style="width: 100%;">📞 Call Technicians</a>
+          </div>
+        </div>
+        <div style="border-radius: 16px; overflow: hidden; height: 380px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;">
+          <iframe title="Issaquah Map" width="100%" height="100%" style="border:0;" loading="lazy" src="https://maps.google.com/maps?q=612+Jasmine+Pl+NW,+Issaquah,+WA+98027&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
