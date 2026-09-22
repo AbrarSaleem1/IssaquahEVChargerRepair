@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "What does a blinking red light on a Tesla Wall Connector mean?",
+    "answer": "A red light sequence indicates an active hardware or electrical fault. One red blink indicates ground fault interruption; two blinks indicate a ground wire missing or disconnected; three blinks indicate high temperature detected inside the unit or handle; four blinks indicate internet/Wi-Fi comms fault; five blinks indicate line voltage drop; and six blinks indicate internal hardware failure."
+  },
+  {
+    "question": "Why is my Tesla charging speed cut in half (from 48A to 24A or 16A)?",
+    "answer": "When the Tesla vehicle or Wall Connector detects excessive heat at the wall connection, wire lugs, or handle terminals, it automatically throttles the charging current by 50% to prevent an electrical fire. This is a severe safety symptom requiring professional terminal inspection and re-torquing."
+  },
+  {
+    "question": "Can you repair both Gen 2 and Gen 3 Tesla Wall Connectors?",
+    "answer": "Yes. We repair both Gen 2 Wall Connectors (rotary dial dip-switch configurations) and modern Gen 3 units with built-in Wi-Fi commissioning, thermal sensors, and firmware diagnostics."
+  },
+  {
+    "question": "Can a loose wire inside the Wall Connector faceplate be repaired on-site?",
+    "answer": "Yes. In most cases, if caught before terminal melting occurs, our electricians re-strip damaged copper, apply anti-oxidant if needed, replace scorched wire nuts or blocks, and torque all fasteners to Tesla's strict factory specifications."
+  },
+  {
+    "question": "Why does my Tesla Wall Connector trip the breaker as soon as I plug in?",
+    "answer": "This usually indicates an internal short circuit in the contactor relay, a damaged conductor insulation inside the metallic conduit, or an illegal double-GFCI conflict where the breaker has a built-in GFCI that battles the Wall Connector's internal 20mA CCID."
+  }
+];
+---
+
+<Layout
+  title="Tesla Wall Connector Repair in Issaquah, WA | Red Light Fix & Diagnostics"
+  description="Specialized Tesla Wall Connector repair in Issaquah, WA. Diagnostics for blinking red lights, thermal current throttling, handle overheating & breaker trips. Call (425) 380-0019."
+  canonicalPath="/services/tesla-wall-connector-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Tesla Wall Connector Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Tesla Certified Diagnostics</span>
+        <h1>Tesla Wall Connector Repair & Diagnostics in Issaquah</h1>
+        <p class="hero-lead">Don't let a flashing red light or sudden charge throttling strand your Tesla Model S, 3, X, Y, or Cybertruck. Our licensed electricians diagnose and repair Gen 2 and Gen 3 Wall Connector faults across Issaquah.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Fast Response Across Issaquah</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Deciphering & Fixing Tesla Wall Connector Faults</h2>
+        <p>Tesla Wall Connectors are high-performance charging systems running up to 48 continuous amperes on a 60-amp dedicated circuit. At these electrical loads, even minor connection weaknesses or voltage imbalances trigger the unit's onboard safety sensors, causing red fault lights or vehicle error messages such as <em>"Charging Stopped - Check Power Source"</em>.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/tesla-wall-connector-repair-installation.jpg" 
+            alt="Electrician testing terminal block wiring inside an open Tesla Wall Connector in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Field diagnostic inspection of a Tesla Gen 3 Wall Connector: checking line-to-line 240V balance, terminal block torque, and ribbon cable continuity.
+          </figcaption>
+        </figure>
+
+        <h2>Tesla Red Blink Fault Code Guide & Diagnostic Protocol</h2>
+        <p>If your Wall Connector's main light bar is displaying red, count the consecutive flashes between pauses to identify the problem:</p>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔴 1 Red Blink: Ground Fault</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Current leakage detected between live conductors and ground. We trace line insulation breakdowns, conduit moisture, or internal contactor isolation failure.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔴 2 Red Blinks: Ground Missing</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Equipment Grounding Conductor (EGC) is loose, broken, or has high resistance exceeding safe thresholds. We restore continuous bonded ground.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔴 3 Red Blinks: High Temperature</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Terminal blocks or charging cable handle exceeded temperature limits. Caused by improper wire torque or corroded NACS pin contacts.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔴 5 Red Blinks: Voltage Too High/Low</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Utility supply voltage from Puget Sound Energy (PSE) is dropping below 200V or spiking above 260V under charging load.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔴 6 Red Blinks: Internal Hardware Fault</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Microcontroller, pilot circuit, or internal relay failure. We assess component serviceability or perform rapid unit replacement under warranty.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">🟡 Breaker Tripping Instantly</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Occurs when a dual-pole GFCI breaker is installed on a circuit feeding a Wall Connector that already has its own built-in GFCI sensor.</p>
+          </div>
+        </div>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charging-cable-close-up.jpg" 
+            alt="Close up inspection of Tesla NACS charging handle pins and latch mechanism"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Examining NACS charging handle pins: inspecting for arcing pits, microswitch resistance, and thermal sensor integrity.
+          </figcaption>
+        </figure>
+
+        <h2>Our Specialized Tesla Diagnostic Process</h2>
+        <ol>
+          <li><strong>Digital Code Interrogation:</strong> We access the Gen 3 diagnostic web portal to download raw event logs, fault timestamps, and thermal sensor histories.</li>
+          <li><strong>Infrared Thermal Scanning:</strong> Under a full 48A charging draw, we scan the Wall Connector wire block, conduit entry, and panel breaker to spot thermal anomalies before catastrophic melting.</li>
+          <li><strong>Conductor & Torque Restoration:</strong> We replace overheated wire leads, apply calibrated torque to all terminal screws using precision tools, and verify proper wire gauge (#6 AWG copper min for 48A).</li>
+          <li><strong>Vehicle Handshake Testing:</strong> We verify clean communication on the NACS pilot pin to ensure the vehicle charges at full rated speed without unexpected interruptions.</li>
+        </ol>
+
+        <h2>Serving Tesla Owners Throughout Issaquah</h2>
+        <p>From Issaquah Highlands to Talus and Klahanie, Tesla vehicles represent the largest EV population in our community. When your Wall Connector fails, you shouldn't have to waste hours at a Supercharger. Our fully stocked service vehicles arrive with replacement breakers, heavy-duty wire, thermal sensors, and diagnostic gear to resolve the fault promptly.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Tesla Wall Connector Flashing Red?" 
+    description="Speak directly with an Issaquah EV electrical specialist. We provide same-day diagnostics and repair across zip codes 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="View All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Tesla Wall Connector Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

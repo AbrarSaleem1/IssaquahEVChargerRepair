@@ -1,0 +1,139 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "How quickly can an emergency EV technician arrive in Issaquah?",
+    "answer": "Because our electricians are locally based in Issaquah (serving 98027 and 98029), our emergency response dispatch can typically arrive within 60 to 90 minutes of your call for urgent safety issues like burning odors, arcing breakers, or stranded commuters."
+  },
+  {
+    "question": "What should I do immediately if I smell burning plastic around my charger?",
+    "answer": "Immediately locate your main electrical panel and switch the dedicated two-pole EV circuit breaker to the OFF position. Do not attempt to pull a melted plug out of the wall while power is live. Once the breaker is off, call our emergency line at (425) 380-0019."
+  },
+  {
+    "question": "My charging handle is locked and stuck in my vehicle's charge port. Can you help?",
+    "answer": "Yes. Worn latch solenoids, deformed thermal pins, or electronic locking pin failures can lock a J1772 or NACS connector inside the vehicle charge port. We safely release the mechanical interlock and inspect pins for electrical arcing damage."
+  },
+  {
+    "question": "Are emergency diagnostic services available on weekends and holidays?",
+    "answer": "Yes. We operate 24 hours a day, 7 days a week, 365 days a year for critical electrical diagnostic and repair emergencies throughout Issaquah."
+  },
+  {
+    "question": "Do your emergency service trucks carry common replacement parts?",
+    "answer": "Yes. Our mobile units carry commercial-grade double-pole breakers (40A, 50A, 60A), heavy-duty industrial Hubbell 14-50 receptacles, replacement contactors, THHN copper wire, and digital diagnostic scopes to complete most emergency repairs on the first visit."
+  }
+];
+---
+
+<Layout
+  title="24/7 Emergency EV Charger Repair in Issaquah, WA | Same-Day Dispatch"
+  description="24/7 emergency EV charger repair in Issaquah, WA. Rapid response for burning odors, tripping breakers, stuck charging handles & complete station blackouts. Call (425) 380-0019."
+  canonicalPath="/services/emergency-ev-charger-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: '24/7 Emergency EV Charger Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(239, 68, 68, 0.2); color: #f87171;">24/7 Emergency Dispatch</span>
+        <h1>24/7 Emergency EV Charger Repair in Issaquah</h1>
+        <p class="hero-lead">Woke up to an uncharged vehicle before a critical morning commute, or noticed smoke or sparks from your charging station? Our on-call emergency electricians provide rapid dispatch across 98027 & 98029.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>🚨</span><span>Call (425) 380-0019 Now</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving All 15 Issaquah Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Immediate Help for Critical EV Charging Emergencies</h2>
+        <p>An EV charging malfunction is not just an inconvenience—it can leave you stranded without transportation and pose immediate fire hazards to your home. When high-amperage 240V circuits fail, waiting days for an ordinary contractor is not an option. Our certified emergency electrical team is prepared around the clock to respond to urgent EVSE failures across Issaquah.</p>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card" style="border-top: 4px solid #ef4444;">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔥 Burning Odors / Smoke</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Shut breaker off immediately. Loose connections under high load can heat beyond 400°F and ignite surrounding building materials.</p>
+          </div>
+          <div class="card" style="border-top: 4px solid #f59e0b;">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">🔒 Handle Stuck in Vehicle Port</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Connector won't release due to warped locking pins or melted microswitches. We perform non-destructive port disengagement.</p>
+          </div>
+          <div class="card" style="border-top: 4px solid #0284c7;">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">⚡ Total Charging Blackout</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Station shows no power, tripped main breaker, or lightning surge failure before an essential trip or work commute.</p>
+          </div>
+        </div>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Emergency electrical technician conducting fast multimeter troubleshooting in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Emergency rapid diagnostic: isolating short circuits, testing fuse resistance, and verifying safety disconnects.
+          </figcaption>
+        </figure>
+
+        <h2>What to Do While Waiting for Our Emergency Electrician</h2>
+        <ol>
+          <li><strong>Turn Off Circuit Power:</strong> Go directly to your home's main panel or garage subpanel and flip the dedicated EV circuit breaker to the OFF position.</li>
+          <li><strong>Do NOT Force Plugs or Levers:</strong> If a plug feels fused or hot, do not yank on it; forceful pulling can tear the vehicle's onboard charge receptacle.</li>
+          <li><strong>Ventilate the Garage:</strong> If you detect burning plastic or chemical odors, open garage doors to disperse fumes.</li>
+          <li><strong>Call Our Dispatch Line:</strong> Dial (425) 380-0019 to report your symptoms and initiate priority local dispatch.</li>
+        </ol>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/modern-issaquah-garage-ev-charger.jpg" 
+            alt="Modern garage EV charger restored to full working order after emergency repair in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Restoring power safely: fully functional, temperature-verified EV charging station ready for overnight charging.
+          </figcaption>
+        </figure>
+
+        <h2>Serving Every Corner of Issaquah 24/7</h2>
+        <p>Whether you are situated up on Squak Mountain, perched in Talus, in the master-planned communities of Issaquah Highlands and Klahanie, or down in Olde Town, our emergency vehicles have rapid access to all Issaquah arterial roads. Call us 24/7 for immediate professional relief.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Need Emergency EV Charger Repair Right Now?" 
+    description="Do not wait. Call our 24/7 emergency dispatch line immediately for priority electrical service across Issaquah 98027 & 98029." 
+    primaryBtnText="🚨 Call (425) 380-0019 Now" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="View All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Emergency EV Charger Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,150 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Can a malfunctioning Level 2 EV charger be repaired without full replacement?",
+    "answer": "In many cases, yes. Common failures stem from degraded contactor relays, loose terminal connections, burnt wire lugs, failed internal fuses, or damaged charging cables/J1772 handles. Our licensed electricians test internal components to repair the specific fault rather than forcing an expensive whole-unit replacement."
+  },
+  {
+    "question": "Why is my Level 2 charger shutting off after charging for only 15-20 minutes?",
+    "answer": "This is almost always thermal throttling or an onboard ground-fault interruption (GFCI). If terminal blocks, breakers, or the charging handle become excessively hot under continuous 32A to 48A load, internal thermal sensors shut down the charging session to prevent electrical fire."
+  },
+  {
+    "question": "How do you test a malfunctioning 240V Level 2 charger?",
+    "answer": "We use calibrated digital multimeters, insulation resistance (megohmmeter) testers, infrared thermal imaging cameras, and EVSE test simulators that mimic an EV handshake (pilot signal and proximity pin resistance) under live current."
+  },
+  {
+    "question": "Do you repair both hardwired and plug-in Level 2 chargers?",
+    "answer": "Yes. We service hardwired residential chargers (mounted directly to conduit) as well as plug-in units using NEMA 14-50 or 6-50 receptacles across Issaquah 98027 and 98029."
+  },
+  {
+    "question": "What brands of Level 2 chargers do you repair?",
+    "answer": "We repair ChargePoint Home Flex, Wallbox Pulsar Plus, Autel MaxiCharger, Emporia EV, Grizzl-E Classic/Smart, JuiceBox (Enel X), Webasto, ClipperCreek, and Bosch EV chargers."
+  }
+];
+---
+
+<Layout
+  title="Level 2 EV Charger Repair in Issaquah, WA | 240V Diagnostic & Fix"
+  description="Expert Level 2 EV charger repair in Issaquah, WA. Diagnostics for thermal cutouts, pilot signal faults, tripping breakers, and damaged J1772 handles. Call (425) 380-0019."
+  canonicalPath="/services/level-2-ev-charger-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Level 2 EV Charger Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Specialized EVSE Repair</span>
+        <h1>Level 2 EV Charger Repair & Diagnostics in Issaquah</h1>
+        <p class="hero-lead">When your 240-volt home charging station refuses to power on, stops charging prematurely, or exhibits red warning lights, our certified electricians diagnose the electrical root cause and restore rapid, safe charging.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving All Issaquah Neighborhoods</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Comprehensive Level 2 Charger Repair Services</h2>
+        <p>A Level 2 electric vehicle charging station is a high-amperage continuous load appliance drawing between 32 and 48 continuous amperes at 240 volts. Over months and years of daily thermal cycles, microscopic vibrations and electrical resistance can cause critical hardware failures. We provide field repairs across Issaquah for all major residential charging brands.</p>
+
+        <ul>
+          <li><strong>Thermal Throttling & Overheating Diagnosis:</strong> Detecting and repairing high-resistance connections at terminal blocks and supply lugs.</li>
+          <li><strong>Internal Relay & Contactor Replacement:</strong> Fixing heavy-duty electromechanical relays that fail to close or weld shut under load.</li>
+          <li><strong>Control Pilot (CP) & Proximity Pilot (PP) Troubleshooting:</strong> Repairing communication signal breakdown between the charger logic board and the vehicle.</li>
+          <li><strong>GFCI & Ground-Fault Interruption Fixes:</strong> Resolving nuisance tripping caused by moisture ingress, ground resistance drift, or capacitor degradation.</li>
+          <li><strong>Charging Cord & J1772 Connector Replacement:</strong> Splicing or replacing frayed cables, cracked holsters, and worn microswitches.</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/level-2-ev-charger-installation-issaquah.jpg" 
+            alt="Licensed electrician repairing Level 2 EV charging station terminal block in an Issaquah garage"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Field testing a 240V Level 2 EV charger: verifying torque specs, terminal continuity, and pilot frequency response.
+          </figcaption>
+        </figure>
+
+        <h2>Common Signs Your Level 2 Charger Needs Immediate Repair</h2>
+        <p>Operating a damaged or failing Level 2 charger risks damaging your vehicle's onboard inverter and poses a severe house fire hazard. Contact our technicians immediately if you notice any of the following symptoms in your Issaquah home:</p>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">⚠️ Red Flashing Warning Lights</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Represents an unrecoverable fault: high ground impedance, voltage sag under load, or internal circuit board communication failure.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">🔥 Burning Plastic Odor / Warm Faceplate</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Caused by loose wire terminations creating electrical arcing and intense localized heating inside the enclosure.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">⚡ Nuisance Breaker Tripping</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">The 40A or 50A breaker trips instantly upon plug-in or pops after 30-45 minutes of sustained charging.</p>
+          </div>
+        </div>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Multimeter diagnostic check on Level 2 charger circuit breakers in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Precision diagnostic measurement: checking split-phase voltage balancing and neutral-to-ground fault current.
+          </figcaption>
+        </figure>
+
+        <h2>Our 4-Step Level 2 Repair Protocol</h2>
+        <ol>
+          <li><strong>Incoming Power & Subpanel Testing:</strong> We verify line voltage (240V nominal) under live load and inspect breaker seating, torque values, and wire insulation integrity.</li>
+          <li><strong>Signal & Microcontroller Interrogation:</strong> We measure the 1kHz pulse-width modulated (PWM) pilot signal that commands vehicle charge rates and reads vehicle readiness.</li>
+          <li><strong>Internal Component Servicing:</strong> Defective wiring, overheated lugs, failed surge suppressors, or worn contactor points are repaired to OEM and NEC 625 specifications.</li>
+          <li><strong>Simulated Load & Thermal Verification:</strong> We perform a full-current simulated charge cycle while scanning the unit and breaker with FLIR thermal imaging to certify safe continuous operation.</li>
+        </ol>
+
+        <h2>Repairing All Major Level 2 Charger Brands in Issaquah</h2>
+        <p>Whether you live in the highlands, Talus, or downtown Issaquah, our mobile diagnostic service trucks carry genuine components, heavy-duty replacement wire, and specialized diagnostic adapters for every leading manufacturer. We service units installed indoors in attached garages or outdoors exposed to Pacific Northwest rainfall.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Need Fast Level 2 EV Charger Repair in Issaquah?" 
+    description="Don't let a faulty home charger leave you stranded with an empty battery. Call our licensed technicians for same-day diagnostic dispatch in 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Level 2 Charger Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Can a cracked or broken J1772 latch trigger a charging failure?",
+    "answer": "Yes. The mechanical latch on a J1772 connector houses an internal microswitch connected to the Proximity Pilot (PP) circuit. When the latch is released or cracked, the microswitch opens, signaling the vehicle to immediately stop current flow to prevent high-voltage arcing. If the latch is physically damaged, charging will not initiate."
+  },
+  {
+    "question": "My EV charging cable got pinched under the garage door. Can it be repaired?",
+    "answer": "If outer sheathing is lightly abraded without copper strand or insulation damage, protective vulcanized insulation tape or heat-shrink can restore weather protection. However, if internal conductors or pilot signal wires are pinched, crushed, or severed, splicing high-current 240V continuous lines is hazardous. We replace the entire factory cable assembly directly at the charger terminal block."
+  },
+  {
+    "question": "Do you repair Tesla NACS charging handles and release buttons?",
+    "answer": "Yes. The NACS handle contains a radio-frequency (RF) transmitter button, a microswitch, and internal thermistors. We diagnose button communication failures and replace damaged NACS cable assemblies."
+  },
+  {
+    "question": "What causes the charging connector to feel burning hot during use?",
+    "answer": "Excessive handle temperature is usually caused by pitted or oxidized brass female socket sleeves inside the connector, which create resistive heating under continuous 32A-48A flow. This heat will degrade the vehicle's charge port if left unaddressed."
+  },
+  {
+    "question": "Can I replace just the charging cable instead of buying a whole new charging station?",
+    "answer": "Yes. Most reputable Level 2 charging stations (ChargePoint, Tesla, Autel, Emporia, Grizzl-E) allow field replacement of the output cord set. This saves homeowners hundreds of dollars compared to whole-unit replacement."
+  }
+];
+---
+
+<Layout
+  title="EV Charging Cable & Handle Repair in Issaquah, WA | J1772 & NACS Fix"
+  description="EV charging cable, handle and connector latch repair in Issaquah, WA. Fixing damaged cords, stuck plugs, pitted pins & NACS buttons. Call (425) 380-0019."
+  canonicalPath="/services/ev-charging-cable-handle-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'EV Cable & Handle Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Connector & Cable Specialists</span>
+        <h1>EV Charging Cable & Handle Repair in Issaquah</h1>
+        <p class="hero-lead">Has your charging cable been pinched by the garage door, dropped on concrete, or suffering from a broken plastic latch? Our licensed technicians repair and replace J1772 and NACS cable assemblies across Issaquah.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving All Issaquah 98027 & 98029</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Restoring the Critical Physical Link to Your Electric Vehicle</h2>
+        <p>The charging cord and coupler endure more mechanical stress than any other component of your EVSE setup. Every single day, cables are uncoiled, dragged across concrete garage floors, exposed to vehicle tires, and plugged in and out under tension. Over time, physical wear compromises safety sensors and conductor insulation. We provide precision cord and handle repairs throughout Issaquah.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charging-cable-close-up.jpg" 
+            alt="Close-up inspection of J1772 charging connector pins and safety latch mechanism in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Examining contact pin spring tension, microswitch resistance, and cable strain relief on a Level 2 charging coupler.
+          </figcaption>
+        </figure>
+
+        <h2>Our Cable & Coupler Repair Capabilities</h2>
+        <ul>
+          <li><strong>Broken J1772 Latch & Spring Replacement:</strong> Restoring mechanical locking latches and internal microswitch continuity so charging sessions initiate smoothly.</li>
+          <li><strong>Factory Cord Set Replacement:</strong> Opening the charging station enclosure to disconnect damaged cables from internal terminal lugs and installing brand-new OEM heavy-duty cold-weather cords (up to 25 ft).</li>
+          <li><strong>Overheated Pin & Terminal Rebuilding:</strong> Cleaning oxidation, replacing scored sleeve sleeves, and restoring clean conductivity on power and ground pins.</li>
+          <li><strong>Tesla NACS Charge Port Door Button Repair:</strong> Diagnosing wireless RF transmitter circuits and spring release buttons inside Tesla connector handles.</li>
+          <li><strong>Cord Strain Relief & Boot Replacement:</strong> Replacing torn weather boots and loose cable gland fittings that allow water to migrate down into station electronics.</li>
+        </ul>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">⚠️ Damaged Outer Jacket</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Exposed internal conductors allow moisture penetration, creating lethal shock hazards and instant ground-fault trips in wet PNW conditions.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">🔥 Scorched or Pitted Pins</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Carbon soot or heat discoloration on connector pins creates severe thermal resistance that can melt your car's expensive inlet port.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">🛑 "Vehicle Not Detected" Errors</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Broken pilot signal conductors inside the flex cable prevent the electronic communication handshake between the station logic and the car.</p>
+          </div>
+        </div>
+
+        <h2>High-Current Cord Safety: Don't DIY</h2>
+        <p>Attempting to fix an electric car charging cable with wire nuts or household electrical tape is illegal under NEC Article 625 and creates an extreme hazard. EV cords conduct 32A to 48A of continuous current; any improper joint will rapidly overheat. Let our licensed electricians install an approved, factory-certified cable assembly with full warranty protection.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Damaged EV Charging Cable or Handle in Issaquah?" 
+    description="Don't risk vehicle port damage or electrical hazards. Call our licensed technicians for fast cord inspection and replacement in 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">EV Cable Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

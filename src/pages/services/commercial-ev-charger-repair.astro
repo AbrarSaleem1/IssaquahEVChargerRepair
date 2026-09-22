@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "What are the most frequent causes of commercial EV charger breakdowns?",
+    "answer": "Commercial stations endure extreme physical wear and outdoor weather exposure. Frequent failures include damaged or run-over charging cables, broken connector latches, failed RFID/NFC payment readers, cellular network connectivity drops, and water intrusion inside pedestal enclosures."
+  },
+  {
+    "question": "Do you repair commercial Level 2 and DC Fast Chargers (DCFC)?",
+    "answer": "Yes. We troubleshoot and repair commercial dual-port Level 2 charging pedestals (ChargePoint CT4000, Blink, Autel, SemaConnect, FLO) as well as commercial electrical distribution systems, 3-phase transformers, and dedicated disconnects feeding DC Fast Charging stations."
+  },
+  {
+    "question": "Can you service EV chargers in multifamily condo and apartment garages?",
+    "answer": "Yes. We frequently service HOA and property-management owned chargers in residential complexes throughout Issaquah Highlands and Central Issaquah, troubleshooting billing gateways, load-balancing networks, and tripping subpanels."
+  },
+  {
+    "question": "Do you offer emergency response service level agreements (SLAs) for commercial fleets?",
+    "answer": "Yes. We partner with commercial fleet operators, municipal departments, and property managers in Issaquah to provide priority 2- to 4-hour response times to minimize station downtime and preserve fleet readiness."
+  },
+  {
+    "question": "How do you handle firmware, RFID, or OCPP network communication errors?",
+    "answer": "We interface directly with Open Charge Point Protocol (OCPP) network platforms, test internal 4G/LTE cellular modems, reset gateway microcontrollers, and verify SIM card and signal antenna performance."
+  }
+];
+---
+
+<Layout
+  title="Commercial EV Charger Repair in Issaquah, WA | Fleet & Public Station Fix"
+  description="Commercial EV charger repair and maintenance in Issaquah, WA. Pedestal troubleshooting, RFID reader repairs, cable replacements & 3-phase electrical fixes. Call (425) 380-0019."
+  canonicalPath="/services/commercial-ev-charger-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Commercial EV Charger Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Commercial & Fleet Service</span>
+        <h1>Commercial EV Charger Repair & Maintenance in Issaquah</h1>
+        <p class="hero-lead">Keep your public, workplace, multifamily, or fleet charging stations operational. Our commercial electricians repair pedestals, retractor cables, contactors, and network communication across Issaquah.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving All Issaquah Businesses</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Maximizing Station Uptime for Issaquah Commercial Properties</h2>
+        <p>A non-functional commercial EV charging station frustrates customers, loses parking revenue, and creates negative reviews for retail centers, corporate offices, and multifamily communities. Issaquah EV Charger Repair delivers rapid diagnostic and hardware repair solutions to keep commercial charging assets generating revenue and powering vehicles safely.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/commercial-ev-charging-stations-parking.jpg" 
+            alt="Commercial dual-port EV charging station pedestal repair in an Issaquah commercial parking lot"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Commercial station servicing: diagnosing pedestal contactors, cable retractor tension, and cellular network telemetry.
+          </figcaption>
+        </figure>
+
+        <h2>Our Commercial Repair Capabilities</h2>
+        <ul>
+          <li><strong>Heavy-Duty Retractor & Cable Assembly Replacement:</strong> Replacing cut, frayed, or vandalized charging cables and retractor counterweights.</li>
+          <li><strong>RFID & Payment Gateway Troubleshooting:</strong> Diagnosing contactless tap readers, credit card interfaces, and OCPP network modem dropouts.</li>
+          <li><strong>Three-Phase 208V/480V Distribution Servicing:</strong> Diagnosing commercial step-down transformers, switchgear disconnects, and distribution subpanels.</li>
+          <li><strong>Physical Bollard & Pedestal Foundation Repair:</strong> Addressing impact damage from parking maneuvers, re-anchoring loose bollards, and restoring grounding bonds.</li>
+          <li><strong>Moisture & Weather Seal Remediation:</strong> Replacing deteriorated NEMA 3R/4 gaskets to eliminate moisture-induced ground-fault trips caused by Pacific Northwest rain.</li>
+        </ul>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">🏢 Multifamily & Condos</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Rapid repair for shared resident charging stations, keycard authentication failures, and billing meter inaccuracies in HOA garages.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #16a34a; font-size: 1.15rem; margin-bottom: 0.5rem;">🛍️ Retail & Hospitality</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Same-day service for retail plazas like Grand Ridge Plaza and Gilman Village to maintain customer dwell times and amenity ratings.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">🚚 Commercial Fleets</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Priority overnight and early-morning turnaround for delivery and municipal van fleets that cannot afford missed dispatch windows.</p>
+          </div>
+        </div>
+
+        <h2>Networked Commercial Charger Support</h2>
+        <p>We work with commercial stations connected to ChargePoint Network, EVgo, Blink, FLO, Enel X Way, and open OCPP networks. Our technicians carry diagnostic software interfaces to run hardware loopback tests, reset stuck firmware routines, and ensure full billing compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Need Commercial EV Charger Service in Issaquah?" 
+    description="Minimize station downtime and keep your fleet or public chargers online. Call our commercial electrical team today for responsive maintenance." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Commercial EV Charger Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

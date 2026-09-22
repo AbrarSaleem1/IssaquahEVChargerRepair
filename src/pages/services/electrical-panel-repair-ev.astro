@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Why does my main house breaker trip when my EV starts charging?",
+    "answer": "When an EV charger draws 32A to 48A on top of existing major household appliances (electric heat pump, electric water heater, oven, or clothes dryer), total household demand can exceed the main panel's service capacity (e.g., 100A or 125A), causing the main 100A-200A breaker to trip."
+  },
+  {
+    "question": "Can an electrical panel be repaired for EV charging without replacing the whole panel?",
+    "answer": "Often yes. Common panel repairs include replacing scorched branch breakers, cleaning and treating arced busbars, rebalancing phase loads, tightening loose neutral/ground bars, and adding an automated EV energy management system (load shedding device) to prevent panel overloads."
+  },
+  {
+    "question": "What is an EV energy management system (EVEMS) load shedder?",
+    "answer": "An EVEMS continuously monitors total power draw on your main electrical service. If whole-house demand approaches maximum panel capacity (e.g. 80%), the smart monitor temporarily pauses or throttles the EV charger until heavy appliances turn off, preventing main breaker trips."
+  },
+  {
+    "question": "Why is my electrical panel buzzing loudly during EV charging?",
+    "answer": "Loud buzzing or humming indicates a loose mechanical connection on a breaker clip, heavy electromagnetic vibration on an overloaded double-pole breaker, or arcing on the copper/aluminum panel busbar. This is an urgent safety issue requiring immediate inspection."
+  },
+  {
+    "question": "Are Zinsco or Federal Pacific Electric (FPE) panels safe for EV charging?",
+    "answer": "No. Zinsco and FPE panels have known design defects where breakers fail to trip under direct overload, causing busbars to melt and panels to catch fire. If you have an FPE or Zinsco panel in older Issaquah homes, panel modernization is strictly required before safe EV charging."
+  }
+];
+---
+
+<Layout
+  title="Electrical Panel Repair for EV Charging in Issaquah, WA | Breaker & Busbar Fix"
+  description="Licensed electrical panel repair for EV charging in Issaquah, WA. Fixing main breaker trips, buzzing panels, arced busbars & overloaded services. Call (425) 380-0019."
+  canonicalPath="/services/electrical-panel-repair-ev/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Electrical Panel Repair for EV' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Main Service & Panel Diagnostics</span>
+        <h1>Electrical Panel Repair for EV Charging in Issaquah</h1>
+        <p class="hero-lead">Is your main breaker tripping, panel buzzing loudly, or lights flickering whenever you plug in your electric car? Our certified electricians repair panel overloads, busbar arcing, and phase imbalances across Issaquah.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving Issaquah 98027 & 98029</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Protecting Your Home's Electrical Core from EV Overload</h2>
+        <p>Adding a 40A to 60A continuous load to a residential electrical panel is equivalent to running an entire central air conditioning compressor and electric oven simultaneously for hours. If your electrical service panel has existing weaknesses—such as loose busbar stabs, aged breakers, or uneven phase loading—the intense demand of EV charging will quickly expose them. We provide expert diagnostic panel repairs throughout Issaquah.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Electrician testing busbar voltage and breaker thermal balance inside 200 amp residential panel in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Infrared thermal analysis and busbar inspection to repair electrical panel hot spots caused by EV charging loads.
+          </figcaption>
+        </figure>
+
+        <h2>Common Panel Failures Associated with EV Charging</h2>
+        <p>Our licensed electricians diagnose and repair these common panel issues across Issaquah homes:</p>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔥 Busbar Arcing & Pitting</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Loose breaker clips cause micro-arcing against the copper or aluminum busbar, creating high electrical resistance and scorched metal stabs.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">⚡ Main Service Breaker Tripping</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Combined electrical demand from heat pumps, water heaters, and EV chargers exceeding the main service rating (100A/150A/200A).</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">⚖️ Split-Phase Voltage Imbalance</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Unbalanced 120V circuits cause voltage sags on one leg when the 240V charger engages, causing household LED lights to flicker or dim.</p>
+          </div>
+        </div>
+
+        <h2>Our Panel Diagnostic & Repair Solutions</h2>
+        <ul>
+          <li><strong>Load Calculation & NEC 220 Analysis:</strong> We perform an exact calculation of your home's active connected load to determine whether capacity optimization or load-shedding is required.</li>
+          <li><strong>Busbar Repair & Breaker Relocation:</strong> If a busbar stab is pitted, we clean oxidized contact surfaces, apply conductive de-oxidant, and relocate the EV breaker to an pristine, unworn panel position.</li>
+          <li><strong>Subpanel Service & Feeder Repair:</strong> Diagnosing and fixing undersized or overheated feeder lines running between the main service meter and garage subpanels.</li>
+          <li><strong>Smart Energy Management System (EVEMS) Integration:</strong> Installing dynamic energy monitors (such as Emporia Vue or DCC-12) that automatically regulate charger power without requiring costly utility service changes.</li>
+          <li><strong>Neutral & Ground Bar Servicing:</strong> Checking and torquing all neutral bar screws and verifying earth grounding rod resistance meets Washington state standards (WAC 296-46B).</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Testing panel main lug voltage and line drop under EV charging load in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Precision load profiling: measuring real-time amperage on Leg A and Leg B to verify balanced distribution during vehicle charging.
+          </figcaption>
+        </figure>
+
+        <h2>Serving Historic Olde Town to Modern Issaquah Highlands</h2>
+        <p>From older mid-century homes in Olde Town and Gilman with 100-amp service panels to modern 200-amp panels in Talus and Grand Ridge, our electricians have deep familiarity with local building structures and utility requirements from Puget Sound Energy (PSE). Call us for fast, expert diagnostics today.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Panel Humming or Main Breaker Tripping in Issaquah?" 
+    description="Protect your home from electrical panel burnout. Call our licensed EV specialists for immediate diagnostic dispatch across 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Panel Repair for EV FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

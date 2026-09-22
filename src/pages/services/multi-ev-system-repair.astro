@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "How does power sharing between two EV chargers work?",
+    "answer": "Power sharing (or group power management) allows two or more EV chargers to share a single electrical circuit (such as a 60A or 80A feeder). When one car is charging, it draws full available power (e.g. 48A). When a second car plugs in, the chargers communicate via Wi-Fi, RS-485 twisted pair, or radio frequency to split the current equally (e.g. 24A each) so the circuit breaker never overloads."
+  },
+  {
+    "question": "Why did my dual Tesla Wall Connectors stop sharing power?",
+    "answer": "In Tesla Gen 3 setups, power sharing relies on local 2.4GHz Wi-Fi communication between the leader and follower units. If a firmware update resets configuration settings, the units become unlinked, or 2.4GHz RF interference occurs, both units may attempt to draw maximum current simultaneously, instantly tripping the shared panel breaker."
+  },
+  {
+    "question": "Can you repair hardwired RS-485 communication cables between chargers?",
+    "answer": "Yes. In systems like Wallbox Power Boost or commercial dual pedestals, an RS-485 shielded twisted pair cable carries continuous telemetry data between smart energy meters and chargers. We test cable shielding, termination resistors (120-ohm), and continuity to eliminate data packet corruption."
+  },
+  {
+    "question": "Why does one vehicle charge while the second vehicle refuses to start?",
+    "answer": "This usually indicates priority allocation errors in load-sharing software, broken pilot signals on the secondary station, or a failed contactor relay on unit #2. We diagnose the logic boards of both units to restore balanced dual charging."
+  },
+  {
+    "question": "Can an overloaded garage subpanel support two EV chargers without tripping?",
+    "answer": "Yes, if an automated energy management system (EVEMS) or load sharing is correctly configured. If your subpanel repeatedly trips when both cars plug in, our electricians will rebalance the loads, repair faulty communication protocols, or integrate an intelligent load-shedding controller."
+  }
+];
+---
+
+<Layout
+  title="Dual EV Charger & Load Sharing Repair in Issaquah, WA | Multi-EV Fix"
+  description="Diagnostic and repair services for dual EV charging systems and power sharing in Issaquah, WA. Fixing Tesla group power management & tripping multi-car circuits. Call (425) 380-0019."
+  canonicalPath="/services/multi-ev-system-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Dual EV & Load Sharing Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Multi-EV Specialist Service</span>
+        <h1>Dual EV Charger & Load Sharing Repair in Issaquah</h1>
+        <p class="hero-lead">Are both electric vehicles tripping your main breaker when plugged in together, or has power sharing between your charging stations desynchronized? Our certified electricians repair complex multi-EV charging systems across Issaquah.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving All Issaquah 98027 & 98029</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Restoring Harmony to Multi-EV Garages</h2>
+        <p>In high-adoption electric vehicle neighborhoods like Issaquah Highlands, Grand Ridge, and Talus, many households operate two or more EVs (such as a Tesla and a Rivian, or dual commuter cars). When two high-amperage chargers draw power simultaneously without flawless load-balancing, panels overheat and breakers trip repeatedly. We specialize in diagnosing and repairing intelligent power-sharing networks.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/multi-ev-home-dual-charging.jpg" 
+            alt="Licensed electrician testing dual EV charger load sharing communication in an Issaquah garage"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Field diagnostic on dual Level 2 charging units: inspecting wireless power management packets and subpanel continuous load limits.
+          </figcaption>
+        </figure>
+
+        <h2>Common Multi-EV System Malfunctions We Resolve</h2>
+        <ul>
+          <li><strong>Tesla Leader-Follower Sync Failures:</strong> Re-establishing communication between paired Gen 3 Wall Connectors when Wi-Fi unlinking causes both units to default to full 48A load and pop the shared 60A breaker.</li>
+          <li><strong>Smart Energy Monitor & CT Clamp Failures:</strong> Diagnosing miswired or defective current transformer (CT) sensors on systems like Wallbox Power Boost or Emporia Vue that feed erroneous load readings to the chargers.</li>
+          <li><strong>Garage Subpanel Overheating:</strong> Remedying phase imbalances and high ambient heat inside 100A subpanels feeding two high-load EV branch circuits.</li>
+          <li><strong>Hardwired Communication Bus Diagnostics:</strong> Testing twisted-pair RS-485 cables for interference, ground loop noise, and missing end-of-line terminating resistors.</li>
+          <li><strong>DCC-9 & DCC-12 Energy Management Box Servicing:</strong> Troubleshooting contactor chattering and delayed recovery on automated EV load-shedding boxes in condo garages.</li>
+        </ul>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">⚡ Simultaneous Trip</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Both cars begin charging fine, but 30 minutes in, the feeder breaker trips. This proves dynamic throttling is failing to cap total amperage at 80% circuit rating.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">🔀 Priority Lockout</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Charger #1 charges at full speed while Charger #2 stays in standby mode all night without ever receiving its allocated current share.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #16a34a; font-size: 1.15rem; margin-bottom: 0.5rem;">🛡️ Safe Concurrent Power</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Our technicians re-calibrate software limits, verify busbar capacity, and certify that both vehicles charge safely throughout the night.</p>
+          </div>
+        </div>
+
+        <h2>Precision Multi-Vehicle Diagnostic Equipment</h2>
+        <p>Our electricians use dual-channel clamp multimeters, network packet analyzers, and thermal cameras to monitor both charging stations under active load simultaneously. We eliminate guesswork and ensure your multi-car household wakes up with fully charged batteries every morning.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Having Issues with Dual EV Charging in Issaquah?" 
+    description="Stop tripping breakers and ensure both cars charge reliably overnight. Call our multi-EV electrical specialists today in 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Dual EV Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

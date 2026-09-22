@@ -1,0 +1,126 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Can third-party or Amazon-purchased EV chargers be repaired?",
+    "answer": "Yes. Most smart chargers purchased from retail or Amazon (such as Emporia, Autel, Grizzl-E, JuiceBox, or Wallbox) share standard electrical architectures: input terminal blocks, contactor relays, ground-fault sensing coils, and logic boards. Many common failures stem from improper field wiring, torque errors, or DIP-switch mismatches that can be fixed on-site."
+  },
+  {
+    "question": "Why did my JuiceBox charger stop working or lose Wi-Fi connectivity?",
+    "answer": "JuiceBox (Enel X Way) chargers have experienced significant cloud server migrations and firmware bugs, leading to offline status and red fault LEDs. We perform local board diagnostics, hard resets, and physical electrical testing to confirm whether the issue is network firmware or hardware failure."
+  },
+  {
+    "question": "What is the most common failure on Grizzl-E chargers?",
+    "answer": "Grizzl-E chargers are exceptionally durable Canadian-built units, but frequent issues involve loose internal DIP switch settings (causing amperage cutouts) or loosened internal wire clamps if the terminal lugs were not properly torqued with a calibrated tool."
+  },
+  {
+    "question": "Are cheap unbranded Amazon EV chargers safe to repair?",
+    "answer": "We strictly verify whether an unbranded charger carries certified safety listings from UL, ETL, or CSA. Non-certified chargers lacking safety interlocks pose dangerous fire and shock risks; in these cases, we advise safe decommissioning and replacement with a certified unit."
+  },
+  {
+    "question": "Do you honor manufacturer warranties during your diagnostic visit?",
+    "answer": "We provide formal diagnostic reports that you can submit directly to manufacturers (such as ChargePoint, Emporia, or Autel) to process warranty replacement claims or secure replacement parts under warranty."
+  }
+];
+---
+
+<Layout
+  title="Universal & Amazon EV Charger Repair in Issaquah, WA | Multi-Brand Fix"
+  description="Troubleshooting and repair for Amazon and third-party EV chargers in Issaquah, WA. Service for Emporia, Grizzl-E, JuiceBox, Wallbox & Autel. Call (425) 380-0019."
+  canonicalPath="/services/amazon-ev-charger-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'Universal EV Charger Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Multi-Brand Diagnostics</span>
+        <h1>Universal & Amazon EV Charger Repair in Issaquah</h1>
+        <p class="hero-lead">Purchased your EV charger online from Amazon, Home Depot, or Best Buy and experiencing red error codes or failure to charge? Our licensed electricians diagnose and repair all universal EVSE brands across Issaquah.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving All Issaquah 98027 & 98029</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Independent Diagnostic Authority for Retail EV Chargers</h2>
+        <p>Thousands of electric vehicle owners in Issaquah purchase top-rated Level 2 chargers online through retailers like Amazon. While these units are packed with smart Wi-Fi scheduling and energy monitoring features, they are frequently misconfigured or improperly wired during initial DIY setup. When error lights blink or charging stops mid-session, we provide independent, expert electrical diagnostics.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Licensed technician troubleshooting third-party universal EV charger logic board in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Field testing third-party EVSE terminals: inspecting input voltage stability, contactor closing voltage, and circuit board communication.
+          </figcaption>
+        </figure>
+
+        <h2>Brands We Routinely Diagnose & Repair</h2>
+        <ul>
+          <li><strong>Emporia EV Charger:</strong> Correcting CT clamp sensor polarity errors, 48A hardwire terminal torque issues, and cloud app disconnects.</li>
+          <li><strong>Grizzl-E Classic & Smart:</strong> Repairing internal DIP switch amperage settings, loose terminal blocks, and damaged heavy-duty outdoor cables.</li>
+          <li><strong>Autel MaxiCharger:</strong> Diagnosing RFID card reader faults, Bluetooth commissioning lockouts, and J1772 handle microswitch failures.</li>
+          <li><strong>JuiceBox (Enel X Way):</strong> Resolving flashing purple/red status lights, server migration lockouts, and internal relay arcing.</li>
+          <li><strong>Wallbox Pulsar Plus:</strong> Fixing power-sharing communication loops, ground monitoring sensitivity errors, and halo LED fault sequences.</li>
+          <li><strong>Lectron & Schumacher:</strong> Diagnosing portable Level 1/Level 2 dual-voltage chargers with overheated NEMA adapters.</li>
+        </ul>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">⚙️ DIP Switch & Amp Config</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Many chargers must be manually configured via internal switches to match your circuit breaker (32A on a 40A breaker; 40A on a 50A breaker). Mismatches trigger immediate trips.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔥 Terminal Lug Melting</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Hand-tightened screws on DIY wiring loosen over time, causing terminal block plastic to bubble and scorch the circuit board.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #16a34a; font-size: 1.15rem; margin-bottom: 0.5rem;">📶 Wi-Fi & App Faults</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Smart chargers require strong 2.4GHz Wi-Fi signals in detached garages. We test signal strength, perform gateway re-pairing, and update firmware.</p>
+          </div>
+        </div>
+
+        <h2>Comprehensive Electrical & Safety Certification</h2>
+        <p>Every diagnostic service call includes a thorough inspection of the upstream electrical panel, circuit breaker, wire gauge, and grounding system to guarantee that your retail charging station operates safely and reliably under Washington State electrical regulations.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Amazon or Universal EV Charger Giving You Trouble?" 
+    description="Get fast, professional diagnostics from Issaquah's certified electrical specialists. Serving all residential neighborhoods in 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Universal EV Charger Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

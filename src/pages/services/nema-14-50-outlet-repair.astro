@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Why did my NEMA 14-50 outlet melt or burn?",
+    "answer": "Most standard NEMA 14-50 outlets found at big-box stores (builder-grade) were originally designed for electric kitchen ranges, which only draw high current in short 10-15 minute bursts. An EV charger draws 32A to 40A continuously for 6 to 10 hours. In builder-grade receptacles, thin metal contact jaws lose spring tension, create micro-gaps, arc, and generate enough heat (over 300°F) to melt the plastic face and scorch the wire."
+  },
+  {
+    "question": "Can a melted NEMA 14-50 outlet be safely repaired?",
+    "answer": "Yes, but the damaged receptacle must be removed and discarded immediately. Our electricians inspect the conductors, cut away any heat-compromised, annealed copper, strip fresh wire, and install an industrial heavy-duty specification-grade receptacle (such as Bryant or Hubbell 9450A)."
+  },
+  {
+    "question": "What is the difference between a cheap builder outlet and an industrial Hubbell/Bryant outlet?",
+    "answer": "Industrial specification receptacles feature solid brass thick contact plates, heavy screw-clamp terminals (rather than stamped brass push tabs), and glass-reinforced thermoset housing that resists heat up to 350°F without softening or arcing."
+  },
+  {
+    "question": "Is my mobile charging cord plug damaged if the wall outlet melted?",
+    "answer": "Often, yes. Heat from the outlet transfers directly into the brass blades of the charging plug (Tesla Mobile Connector, Ford Mobile Charger, etc.). We inspect the prongs for discoloration, pitted metal, and softened plastic to determine whether the cord plug also requires blade servicing or replacement."
+  },
+  {
+    "question": "Do I need to hardwire my charger instead of replacing the outlet?",
+    "answer": "If you experience repeat outlet thermal issues or charge at 48A (11.5 kW), hardwiring directly into a dedicated junction box or disconnect is the safest, most durable solution. We can convert your burnt outlet box into a certified hardwired connection on-site."
+  }
+];
+---
+
+<Layout
+  title="NEMA 14-50 Outlet Repair in Issaquah, WA | Melted Plug & Receptacle Fix"
+  description="Emergency repair for melted, burnt, or loose NEMA 14-50 EV charging outlets in Issaquah, WA. Heavy-duty Hubbell & Bryant industrial upgrades. Call (425) 380-0019."
+  canonicalPath="/services/nema-14-50-outlet-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'NEMA 14-50 Outlet Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Receptacle Thermal Repair</span>
+        <h1>Melted & Burnt NEMA 14-50 Outlet Repair in Issaquah</h1>
+        <p class="hero-lead">Smelled burning plastic or noticed brown discoloration around your 240V charging outlet? Turn off the breaker and call our licensed electricians immediately for emergency inspection and industrial-grade receptacle restoration.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Fast Service Across Issaquah</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>The Danger of Melted NEMA 14-50 EV Charging Outlets</h2>
+        <p>Across Issaquah neighborhoods like Issaquah Highlands, Talus, and Klahanie, hundreds of homes were built with standard builder-grade 50-amp range receptacles installed in the garage. When an EV owner plugs in a 32A or 40A portable charger for overnight charging, the thin metal spring contacts degrade rapidly under sustained thermal load. The result is glowing hot metal, melting polycarbonate, and a severe fire hazard inside garage walls.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/nema-14-50-heavy-duty-receptacle-installation.jpg" 
+            alt="Licensed electrician installing heavy-duty industrial grade NEMA 14-50 outlet replacement in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Replacing a melted builder-grade receptacle with an industrial-grade Bryant/Hubbell 9450A heavy-duty EV receptacle.
+          </figcaption>
+        </figure>
+
+        <h2>Our NEMA 14-50 Outlet Repair & Rebuilding Process</h2>
+        <p>Fixing a melted 240V charging outlet requires much more than simply swapping out a cheap $15 part from a hardware store. Our comprehensive repair protocol restores complete electrical safety:</p>
+
+        <ul>
+          <li><strong>Thermal & Annealed Wire Inspection:</strong> Heat travels backward along copper conductors. We inspect wire insulation for brittleness and cut back oxidized, annealed copper to reach fresh, ductile conductor.</li>
+          <li><strong>Industrial Specification Receptacle Upgrades:</strong> We exclusively install heavy-duty industrial receptacles (Bryant 9450A or Hubbell 9450A) designed with massive brass contact jaws that maintain spring tension under continuous 40-amp draw.</li>
+          <li><strong>Precision Torque Application:</strong> Using calibrated torque screwdrivers, terminal screws are tightened to the exact manufacturer specification (typically 75 inch-pounds) to guarantee zero micro-arcing.</li>
+          <li><strong>Steel Deep-Well Enclosure Replacement:</strong> Overheated plastic outlet boxes are replaced with heavy-duty metal 4x4 deep junction boxes with grounding pigtails.</li>
+          <li><strong>Hardwire Conversion Option:</strong> For homeowners seeking the safest possible long-term setup, we can eliminate the plug entirely by converting the circuit to a direct hardwired connection.</li>
+        </ul>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔥 Signs of Imminent Failure</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Brown or black scorch marks around receptacle prong slots, outlet faceplate warm to the touch after unplugging, or a fishy burning odor in your garage.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">⚠️ Loose Plug Fit</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">If your charging plug slides in and out without firm resistance, internal spring jaws have expanded. High electrical resistance is actively developing.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #16a34a; font-size: 1.15rem; margin-bottom: 0.5rem;">🛡️ The Industrial Solution</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Heavy-duty Hubbell/Bryant receptacles provide up to 4x the contact area of standard consumer receptacles, eliminating thermal breakdown.</p>
+          </div>
+        </div>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Testing voltage drop and contact resistance across repaired 240V NEMA outlet in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Verifying 240-volt line-to-line continuity, ground loop impedance, and zero voltage drop under load after outlet repair.
+          </figcaption>
+        </figure>
+
+        <h2>Same-Day Emergency Receptacle Repair in Issaquah</h2>
+        <p>If your 14-50 outlet has charred or your mobile charger won't power up, do not attempt to force the plug back into the wall. Shut off the 50A breaker in your electrical panel and contact Issaquah EV Charger Repair at (425) 380-0019. Our mobile technicians carry genuine industrial components to restore your charging safely today.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Melted or Scorched NEMA 14-50 Outlet in Issaquah?" 
+    description="Do not risk an electrical fire. Call our licensed technicians right away for emergency diagnostic inspection and heavy-duty industrial replacement in 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="View All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">NEMA 14-50 Outlet Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Can standard Romex (NM-B) wire overheat on a 48-amp EV charger circuit?",
+    "answer": "Yes. Under NEC 334.80, Romex (NM-B cable) must be sized based on the 60°C column of the ampacity chart. #6 AWG NM-B is only rated for 55 amps, which is illegal and unsafe for a continuous 48-amp load (requiring a 60-amp rated circuit). In warm attics or insulated garage walls, this causes insulation breakdown and thermal trips. We replace non-compliant wiring with 90°C THHN copper in EMT conduit."
+  },
+  {
+    "question": "What is an open ground or ground-fault error on an EV charger?",
+    "answer": "An EV charger continuously tests for earth ground before allowing high-voltage contactors to close. If a grounding screw is loose, conduit connections are detached, or ground rod resistance is too high, the charger locks out and displays a red light to prevent user electrocution."
+  },
+  {
+    "question": "Can you repair wiring inside conduits without ripping open garage walls?",
+    "answer": "Yes. When electrical conduit (EMT or PVC) is already in place, our electricians can pull out compromised or damaged wires and pull through brand-new, correctly sized THHN conductors with zero drywall damage."
+  },
+  {
+    "question": "How do you locate an electrical short or break inside a concealed wall?",
+    "answer": "We utilize tone generators, circuit tracers, megohmmeters (insulation resistance testing), and infrared thermography to identify the exact coordinates of conductor breaks or thermal hot spots."
+  },
+  {
+    "question": "Why is aluminum wiring problematic for EV chargers?",
+    "answer": "Aluminum wire expands and contracts at a much higher rate than copper. Under the thermal strain of daily 8-hour EV charging cycles, aluminum connections loosen, oxidize, generate extreme heat, and risk catching fire. We retrofit aluminum runs with proper copper transitions or certified Al/Cu mechanical lugs."
+  }
+];
+---
+
+<Layout
+  title="EV Charger Wiring & Conduit Repair in Issaquah, WA | Ground Fault Fixes"
+  description="EV charger wiring, conduit and grounding fault repair in Issaquah, WA. Fixing undersized Romex, aluminum wire arcing, conduit damage & open grounds. Call (425) 380-0019."
+  canonicalPath="/services/ev-charger-wiring-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'EV Charger Wiring Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Dedicated Wiring Specialists</span>
+        <h1>EV Charger Wiring & Conduit Repair in Issaquah</h1>
+        <p class="hero-lead">Is your charging station locking out due to ground faults, voltage drops, or heat-degraded conductors? Our certified electricians repair hidden wiring faults and bring circuits into strict compliance with NEC Article 625.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Fast Response in 98027 & 98029</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Ensuring Flawless Electrical Infrastructure Behind the Wall</h2>
+        <p>An EV charger is only as dependable as the dedicated branch circuit feeding it. In many homes across Issaquah, original branch circuits were completed using undersized wiring, inappropriate cable types, or inadequate grounding paths. When subjected to 7 to 10 hours of continuous high current, these concealed wiring flaws result in charred junctions, tripped breakers, and ground fault lockouts. We repair and rewire EV branch circuits with precision.</p>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Licensed electrician testing wiring continuity and conduit grounding path for an EV charger in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Testing branch circuit conductor insulation: ensuring proper ampacity rating and zero leakage current to ground.
+          </figcaption>
+        </figure>
+
+        <h2>Common EV Wiring Failures We Repair</h2>
+        <ul>
+          <li><strong>Undersized Conductor Replacement:</strong> Replacing overheated #8 or #10 AWG wiring with proper #6 or #4 AWG copper to eliminate voltage drop and overheating on 40A/48A charging setups.</li>
+          <li><strong>Ground Fault & Floating Ground Repair:</strong> Re-establishing continuous low-impedance Equipment Grounding Conductors (EGC) to satisfy strict EVSE microprocessor safety checks.</li>
+          <li><strong>Conduit Separation & Water Ingress Remediation:</strong> Repairing separated metallic (EMT) or PVC conduit fittings that allow rainwater into junction boxes and ground-out conductors.</li>
+          <li><strong>Burnt Junction Box Rebuilding:</strong> Eliminating melted wire nuts, installing Polaris-style insulated mechanical lugs, and replacing scorched metal junction boxes.</li>
+          <li><strong>Aluminum Wiring Remediation:</strong> Safely terminating or repulling aluminum feeders that have loosened and arced under continuous thermal load.</li>
+        </ul>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🛑 Ground Fault Lockout</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Chargers monitor earth resistance. If ground resistance drifts or a neutral conductor is grounded downstream, the station refuses to charge.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">📉 Excessive Voltage Drop</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Undersized wire over long runs (from detached garages or basement panels) drops voltage below 208V, causing chargers to fault out.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">⚡ Insulation Breakdown</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Heat-baked conductor sheathing cracks inside conduits, causing micro-shorts and random breaker trips that are difficult to locate.</p>
+          </div>
+        </div>
+
+        <h2>Washington State WAC 296-46B Compliance Guaranteed</h2>
+        <p>In Washington State, Department of Labor & Industries (L&I) electrical codes mandate rigorous safety standards for continuous high-load EV circuits. Our repairs strictly adhere to NEC continuous load derating (125%), proper conduit support intervals, and correct conduit fill calculations to ensure your home remains safe and fully insured.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="Dealing with an EV Wiring or Ground Fault in Issaquah?" 
+    description="Do not risk wiring fires or persistent charging shutoffs. Call our certified electricians for comprehensive circuit diagnosis in 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">EV Wiring Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>

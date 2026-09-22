@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TrustStrip from '../../components/TrustStrip.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CTABand from '../../components/CTABand.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+
+const faqs = [
+  {
+    "question": "Why does my EV charger breaker trip after 20 to 45 minutes of charging?",
+    "answer": "This is typically caused by thermal overload. Circuit breakers have thermal-magnetic trip curves. Under continuous high-amperage load (like 32A-48A drawn continuously for hours), a worn breaker, loose busbar stab, or undersized copper conductor builds excessive heat until the internal bimetallic strip triggers a thermal trip."
+  },
+  {
+    "question": "Why does my breaker trip immediately when I plug my EV in?",
+    "answer": "Instant tripping points to a direct short circuit (line-to-line, line-to-neutral, or line-to-ground) or a severe ground fault inside the EVSE unit or conduit run. Do NOT repeatedly reset the breaker, as this can cause busbar arcing and panel damage."
+  },
+  {
+    "question": "Can you replace a damaged EV circuit breaker with a heavy-duty commercial grade breaker?",
+    "answer": "Yes. Continuous EV charging strains standard residential breakers. We replace failed breakers with manufacturer-approved, high-endurance breakers (Square D QO, Siemens, Eaton CH) torqued precisely to panel specifications."
+  },
+  {
+    "question": "What is the continuous load rule for EV charging circuits?",
+    "answer": "Under National Electrical Code (NEC Article 625), EV charging is classified as a continuous load (operating for 3 hours or more). The circuit conductors and overcurrent device must be rated for 125% of the charger's output. A 40A charger requires a 50A circuit; a 48A charger requires a 60A circuit."
+  },
+  {
+    "question": "How do you detect damaged or overheated wiring behind finished walls?",
+    "answer": "We utilize non-invasive FLIR infrared thermal imaging, calibrated megohmmeter insulation resistance testers, and circuit analyzers to pinpoint overheating and compromised insulation without tearing into drywall."
+  }
+];
+---
+
+<Layout
+  title="EV Charger Circuit & Breaker Repair in Issaquah, WA | Electrical Fixes"
+  description="Licensed EV charger circuit and breaker repair in Issaquah, WA. Fixing tripping breakers, burnt busbars, thermal overloads & line faults. Call (425) 380-0019."
+  canonicalPath="/services/ev-charger-circuit-repair/"
+>
+  <Breadcrumbs items={[
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: 'EV Charger Circuit Repair' }
+  ]} />
+
+  <section class="hero-section">
+    <div class="container">
+      <div style="max-width: 840px;">
+        <span class="section-tag" style="background: rgba(132, 204, 22, 0.2); color: #84cc16;">Dedicated Circuit Repair</span>
+        <h1>EV Charger Circuit & Breaker Repair in Issaquah</h1>
+        <p class="hero-lead">When the dedicated circuit powering your EV charger repeatedly trips, hums loudly, or produces a hot electrical smell, our licensed electricians isolate the fault, repair the circuit, and restore safe power delivery.</p>
+        <div class="hero-cta-wrap">
+          <a href="tel:+14253800019" class="btn btn-lime"><span>📞</span><span>Call (425) 380-0019</span></a>
+          <a href="/locations/" class="btn btn-outline-white">Serving All Issaquah Zip Codes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <section class="section">
+    <div class="container">
+      <div class="rich-content" style="max-width: 900px; margin-inline: auto;">
+        <h2>Specialized Circuit & Overcurrent Protection Repairs</h2>
+        <p>Unlike ordinary household circuits that cycle on and off for minutes at a time, dedicated EV charging circuits carry sustained, maximum-rated current for 4 to 10 continuous hours every night. This severe duty cycle exposes every weak link in the electrical branch circuit. We specialize in diagnosing and repairing dedicated 240V circuits feeding residential and commercial chargers throughout Issaquah.</p>
+
+        <ul>
+          <li><strong>Thermal-Magnetic Breaker Replacement:</strong> Replacing degraded, buzzing, or heat-damaged 40A, 50A, and 60A double-pole breakers with OEM-certified replacements.</li>
+          <li><strong>Panel Busbar Arcing Repair:</strong> Cleaning, treating, or relocating breaker positions on panels where loose breaker stabs have created pitting and oxidation.</li>
+          <li><strong>Conductor & Conduit Repair:</strong> Pulling fresh THHN/THWN copper conductors through existing conduits to replace heat-degraded or nicked wires.</li>
+          <li><strong>Terminal Re-Torquing to Manufacturer Spec:</strong> Utilizing calibrated torque screwdrivers and wrenches to eliminate micro-gaps that cause dangerous resistive heating.</li>
+          <li><strong>GFCI Conflict Resolution:</strong> Diagnosing and rectifying nuisance tripping caused by dual-GFCI feedback loops between panel breakers and charger microcontrollers.</li>
+        </ul>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/panel-upgrade-200-amp-circuit-breakers.jpg" 
+            alt="Licensed electrician inspecting 50-amp double pole breaker in main electrical panel in Issaquah"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Testing continuous load tolerance: verifying breaker stab tension, busbar cleanliness, and conductor sizing on a 240V circuit.
+          </figcaption>
+        </figure>
+
+        <h2>Why EV Breakers Trip & How We Fix Them</h2>
+        <p>EV charging breaker trips fall into three distinct electrical categories:</p>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-block: 2rem;">
+          <div class="card">
+            <h3 style="color: #ef4444; font-size: 1.15rem; margin-bottom: 0.5rem;">🔥 1. Slow Thermal Overload Trip</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Trips after 30 to 120 minutes of charging. Indicates that internal breaker temperature exceeded 140°F due to loose terminal screws, undersized wiring, or degraded internal springs.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #0284c7; font-size: 1.15rem; margin-bottom: 0.5rem;">⚡ 2. Instant Magnetic Short-Circuit Trip</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Trips with a loud snap the instant charging initiates. Indicates a direct short inside the charging unit contactor, water in junction boxes, or pinched conduit wires.</p>
+          </div>
+          <div class="card">
+            <h3 style="color: #f59e0b; font-size: 1.15rem; margin-bottom: 0.5rem;">🔄 3. Nuisance GFCI Trip</h3>
+            <p style="color: #64748b; font-size: 0.95rem;">Trips intermittently at random intervals. Caused by high-frequency inverter noise, minor moisture tracking, or an illegal double-GFCI circuit conflict.</p>
+          </div>
+        </div>
+
+        <figure class="seo-service-figure" style="margin-block: 2.25rem; text-align: center;">
+          <img 
+            src="/images/ev-charger-troubleshooting-diagnostic-multimeter.jpg" 
+            alt="Digital multimeter load testing on EV circuit conductors in Issaquah WA"
+            width="900"
+            height="500"
+            loading="lazy"
+            decoding="async"
+            style="width: 100%; height: auto; max-height: 440px; object-fit: cover; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);"
+          />
+          <figcaption style="margin-top: 0.65rem; font-size: 0.88rem; color: #64748b; font-style: italic;">
+            Measuring insulation resistance and line voltage drop under heavy current to verify circuit integrity.
+          </figcaption>
+        </figure>
+
+        <h2>Strict Adherence to NEC Article 625 & WAC 296-46B</h2>
+        <p>In Washington State, electric vehicle branch circuits are strictly regulated under WAC 296-46B and the National Electrical Code. Our licensed electricians ensure that every circuit repair incorporates proper wire ampacity derating (taking into account attic ambient temperatures and conduit fill), proper conductor insulation ratings (75°C/90°C), and secure mechanical grounding.</p>
+      </div>
+    </div>
+  </section>
+
+  <CTABand 
+    title="EV Charger Tripping Your Breaker in Issaquah?" 
+    description="Don't risk electrical panel fire or dead morning batteries. Call our certified repair electricians today for prompt diagnostic service in 98027 & 98029." 
+    primaryBtnText="Call (425) 380-0019" 
+    primaryBtnUrl="tel:+14253800019" 
+    secondaryBtnText="Explore All Repair Services" 
+    secondaryBtnUrl="/services/" 
+  />
+
+  <section class="section" style="background: #f8fafc;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 2rem;">EV Circuit Repair FAQs</h2>
+      <FAQAccordion items={faqs} />
+    </div>
+  </section>
+</Layout>
